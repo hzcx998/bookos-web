@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" type="image/jpg" sizes="48x48" href="./img/icon/icon.jpg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Book OS</title>
 </head>
-<body>
-    <div class="header">BOOKOS</div>
 
-    <ul class="menu">
+<body>
+    <div class="header" id="header">BOOKOS</div>
+
+    <ul class="menu" id="menu">
         <li id="index">主页</li>
         <li id="downloads">下载</li>
         <li id="documents">文档</li>
@@ -95,6 +97,7 @@
         <div class="line">你可以在这里下载到源码(v0.1)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/zip/BookOS-v0.1.zip'">BookOS-v0.1</span></div>
         <div class="line">你可以在这里下载到镜像(v0.1)：<span class="link" onclick="window.location.href='#'">BookOS-v0.1-img 暂无</span></div>
     </div>
+
     <div class="view" id="zh-documents">
         <div class="line">你可以在这里获取我们的文档。</div>
         <div class="line"><span class="light-word" style="margin-left: 0px;">XBook</span>内核开发日志，开发过程中的资料整理和内核开发日志。历经9个多月，320多页：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/doc/xbook%E7%B3%BB%E7%BB%9F%E5%86%85%E6%A0%B8-%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97.pdf'">下载</span></div>
@@ -103,6 +106,7 @@
         <div class="line"><span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/doc/BookOS%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E8%80%85%E5%BE%81%E9%9B%86.pdf'">“征婚文档”BookOS操作系统开发者征集.pdf</span></div>
         <div class="line"><span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/doc/%E8%87%B4BookOS%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E4%B8%80%E5%B0%81%E4%BF%A1.pdf'">致开发者的一封信致BookOS开发者的一封信.pdf</span></div>
     </div>
+
     <div class="view" id="zh-news">
         <div class="line">[2020/3/10] <span class="light-word">Book OS</span> v0.7.1 发布。</div>
         <div class="line">- 优化进程调度算法</div>
@@ -146,6 +150,7 @@
         <div class="line">[2019/2/20] <span class="light-word">Book OS</span> v0.2 发布。</div>
         <div class="line">[2019/1/ 7] <span class="light-word">Book OS</span> v0.1 发布。</div>
     </div>
+
     <div class="view" id="zh-development">
         <div class="line"><span class="light-word">BookOS</span> Github</div>
         <div class="line"><span class="link" onclick="window.location.href='https://github.com/hzcx998/Book-OS'">->点击这儿跳转过去</span></div>
@@ -159,10 +164,14 @@
         <div class="line"><span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/tools/Qemu-i386.rar'">->点击这儿下载</span></div>
     </div>
 
-    <div class="footer">版权归 (C) 2018-2020 Book OS 开发者所有</div>
+    <div class="footer" id="footer">版权归 (C) 2018-2020 Book OS 开发者所有</div>
     <script src="./js/mtool.js"></script>
     <script>
-        $('#index').onclick = function () {
+        document.addEventListener('gesturestart', function(event) {
+            event.preventDefault()
+        })
+
+        $('#index').onclick = function() {
             $('#zh-index').css('display', 'block');
             $('#zh-downloads').css('display', 'none');
             $('#zh-documents').css('display', 'none');
@@ -170,7 +179,7 @@
             $('#zh-development').css('display', 'none');
             $('#zh-english').css('display', 'none');
         }
-        $('#downloads').onclick = function () {
+        $('#downloads').onclick = function() {
             $('#zh-index').css('display', 'none');
             $('#zh-downloads').css('display', 'block');
             $('#zh-documents').css('display', 'none');
@@ -178,7 +187,7 @@
             $('#zh-development').css('display', 'none');
             $('#zh-english').css('display', 'none');
         }
-        $('#documents').onclick = function () {
+        $('#documents').onclick = function() {
             $('#zh-index').css('display', 'none');
             $('#zh-downloads').css('display', 'none');
             $('#zh-documents').css('display', 'block');
@@ -186,7 +195,7 @@
             $('#zh-development').css('display', 'none');
             $('#zh-english').css('display', 'none');
         }
-        $('#news').onclick = function () {
+        $('#news').onclick = function() {
             $('#zh-index').css('display', 'none');
             $('#zh-downloads').css('display', 'none');
             $('#zh-documents').css('display', 'none');
@@ -194,7 +203,7 @@
             $('#zh-development').css('display', 'none');
             $('#zh-english').css('display', 'none');
         }
-        $('#development').onclick = function () {
+        $('#development').onclick = function() {
             $('#zh-index').css('display', 'none');
             $('#zh-downloads').css('display', 'none');
             $('#zh-documents').css('display', 'none');
@@ -202,12 +211,32 @@
             $('#zh-development').css('display', 'block');
             $('#zh-english').css('display', 'none');
         }
-        $('#english').onclick = function () {
+        $('#english').onclick = function() {
             window.location.href = "en.html";
         }
-        
+
         var en = new Environment();
-        alert(en.isChrome);
+        if (en.isAndroid || en.isIOS) {
+            // alert("is phone");
+            $('#header').css('margin-left', '5px');
+            $('#header').css('width', 'calc(100vw - 10px)');
+            $('#menu').css('font-size', '10px');
+            $('#menu').css('margin-left', '5px');
+            $('#menu').css('width', 'calc(100vw - 10px)');
+            $('#zh-index').css('margin-left', '5px');
+            $('#zh-index').css('width', 'calc(100vw - 10px)');
+            $('#zh-downloads').css('margin-left', '5px');
+            $('#zh-downloads').css('width', 'calc(100vw - 10px)');
+            $('#zh-documents').css('margin-left', '5px');
+            $('#zh-documents').css('width', 'calc(100vw - 10px)');
+            $('#zh-news').css('margin-left', '5px');
+            $('#zh-news').css('width', 'calc(100vw - 10px)');
+            $('#zh-development').css('margin-left', '5px');
+            $('#zh-development').css('width', 'calc(100vw - 10px)');
+            $('#footer').css('margin-left', '5px');
+            $('#footer').css('width', 'calc(100vw - 10px)');
+        }
     </script>
 </body>
+
 </html>

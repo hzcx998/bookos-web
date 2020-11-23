@@ -1,17 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./css/normalize.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="icon" type="image/jpg" sizes="48x48" href="./img/icon/icon.jpg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Book OS</title>
 </head>
-<body>
-    <div class="header">BOOKOS</div>
 
-    <ul class="menu">
+<body>
+    <div class="header" id="header">BOOKOS</div>
+
+    <ul class="menu" id="menu" style="font-size: 12px;">
         <li id="index">Home</li>
         <li id="downloads">Download</li>
         <li id="documents">Documentation</li>
@@ -20,7 +22,7 @@
         <li id="english">中文</li>
     </ul>
 
-    <div class="view" id="zh-index">
+    <div class="view" id="en-index">
         <div class="line">What is<span class="light-word">Book OS</span>? Book is the ladder of human progress - golgi. so I call it<span class="light-word">Book OS</span>。</div>
         <div class="line"><span class="light-word" style="margin-left: 0px;">Book OS</span>is a x86 platform 32 bits Operating System.</div>
         <div class="line">Support</div>
@@ -55,7 +57,7 @@
         <img src="./img/screenshot/run.png" class="image-show" alt="screenshot">
     </div>
 
-    <div class="view" id="zh-downloads">
+    <div class="view" id="en-downloads">
         <div class="line"><span class="light-word" style="margin-left: 0px;">Book OS</span>Download Page</div>
         <div class="line">You can get source code here(v0.7.1):<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/zip/BookOS-v0.7.1.zip'">BookOS-v0.7.1</span></div>
         <div class="line">You can get source image here(v0.7.1):<span class="link" onclick="window.location.href='#'">BookOS-v0.7.1-img is not have now</span></div>
@@ -97,7 +99,7 @@
         <div class="line">You can get source image here(v0.1):<span class="link" onclick="window.location.href='#'">BookOS-v0.1-img is not have now</span></div>
 
     </div>
-    <div class="view" id="zh-documents">
+    <div class="view" id="en-documents">
         <div class="line">You can get the documentation here!</div>
         <div class="line"><span class="light-word" style="margin-left: 0px;">XBook</span> kernel development log, data collation during development and kernel development log.Over 9 months, over 320 pages:<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/doc/xbook%E7%B3%BB%E7%BB%9F%E5%86%85%E6%A0%B8-%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97.pdf'">Download</span></div>
         <div class="line">Official development manual v0.2：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/doc/BookOS%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E8%80%85%E6%89%8B%E5%86%8C-v0.2.pdf'">Download v0.2</span></div>
@@ -105,7 +107,7 @@
         <div class="line"><span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/doc/BookOS%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E8%80%85%E5%BE%81%E9%9B%86.pdf'">BookOS developer solicitationBookOS developer solicitation.pdf</span></div>
         <div class="line"><span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/doc/%E8%87%B4BookOS%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E4%B8%80%E5%B0%81%E4%BF%A1.pdf'">A letter to BookOS developersA letter to BookOS developers.pdf</span></div>
     </div>
-    <div class="view" id="zh-news">
+    <div class="view" id="en-news">
         <div class="line">[2020/3/10] <span class="light-word">Book OS</span> v0.7.1 is published.</div>
         <div class="line">- optimize the process scheduling algorithm</div>
         <div class="line">- optimize file descriptor management</div>
@@ -151,7 +153,7 @@
         <div class="line">[2019/2/20] <span class="light-word">Book OS</span> v0.2 is published.</div>
         <div class="line">[2019/1/ 7] <span class="light-word">Book OS</span> v0.1 is published.</div>
     </div>
-    <div class="view" id="zh-development">
+    <div class="view" id="en-development">
         <div class="line"><span class="light-word">BookOS</span> Github</div>
         <div class="line"><span class="link" onclick="window.location.href='https://github.com/hzcx998/Book-OS'">->Click here to jump over</span></div>
         <div class="line"><span class="light-word">XBook</span> github</div>
@@ -164,52 +166,79 @@
         <div class="line"><span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/tools/Qemu-i386.rar'">->Click here to download</span></div>
     </div>
 
-    <div class="footer">Copyright (C) 2018-2020 Book OS Developers</div>
+    <div class="footer" id="footer">Copyright (C) 2018-2020 Book OS Developers</div>
     <script src="./js/mtool.js"></script>
     <script>
-        $('#index').onclick = function () {
-            $('#zh-index').css('display', 'block');
-            $('#zh-downloads').css('display', 'none');
-            $('#zh-documents').css('display', 'none');
-            $('#zh-news').css('display', 'none');
-            $('#zh-development').css('display', 'none');
-            $('#zh-english').css('display', 'none');
+        document.addEventListener('gesturestart', function(event) {
+            event.preventDefault()
+        })
+
+        $('#index').onclick = function() {
+            $('#en-index').css('display', 'block');
+            $('#en-downloads').css('display', 'none');
+            $('#en-documents').css('display', 'none');
+            $('#en-news').css('display', 'none');
+            $('#en-development').css('display', 'none');
+            $('#en-english').css('display', 'none');
         }
-        $('#downloads').onclick = function () {
-            $('#zh-index').css('display', 'none');
-            $('#zh-downloads').css('display', 'block');
-            $('#zh-documents').css('display', 'none');
-            $('#zh-news').css('display', 'none');
-            $('#zh-development').css('display', 'none');
-            $('#zh-english').css('display', 'none');
+        $('#downloads').onclick = function() {
+            $('#en-index').css('display', 'none');
+            $('#en-downloads').css('display', 'block');
+            $('#en-documents').css('display', 'none');
+            $('#en-news').css('display', 'none');
+            $('#en-development').css('display', 'none');
+            $('#en-english').css('display', 'none');
         }
-        $('#documents').onclick = function () {
-            $('#zh-index').css('display', 'none');
-            $('#zh-downloads').css('display', 'none');
-            $('#zh-documents').css('display', 'block');
-            $('#zh-news').css('display', 'none');
-            $('#zh-development').css('display', 'none');
-            $('#zh-english').css('display', 'none');
+        $('#documents').onclick = function() {
+            $('#en-index').css('display', 'none');
+            $('#en-downloads').css('display', 'none');
+            $('#en-documents').css('display', 'block');
+            $('#en-news').css('display', 'none');
+            $('#en-development').css('display', 'none');
+            $('#en-english').css('display', 'none');
         }
-        $('#news').onclick = function () {
-            $('#zh-index').css('display', 'none');
-            $('#zh-downloads').css('display', 'none');
-            $('#zh-documents').css('display', 'none');
-            $('#zh-news').css('display', 'block');
-            $('#zh-development').css('display', 'none');
-            $('#zh-english').css('display', 'none');
+        $('#news').onclick = function() {
+            $('#en-index').css('display', 'none');
+            $('#en-downloads').css('display', 'none');
+            $('#en-documents').css('display', 'none');
+            $('#en-news').css('display', 'block');
+            $('#en-development').css('display', 'none');
+            $('#en-english').css('display', 'none');
         }
-        $('#development').onclick = function () {
-            $('#zh-index').css('display', 'none');
-            $('#zh-downloads').css('display', 'none');
-            $('#zh-documents').css('display', 'none');
-            $('#zh-news').css('display', 'none');
-            $('#zh-development').css('display', 'block');
-            $('#zh-english').css('display', 'none');
+        $('#development').onclick = function() {
+            $('#en-index').css('display', 'none');
+            $('#en-downloads').css('display', 'none');
+            $('#en-documents').css('display', 'none');
+            $('#en-news').css('display', 'none');
+            $('#en-development').css('display', 'block');
+            $('#en-english').css('display', 'none');
         }
-        $('#english').onclick = function () {
+        $('#english').onclick = function() {
             window.location.href = "index.html";
+        }
+
+        var en = new Environment();
+        if (en.isAndroid || en.isIOS) {
+            // alert("is phone");
+            $('#header').css('margin-left', '5px');
+            $('#header').css('width', 'calc(100vw - 10px)');
+            $('#menu').css('font-size', '10px');
+            $('#menu').css('margin-left', '5px');
+            $('#menu').css('width', 'calc(100vw - 10px)');
+            $('#en-index').css('margin-left', '5px');
+            $('#en-index').css('width', 'calc(100vw - 10px)');
+            $('#en-downloads').css('margin-left', '5px');
+            $('#en-downloads').css('width', 'calc(100vw - 10px)');
+            $('#en-documents').css('margin-left', '5px');
+            $('#en-documents').css('width', 'calc(100vw - 10px)');
+            $('#en-news').css('margin-left', '5px');
+            $('#en-news').css('width', 'calc(100vw - 10px)');
+            $('#en-development').css('margin-left', '5px');
+            $('#en-development').css('width', 'calc(100vw - 10px)');
+            $('#footer').css('margin-left', '5px');
+            $('#footer').css('width', 'calc(100vw - 10px)');
         }
     </script>
 </body>
+
 </html>

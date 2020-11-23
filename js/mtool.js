@@ -1,26 +1,27 @@
 var pageCache = new Array();
+
 function debounce(func, wait) {
     var timer;
-    return function () {
+    return function() {
         var context = this,
             args = arguments;
         clearTimeout(timer)
-        timer = setTimeout(function () {
+        timer = setTimeout(function() {
             func.apply(context, args)
         }, wait)
     }
 }
-var Cookie = function () {}
-Cookie.set = function (key, value) {
-	document.cookie = key + '=' + value;
+var Cookie = function() {}
+Cookie.set = function(key, value) {
+    document.cookie = key + '=' + value;
 }
-Cookie.get = function (key) {
-	return document.cookie.substring(key.length + 1);
+Cookie.get = function(key) {
+    return document.cookie.substring(key.length + 1);
 }
-Cookie.del = function (key) {
-	document.cookie = key + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
+Cookie.del = function(key) {
+    document.cookie = key + '=; expires=Thu, 01 Jan 1970 00:00:00 UTC;';
 }
-Element.prototype.css = function (key, value) {
+Element.prototype.css = function(key, value) {
     switch (key) {
         case 'color':
             this.style.color = value;
@@ -30,6 +31,7 @@ Element.prototype.css = function (key, value) {
             break;
         case 'width':
             this.style.width = value;
+            console.log(this);
             break;
         case 'height':
             this.style.height = value;
@@ -43,70 +45,74 @@ Element.prototype.css = function (key, value) {
         case 'opacity':
             this.style.opacity = value;
             break;
-		case 'position':
-		    this.style.position = value;
-		    break;
-		case 'top':
-		    this.style.top = value;
-		    break;
-		case 'right':
-		    this.style.right = value;
-		    break;
-		case 'bottom':
-		    this.style.bottom = value;
-		    break;
-		case 'left':
-		    this.style.left = value;
-		    break;
-		case 'margin':
-		    this.style.margin = value;
-		    break;
+        case 'position':
+            this.style.position = value;
+            break;
+        case 'top':
+            this.style.top = value;
+            break;
+        case 'right':
+            this.style.right = value;
+            break;
+        case 'bottom':
+            this.style.bottom = value;
+            break;
+        case 'left':
+            this.style.left = value;
+            break;
+        case 'margin':
+            this.style.margin = value;
+            break;
         case 'margin-top':
             this.style.marginTop = value;
             break;
-		case 'margin-right':
-		    this.style.marginRight = value;
-		    break;
-		case 'margin-bottom':
-		    this.style.marginBottom = value;
-		    break;
-		case 'margin-left':
-		    this.style.marginLeft = value;
-		    break;
-		case 'transition':
-		    this.style.transition = value;
-		    break;
-		case 'transform':
-		    this.style.transform = value;
-		    break;
+        case 'margin-right':
+            this.style.marginRight = value;
+            break;
+        case 'margin-bottom':
+            this.style.marginBottom = value;
+            break;
+        case 'margin-left':
+            this.style.marginLeft = value;
+            break;
+        case 'transition':
+            this.style.transition = value;
+            break;
+        case 'transform':
+            this.style.transform = value;
+            break;
+        case 'font-size':
+            this.style.fontSize = value;
+            break;
 
         default:
             break;
     }
+    return this;
 }
-Element.prototype.mover = function (func) {
-    this.onmouseover = function () {
+Element.prototype.mover = function(func) {
+    this.onmouseover = function() {
         func && func();
     }
 }
-Element.prototype.mout = function (func) {
-    this.onmouseout = function () {
+Element.prototype.mout = function(func) {
+    this.onmouseout = function() {
         func && func();
     }
 }
-Element.prototype.mclick = function (func) {
-    this.onclick = function () {
+Element.prototype.mclick = function(func) {
+    this.onclick = function() {
         func && func();
     }
 }
-HTMLCollection.prototype.mclick = function (func) {
-	for (var i = 0; i < this.length; i++) {
-		this[i].onclick = function () {
-			func && func(this);
-		}
-	}
+HTMLCollection.prototype.mclick = function(func) {
+    for (var i = 0; i < this.length; i++) {
+        this[i].onclick = function() {
+            func && func(this);
+        }
+    }
 }
-Element.prototype.getSize = function (key) {
+Element.prototype.getSize = function(key) {
     switch (key) {
         case 'width':
             return parseInt(this.offsetWidth);
@@ -119,33 +125,33 @@ Element.prototype.getSize = function (key) {
             break;
     }
 }
-Element.prototype.go = function (url) {
-	this.onclick = function () {
-		if (!document.cookie.substring(10) == '') {
-			pageCache.push(document.cookie.substring(10));
-		}
-		pageCache.push(window.location.href);
-		Cookie.set('pageCache', pageCache);
-		setTimeout(function () {
-			window.location.href = url;
-		}, 200);
-	}
+Element.prototype.go = function(url) {
+    this.onclick = function() {
+        if (!document.cookie.substring(10) == '') {
+            pageCache.push(document.cookie.substring(10));
+        }
+        pageCache.push(window.location.href);
+        Cookie.set('pageCache', pageCache);
+        setTimeout(function() {
+            window.location.href = url;
+        }, 200);
+    }
 }
-Element.prototype.back = function () {
-	this.onclick = function () {
-		if (!Cookie.get('pageCache').substring(10) == '') {
-			pageCache = document.cookie.substring(10).split(',');
-		}
-		var buff = pageCache[pageCache.length - 1];
-		if (pageCache.length == 1) {
-			Cookie.del('pageCache');
-		} else {
-			pageCache.pop();
-			Cookie.set('pageCache', pageCache);
-		}
-		
-		window.location.href = buff;
-	}
+Element.prototype.back = function() {
+    this.onclick = function() {
+        if (!Cookie.get('pageCache').substring(10) == '') {
+            pageCache = document.cookie.substring(10).split(',');
+        }
+        var buff = pageCache[pageCache.length - 1];
+        if (pageCache.length == 1) {
+            Cookie.del('pageCache');
+        } else {
+            pageCache.pop();
+            Cookie.set('pageCache', pageCache);
+        }
+
+        window.location.href = buff;
+    }
 }
 
 function $(obj) {
@@ -154,11 +160,20 @@ function $(obj) {
     if (obj[0] == '#') {
         var result = document.getElementById(obj.substr(1, obj.length - 1));
     }
-	if (obj[0] == '.') {
-	    var result = document.getElementsByClassName(obj.substr(1, obj.length - 1));
-	}
+    if (obj[0] == '.') {
+        var result = document.getElementsByClassName(obj.substr(1, obj.length - 1));
+    }
     return result;
 }
+
+function q(query) {
+    return document.querySelector(query);
+}
+
+function qa(query) {
+    return document.querySelectorAll(query);
+}
+
 function canvas(obj) {
     var type = obj[0];
     var id = obj.substr(1, obj.length - 1);
@@ -167,14 +182,15 @@ function canvas(obj) {
     }
     return result.getContext('2d');
 }
+
 function Person() {
-    this.setBirthday = function (birthday) {
+    this.setBirthday = function(birthday) {
         this.birthday = birthday;
     }
-    this.setAge = function (age) {
+    this.setAge = function(age) {
         this.age = age;
     }
-    this.getAgeByBirthday = function () {
+    this.getAgeByBirthday = function() {
         var birthday = new Date(this.birthday);
         var today = new Date();
         var age = today.getFullYear() - birthday.getFullYear();
@@ -187,8 +203,9 @@ function Person() {
         return age;
     }
 }
+
 function Ajax() {
-    this.get = function (url, func) {
+    this.get = function(url, func) {
         var xmlhttp;
         if (window.XMLHttpRequest) {
             //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
@@ -197,7 +214,7 @@ function Ajax() {
             // IE6, IE5 浏览器执行代码
             xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
         }
-        xmlhttp.onreadystatechange = function () {
+        xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 func && func(xmlhttp.responseText);
             }
@@ -206,7 +223,7 @@ function Ajax() {
         xmlhttp.send();
     }
 
-    this.post = function (url, data, func) {
+    this.post = function(url, data, func) {
         var xmlhttp;
         if (window.XMLHttpRequest) {
             //  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
@@ -218,7 +235,7 @@ function Ajax() {
         xmlhttp.open('POST', url);
         xmlhttp.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
         xmlhttp.send(data);
-        xmlhttp.onreadystatechange = function () {
+        xmlhttp.onreadystatechange = function() {
             if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
                 func && func(xmlhttp.responseText);
             }
@@ -226,6 +243,7 @@ function Ajax() {
 
     }
 }
+
 function Environment() {
     var inBrowser = typeof window !== 'undefined';
     var inWeex = typeof WXEnvironment !== 'undefined' && !!WXEnvironment.platform;
