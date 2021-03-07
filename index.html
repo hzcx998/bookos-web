@@ -11,160 +11,75 @@
 </head>
 
 <body>
-    <div class="header" id="header">BOOKOS</div>
+    <div class="header" id="header">Book OS</div>
 
     <ul class="menu" id="menu">
         <li id="index">主页</li>
         <li id="downloads">下载</li>
         <li id="documents">文档</li>
-        <li id="news">新闻</li>
         <li id="development">开发</li>
-        <li id="english">English</li>
     </ul>
 
     <div class="view" id="zh-index">
-        <div class="line">什么是<span class="light-word">Book OS</span>? “书是人类进步的阶梯” ——高尔基。 因此它叫做<span class="light-word">Book OS</span>。</div>
-        <div class="line"><span class="light-word" style="margin-left: 0px;">Book OS</span>是一个基于x86平台的32位操作系统。</div>
-        <div class="line">系统支持：</div>
-        <div class="line">- i386平台</div>
-        <div class="line">- ELF格式内核和程序</div>
-        <div class="line">- 分页内存管理</div>
-        <div class="line">- 多进程和内核线程</div>
-        <div class="line">- 进程同步和队列</div>
-        <div class="line">- 节点物理内存管理</div>
-        <div class="line">- 虚拟内存管理</div>
-        <div class="line">- 高级中断机制</div>
-        <div class="line">- 块设备和字符设备框架</div>
-        <div class="line">- IDE硬盘驱动</div>
-        <div class="line">- 内存磁盘（Ramdisk）</div>
-        <div class="line">- BOFS文件系统</div>
-        <div class="line">- 计时器</div>
-        <div class="line">- 键盘驱动</div>
-        <div class="line">- 鼠标驱动</div>
-        <div class="line">- 用户函数库</div>
-        <div class="line">- 图形驱动</div>
-        <div class="line">- 简单的硬件抽象驱动</div>
-        <div class="line">- tty驱动</div>
-        <div class="line">- 信号系统</div>
-        <div class="line">- 串口驱动</div>
-        <div class="line">- 蜂鸣器驱动</div>
-        <div class="line">- RTL8139网卡驱动</div>
-        <div class="line">- LIBC库文件</div>
-        <div class="line">- KGC图形核心</div>
-        <div class="line">号外！<span class="light-word">XBook2</span>全新内核正在开发中，点击了解详情:<span class="light-word">XBook2</span></div>
+        <div class="line">
+            什么是<span class="light-word" style="color:yellow;">Book OS</span>?<span class="light-word" style="color: greenyellow;">
+             “书是人类进步的阶梯”</span> ——高尔基。 因此它叫做<span class="light-word">Book OS</span>。
+        </div>
+        <div class="line"><span class="light-word" style="margin-left: 0px;" >Book OS</span>是一个基于x86平台的32位操作系统，其基于<span class="light-word" style="color:yellow;">xbook2</span>内核进行开发。</div>
+        <div class="line"><span class="light-word">xbook2</span>内核特性：</div>
+        <div class="line">> i386处理器平台</div>
+        <div class="line">> ELF格式内核和程序</div>
+        <div class="line">> 内存管理: 分页内存管理，物理内存管理，虚拟内存管理，进程地址空间管理</div>
+        <div class="line">> 多任务: 多进程和内核线程，用户多线程（pthread）</div>
+        <div class="line">> IO驱动框架: 设备对象框架，高级中断机制，软中断机制</div>
+        <div class="line">> 内核: 时间管理，定时器管理，异步异常管理</div>
+        <div class="line">> 文件系统: FSAL文件系统抽象层（类VFS），FATFS文件系统</div>
+        <div class="line">> 进程间通信: 消息队列，共享内存，信号量，pipe管道，fifo命名管道</div>
+        <div class="line">> 通用驱动: ramdisk，null，zero，tty，ptty，view</div>
+        <div class="line">> PC驱动: ahci磁盘，console控制台，e1000网卡，ide磁盘，ps2keyboard键盘，ps2mouse鼠标，rtl8139网卡，sb16声卡，serial串口，vbe视频</div>
         <div class="line"></div>
-        <img src="./img/screenshot/run.png" class="image-show" alt="screenshot">
+        <div class="line"><span class="light-word">Book OS</span>系统功能：</div>
+        <div class="line">
+            > 库：xlibc标准C库，pthread，netsocket，SDL2，SDL2_image，SDL2_ttf，cario，cjson，dotfont，freetype，gato，jpeg，libwebp，pixman，uview，xtk，zlib等
+        </div>
+        <div class="line">
+            > 命令行程序：bash，cal，cat，cp，cpuinfo，date，echo，ls，lua，mem，mkdir，osver，ps，rename，rm，rmdir，sh等
+        </div>
+        <div class="line">
+            > 图像界面程序：infones游戏模拟器，invader游戏，lite文本编辑器
+        </div>
     </div>
 
     <div class="view" id="zh-downloads">
-        <div class="line"><span class="light-word" style="margin-left: 0px;">Book OS</span>下载页面</div>
-        <div class="line">你可以在这里下载到源码(v0.7.1)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/zip/BookOS-v0.7.1.zip'">BookOS-v0.7.1</span></div>
-        <div class="line">你可以在这里下载到镜像(v0.7.1)：<span class="link" onclick="window.location.href='#'">BookOS-v0.7.1-img 暂无</span></div>
-        <div class="line">你可以在这里下载到源码(v0.7.0)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/zip/BookOS-v0.7.0.zip'">BookOS-v0.7.0</span></div>
-        <div class="line">你可以在这里下载到镜像(v0.7.0)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/img/BookOS-v0.7.0-image.zip'">BookOS-v0.7.0-img</span></div>
-        <div class="line">你可以在这里下载到源码(v0.6.9)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/zip/BookOS-v0.6.9.zip'">BookOS-v0.6.9</span></div>
-        <div class="line">你可以在这里下载到镜像(v0.6.9)：<span class="link" onclick="window.location.href='#'">BookOS-v0.6.9-img 暂无</span></div>
-        <div class="line">你可以在这里下载到源码(v0.6.8)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/zip/BookOS-v0.6.8.zip'">BookOS-v0.6.8</span></div>
-        <div class="line">你可以在这里下载到镜像(v0.6.8)：<span class="link" onclick="window.location.href='#'">BookOS-v0.6.8-img 暂无</span></div>
-        <div class="line">你可以在这里下载到源码(v0.6.7)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/zip/BookOS-v0.6.7.zip'">BookOS-v0.6.7</span></div>
-        <div class="line">你可以在这里下载到镜像(v0.6.7)：<span class="link" onclick="window.location.href='#'">BookOS-v0.6.7-img 暂无</span></div>
-        <div class="line">你可以在这里下载到源码(v0.6.6)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/zip/BookOS-v0.6.6.zip'">BookOS-v0.6.6</span></div>
-        <div class="line">你可以在这里下载到镜像(v0.6.6)：<span class="link" onclick="window.location.href='#'">BookOS-v0.6.6-img 暂无</span></div>
-        <div class="line">你可以在这里下载到源码(v0.6.5)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/zip/BookOS-v0.6.5.zip'">BookOS-v0.6.5</span></div>
-        <div class="line">你可以在这里下载到镜像(v0.6.5)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/img/BookOS-v0.6.5-img.zip'">BookOS-v0.6.5-img</span></div>
-        <div class="line">你可以在这里下载到源码(v0.6.4)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/zip/BookOS-v0.6.4.zip'">BookOS-v0.6.4</span></div>
-        <div class="line">你可以在这里下载到镜像(v0.6.4)：<span class="link" onclick="window.location.href='#'">BookOS-v0.6.4-img 暂无</span></div>
-        <div class="line">你可以在这里下载到源码(v0.6.3)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/zip/BookOS-v0.6.3.zip'">BookOS-v0.6.3</span></div>
-        <div class="line">你可以在这里下载到镜像(v0.6.3)：<span class="link" onclick="window.location.href='#'">BookOS-v0.6.3-img 暂无</span></div>
-        <div class="line">你可以在这里下载到源码(v0.6.2)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/zip/BookOS-v0.6.2.zip'">BookOS-v0.6.2</span></div>
-        <div class="line">你可以在这里下载到镜像(v0.6.2)：<span class="link" onclick="window.location.href='#'">BookOS-v0.6.2-img 暂无</span></div>
-        <div class="line">你可以在这里下载到源码(v0.6.1)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/zip/BookOS-v0.6.1.zip'">BookOS-v0.6.1</span></div>
-        <div class="line">你可以在这里下载到镜像(v0.6.1)：<span class="link" onclick="window.location.href='#'">BookOS-v0.6.1-img 暂无</span></div>
-        <div class="line">你可以在这里下载到源码(v0.6.0)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/zip/BookOS-v0.6.0.zip'">BookOS-v0.6.0</span></div>
-        <div class="line">你可以在这里下载到镜像(v0.6.0)：<span class="link" onclick="window.location.href='#'">BookOS-v0.6.0-img 暂无</span></div>
-        <div class="line">你可以在这里下载到源码(v0.5.2)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/zip/BookOS-v0.5.2.zip'">BookOS-v0.5.2</span></div>
-        <div class="line">你可以在这里下载到镜像(v0.5.2)：<span class="link" onclick="window.location.href='#'">BookOS-v0.5.2-img 暂无</span></div>
-        <div class="line">你可以在这里下载到源码(v0.5.0)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/zip/BookOS-v0.5.0.zip'">BookOS-v0.5.0</span></div>
-        <div class="line">你可以在这里下载到镜像(v0.5.0)：<span class="link" onclick="window.location.href='#'">BookOS-v0.5.0-img 暂无</span></div>
-        <div class="line">你可以在这里下载到源码(v0.4)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/zip/BookOS-v0.4.zip'">BookOS-v0.4</span></div>
-        <div class="line">你可以在这里下载到镜像(v0.4)：<span class="link" onclick="window.location.href='#'">BookOS-v0.4-img 暂无</span></div>
-        <div class="line">你可以在这里下载到源码(v0.39)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/zip/BookOS-v0.3.9.zip'">BookOS-v0.39</span></div>
-        <div class="line">你可以在这里下载到镜像(v0.39)：<span class="link" onclick="window.location.href='#'">BookOS-v0.39-img 暂无</span></div>
-        <div class="line">你可以在这里下载到源码(v0.3)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/zip/BookOS-v0.3.zip'">BookOS-v0.3</span></div>
-        <div class="line">你可以在这里下载到镜像(v0.3)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/img/BookOS-v0.3-img.zip'">BookOS-v0.3-img</span></div>
-        <div class="line">你可以在这里下载到源码(v0.2)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/zip/BookOS-v0.2.zip'">BookOSv0.2</span></div>
-        <div class="line">你可以在这里下载到镜像(v0.2)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/img/BookOS-v0.2-img.zip'">BookOS-v0.2-img</span></div>
-        <div class="line">你可以在这里下载到源码(v0.1)：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/zip/BookOS-v0.1.zip'">BookOS-v0.1</span></div>
-        <div class="line">你可以在这里下载到镜像(v0.1)：<span class="link" onclick="window.location.href='#'">BookOS-v0.1-img 暂无</span></div>
+        <div class="line" style="color: yellow">很抱歉，暂无可下载镜像版本！请转到开发页面，到开源仓库下载源码构建！</div>
     </div>
 
     <div class="view" id="zh-documents">
-        <div class="line">你可以在这里获取我们的文档。</div>
-        <div class="line"><span class="light-word" style="margin-left: 0px;">XBook</span>内核开发日志，开发过程中的资料整理和内核开发日志。历经9个多月，320多页：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/doc/xbook%E7%B3%BB%E7%BB%9F%E5%86%85%E6%A0%B8-%E5%BC%80%E5%8F%91%E6%97%A5%E5%BF%97.pdf'">下载</span></div>
-        <div class="line">开发手册发布v0.2：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/doc/BookOS%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E8%80%85%E6%89%8B%E5%86%8C-v0.2.pdf'">下载 v0.2</span></div>
-        <div class="line">开发手册发布v0.1：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/doc/BookOS%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E8%80%85%E6%89%8B%E5%86%8C.pdf'">下载 v0.1</span></div>
-        <div class="line"><span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/doc/BookOS%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F%E5%BC%80%E5%8F%91%E8%80%85%E5%BE%81%E9%9B%86.pdf'">“征婚文档”BookOS操作系统开发者征集.pdf</span></div>
-        <div class="line"><span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/doc/%E8%87%B4BookOS%E5%BC%80%E5%8F%91%E8%80%85%E7%9A%84%E4%B8%80%E5%B0%81%E4%BF%A1.pdf'">致开发者的一封信致BookOS开发者的一封信.pdf</span></div>
-    </div>
-
-    <div class="view" id="zh-news">
-        <div class="line">[2020/3/10] <span class="light-word">Book OS</span> v0.7.1 发布。</div>
-        <div class="line">- 优化进程调度算法</div>
-        <div class="line">- 优化文件描述符管理方法</div>
-        <div class="line">- 添加图形界面多窗口</div>
-        <div class="line">- 完善用户态图形接口</div>
-        <div class="line">- 修复系统部分bug</div>
-        <div class="line">- 简易init配置文件</div>
-        <div class="line">- 添加视频和输入驱动框架</div>
-        <div class="line">[2020/3/2] <span class="light-word">Book OS</span> v0.7.0 发布。</div>
-        <div class="line">添加gtty驱动程序</div>
-        <div class="line">bosh基于gtty运行，添加管道和重定向功能</div>
-        <div class="line">更新时间管理</div>
-        <div class="line">添加日历应用程序</div>
-        <div class="line">添加空设备</div>
-        <div class="line">添加，ls, ps, mv, cp, mm, echo等内置命令</div>
-        <div class="line">[2020/2/24] <span class="light-word">Book OS</span> v0.6.9 发布。</div>
-        <div class="line">在KGC的基础上实现一个简单的GUI</div>
-        <div class="line">[2020/2/10] <span class="light-word">Book OS</span> v0.6.8 发布。</div>
-        <div class="line">重构源码目录</div>
-        <div class="line">[2020/2/8] <span class="light-word">Book OS</span> v0.6.7 发布。</div>
-        <div class="line">添加鼠标驱动，完善键盘驱动，添加视频图形驱动，添加内核图形核心-KGC。</div>
-        <div class="line">[2020/1/30] <span class="light-word">Book OS</span> v0.6.6 发布。</div>
-        <div class="line">添加串口调试机制，添加RTL8139网卡驱动，添加用户库文件，添加蜂鸣器驱动，添加低内存片段管理。</div>
-        <div class="line">[2019/12/29] <span class="light-word">Book OS</span> v0.6.5 发布。</div>
-        <div class="line">添加信号机制，支持大多数常用不可靠信号。</div>
-        <div class="line">[2019/12/19] <span class="light-word">Book OS</span> v0.6.4 发布。</div>
-        <div class="line">添加匿名管道pipe和命名管道fifo</div>
-        <div class="line">[2019/12/11] <span class="light-word">Book OS</span> v0.6.3 发布。</div>
-        <div class="line">添加tty和bosh（<span class="light-word">Book OS</span> Shell）</div>
-        <div class="line">[2019/12/1] <span class="light-word">Book OS</span> v0.6.2 发布。</div>
-        <div class="line">升级BOFS（Book OS File System）文件系统为0.3版本</div>
-        <div class="line">[2019/11/24] <span class="light-word">Book OS</span> v0.6.1 发布。</div>
-        <div class="line">[2019/10/31] <span class="light-word">Book OS</span> v0.6.0 发布。</div>
-        <div class="line">[2019/8/22] <span class="light-word">Book OS</span> v0.5.2 发布。</div>
-        <div class="line">[2019/8/12] <span class="light-word">Book OS</span> v0.5.1 发布。</div>
-        <div class="line">[2019/8/11] <span class="light-word">Book OS</span> v0.5.0 发布。</div>
-        <div class="line">[2019/5/13] <span class="light-word">Book OS</span> v0.4 发布。</div>
-        <div class="line">[2019/5/ 2] <span class="light-word">Book OS</span> v0.39 发布。</div>
-        <div class="line">[2019/4/ 6] <span class="light-word">Book OS</span> v0.3 发布。</div>
-        <div class="line">[2019/2/20] <span class="light-word">Book OS</span> v0.2 发布。</div>
-        <div class="line">[2019/1/ 7] <span class="light-word">Book OS</span> v0.1 发布。</div>
+        <div class="line"><span class="link" onclick="window.location.href='https://gitee.com/hzc1998/BookOS/blob/master/README.md'">BookOS开发文档</span></div>
+        <div class="line"><span class="link" onclick="window.location.href='https://gitee.com/hzc1998/xbook2/blob/master/README.md'">xbook2内核开发文档</span></div>
     </div>
 
     <div class="view" id="zh-development">
-        <div class="line"><span class="light-word">BookOS</span> Github</div>
-        <div class="line"><span class="link" onclick="window.location.href='https://github.com/hzcx998/Book-OS'">->点击这儿跳转过去</span></div>
-        <div class="line"><span class="light-word">XBook</span> github</div>
-        <div class="line"><span class="link" onclick="window.location.href='https://github.com/hzcx998/XBook'">->点击这儿跳转过去</span></div>
-        <div class="line"><span class="light-word">XBook2</span> github</div>
-        <div class="line"><span class="link" onclick="window.location.href='https://github.com/hzcx998/xbook2'">->点击这儿跳转过去</span></div>
-        <div class="line">下载 Build Tools</div>
-        <div class="line"><span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/tools/BuildTools-v7.zip'">->点击这儿下载</span></div>
-        <div class="line">下载 Qemu for i386</div>
-        <div class="line"><span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/tools/Qemu-i386.rar'">->点击这儿下载</span></div>
+        <div class="line">
+            BookOS仓库：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/BookOS'">(gitee)</span> or 
+            <span class="link" onclick="window.location.href='https://github.com/hzcx998/BookOS'">(github)</span>
+        </div>
+        <div class="line">
+            xbook2仓库：<span class="link" onclick="window.location.href='https://gitee.com/hzc1998/xbook2'">(gitee)</span> or 
+            <span class="link" onclick="window.location.href='https://github.com/hzcx998/xbook2'">(github)</span>
+        </div>
+
+        <div class="line">
+            Windows 平台工具链：
+            <span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/tools/BuildTools-v7.zip'">BuildTools</span>
+        </div>
+        <div class="line">
+            Windows Qemu for i386模拟器:
+            <span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/tools/Qemu-i386.rar'">Qemu</span>
+        </div>
     </div>
 
-    <div class="footer" id="footer">版权归 (C) 2018-2020 Book OS 开发者所有</div>
+    <div class="footer" id="footer">版权归 (C) 2018-2021 Book OS 开发者所有</div>
     <script src="./js/mtool.js"></script>
     <script>
         document.addEventListener('gesturestart', function(event) {
@@ -175,46 +90,26 @@
             $('#zh-index').css('display', 'block');
             $('#zh-downloads').css('display', 'none');
             $('#zh-documents').css('display', 'none');
-            $('#zh-news').css('display', 'none');
             $('#zh-development').css('display', 'none');
-            $('#zh-english').css('display', 'none');
         }
         $('#downloads').onclick = function() {
             $('#zh-index').css('display', 'none');
             $('#zh-downloads').css('display', 'block');
             $('#zh-documents').css('display', 'none');
-            $('#zh-news').css('display', 'none');
             $('#zh-development').css('display', 'none');
-            $('#zh-english').css('display', 'none');
         }
         $('#documents').onclick = function() {
             $('#zh-index').css('display', 'none');
             $('#zh-downloads').css('display', 'none');
             $('#zh-documents').css('display', 'block');
-            $('#zh-news').css('display', 'none');
             $('#zh-development').css('display', 'none');
-            $('#zh-english').css('display', 'none');
-        }
-        $('#news').onclick = function() {
-            $('#zh-index').css('display', 'none');
-            $('#zh-downloads').css('display', 'none');
-            $('#zh-documents').css('display', 'none');
-            $('#zh-news').css('display', 'block');
-            $('#zh-development').css('display', 'none');
-            $('#zh-english').css('display', 'none');
         }
         $('#development').onclick = function() {
             $('#zh-index').css('display', 'none');
             $('#zh-downloads').css('display', 'none');
             $('#zh-documents').css('display', 'none');
-            $('#zh-news').css('display', 'none');
             $('#zh-development').css('display', 'block');
-            $('#zh-english').css('display', 'none');
         }
-        $('#english').onclick = function() {
-            window.location.href = "en.html";
-        }
-
         var en = new Environment();
         if (en.isAndroid || en.isIOS) {
             // alert("is phone");
@@ -229,8 +124,6 @@
             $('#zh-downloads').css('width', 'calc(100vw - 10px)');
             $('#zh-documents').css('margin-left', '5px');
             $('#zh-documents').css('width', 'calc(100vw - 10px)');
-            $('#zh-news').css('margin-left', '5px');
-            $('#zh-news').css('width', 'calc(100vw - 10px)');
             $('#zh-development').css('margin-left', '5px');
             $('#zh-development').css('width', 'calc(100vw - 10px)');
             $('#footer').css('margin-left', '5px');
