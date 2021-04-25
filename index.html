@@ -18,6 +18,9 @@
         <li id="downloads">下载</li>
         <li id="documents">文档</li>
         <li id="development">开发</li>
+        <li id="summer">
+            <span style="color:dodgerblue;">开源之夏</span>
+        </li>
     </ul>
 
     <div class="view" id="zh-index">
@@ -78,7 +81,51 @@
             <span class="link" onclick="window.location.href='https://gitee.com/hzc1998/bookos-web-db/blob/master/tools/Qemu-i386.rar'">Qemu</span>
         </div>
     </div>
-
+    <div class="view" id="zh-summer">
+        <div class="line">
+            <span class="link" onclick="window.location.href='https://summer.iscas.ac.cn/'">开源软件供应链点亮计划 - 暑期2021</span>
+        </div>
+        <div class="line">
+            开源软件供应链点亮计划鼓励大家关注开源软件和开源社区，致力于培养和发掘更多优秀的开发者。
+            活动将在暑期进行，我们将与开源社区紧密合作，提供一对一的导师指导，邀请技术大牛开展线上免费讲座。
+            我们鼓励研究人员、开源爱好者、在校师生参与开源软件的开发与维护，促进开源软件的发展和优秀开源软件社区建设，
+            增加开源项目的活跃度，推进开源生态的发展。
+        </div>
+        <div class="line">
+            开发者可以在开源之夏上面参与BookOS发布的项目，可以通过
+            <span class="link" onclick="window.location.href='https://summer.iscas.ac.cn/#/org/orgdetail/bookos'">【传送门】</span>
+            报名参加
+        </div>
+        <!--项目列表-->
+        <table>
+            <tr>
+                <th style="width: 100px;">项目名</th>
+                <th style="width: 50px;">难度</th>
+                <th style="width: 300px;">描述</th>
+                <th style="width: 100px;">产出要求</th>
+                <th style="width: 100px;">技术要求</th>
+                <th>项目直达</th>
+            </tr>
+            <tr>
+                <td>Pthread 多线程的优化与完善</td>
+                <td>中</td>
+                <td>
+                    在xbook2中的pthread仅实现了最基础的线程管理功能，仍有许多功能尚未实现，
+                    需要优化原有实现并且完善它，让它和标准的pthread功能一样，
+                    最终支持SDL2_Thread的pthread子模块。
+                </td>
+                <td>
+                    * 标准的pthread库<br>
+                    * 支持SDL_Thread的pthread接口
+                </td>
+                <td>
+                    * C语言基础<br>
+                    * pthread编程经验
+                </td>
+                <td>点击跳转</td>
+            </tr>
+        </table>
+    </div>
     <div class="footer" id="footer">版权归 (C) 2018-2021 Book OS 开发者所有</div>
     <script src="./js/mtool.js"></script>
     <script>
@@ -91,24 +138,35 @@
             $('#zh-downloads').css('display', 'none');
             $('#zh-documents').css('display', 'none');
             $('#zh-development').css('display', 'none');
+            $('#zh-summer').css('display', 'block');
         }
         $('#downloads').onclick = function() {
             $('#zh-index').css('display', 'none');
             $('#zh-downloads').css('display', 'block');
             $('#zh-documents').css('display', 'none');
             $('#zh-development').css('display', 'none');
+            $('#zh-summer').css('display', 'block');
         }
         $('#documents').onclick = function() {
             $('#zh-index').css('display', 'none');
             $('#zh-downloads').css('display', 'none');
             $('#zh-documents').css('display', 'block');
             $('#zh-development').css('display', 'none');
+            $('#zh-summer').css('display', 'block');
         }
         $('#development').onclick = function() {
             $('#zh-index').css('display', 'none');
             $('#zh-downloads').css('display', 'none');
             $('#zh-documents').css('display', 'none');
             $('#zh-development').css('display', 'block');
+            $('#zh-summer').css('display', 'none');
+        }
+        $('#summer').onclick = function() {
+            $('#zh-index').css('display', 'none');
+            $('#zh-downloads').css('display', 'none');
+            $('#zh-documents').css('display', 'none');
+            $('#zh-development').css('display', 'none');
+            $('#zh-summer').css('display', 'block');
         }
         var en = new Environment();
         if (en.isAndroid || en.isIOS) {
@@ -126,6 +184,8 @@
             $('#zh-documents').css('width', 'calc(100vw - 10px)');
             $('#zh-development').css('margin-left', '5px');
             $('#zh-development').css('width', 'calc(100vw - 10px)');
+            $('#zh-summer').css('margin-left', '5px');
+            $('#zh-summer').css('width', 'calc(100vw - 10px)');
             $('#footer').css('margin-left', '5px');
             $('#footer').css('width', 'calc(100vw - 10px)');
         }
