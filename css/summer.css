@@ -1,57 +1,18 @@
+.view > .pure-table > thead > tr > th {
+    background-color: rgba(240, 128, 128, 0.3);
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
 
-.tab_center  {
-    text-align:center;
+    cursor: pointer;
 }
-body {
-    margin: 10px;
+.view > .pure-table > tbody td {
+    background-color: rgba(240, 128, 128, 0.1);
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+
+    cursor: pointer;
+    transition: background-color .15s linear;
 }
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
- 
-td,th {
-    padding: 0;
-}
- 
-.pure-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-    empty-cells: show;
-    border: 1px solid #cbcbcb;
-}
- 
-.pure-table caption {
-    color: #000;
-    font: italic 85%/1 arial,sans-serif;
-    padding: 1em 0;
-    text-align: center;
-}
- 
-.pure-table td,.pure-table th {
-    border-left: 1px solid #cbcbcb;
-    border-width: 0 0 0 1px;
-    font-size: inherit;
-    margin: 0;
-    overflow: visible;
-    padding: .5em 1em;
-}
- 
-.pure-table thead {
-    background-color: #e0e0e0;
-    color: #000;
-    text-align: left;
-    vertical-align: bottom;
-}
- 
-.pure-table td {
-    background-color: transparent;
-}
- 
-.pure-table-bordered td {
-    border-bottom: 1px solid #cbcbcb;
-}
- 
-.pure-table-bordered tbody>tr:last-child>td {
-    border-bottom-width: 0;
+.view > .pure-table > tbody td:hover {
+    background-color: rgba(240, 128, 128, 0.3);
 }
