@@ -166,6 +166,7 @@ function $(obj) {
     return result;
 }
 
+
 function q(query) {
     return document.querySelector(query);
 }
