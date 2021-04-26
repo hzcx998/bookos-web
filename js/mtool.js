@@ -154,18 +154,28 @@ Element.prototype.back = function() {
     }
 }
 
-function $(obj) {
-    var type = obj[0];
-    var id = obj.substr(1, obj.length - 1);
-    if (obj[0] == '#') {
-        var result = document.getElementById(obj.substr(1, obj.length - 1));
-    }
-    if (obj[0] == '.') {
-        var result = document.getElementsByClassName(obj.substr(1, obj.length - 1));
-    }
-    return result;
+function $(el) {
+    return query(el);
 }
 
+
+function query (el) {
+    if (typeof el === 'string') {
+      var selected = document.querySelectorAll(el);
+      if (!selected) {
+        warn(
+          'Cannot find element: ' + el
+        );
+        return document.createElement('div')
+      }
+      if (selected.length > 1) {
+          return selected
+      }
+      return selected[0]
+    } else {
+      return el
+    }
+  }
 
 function q(query) {
     return document.querySelector(query);
