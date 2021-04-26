@@ -546,6 +546,12 @@
             $('#zh-summer').css('width', 'calc(100vw - 10px)');
             $('#footer').css('margin-left', '5px');
             $('#footer').css('width', 'calc(100vw - 10px)');
+            $('.view > .pure-table > thead th').forEach(element => {
+                element.style.padding = '0px';
+            });
+            $('.view > .pure-table > tbody td').forEach(element => {
+                element.style.padding = '0px';
+            });
         }
     </script>
 </body>
