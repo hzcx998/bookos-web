@@ -1,0 +1,670 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>PS/2键盘驱动分析 · book for xbook2</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="jason hu">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+    <link rel="prev" href="ahci.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://book-os.org" target="_blank" class="custom-link">bookos</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <span>
+            
+                    
+                    xbook2文档中心
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" >
+            
+                <span>
+            
+                    
+                    简介
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    xbook2 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" >
+            
+                <span>
+            
+                    
+                    快速上手
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.1" data-path="../../tutorial/quick-start.html">
+            
+                <a href="../../tutorial/quick-start.html">
+            
+                    
+                    Qemu x86
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" >
+            
+                <span>
+            
+                    
+                    内核
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.1" data-path="../base/base.html">
+            
+                <a href="../base/base.html">
+            
+                    
+                    内核基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2" data-path="../task/task.html">
+            
+                <a href="../task/task.html">
+            
+                    
+                    任务管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3" data-path="../timer/timer.html">
+            
+                <a href="../timer/timer.html">
+            
+                    
+                    时钟管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.4" data-path="../mm/mm.html">
+            
+                <a href="../mm/mm.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.5" data-path="device.html">
+            
+                <a href="device.html">
+            
+                    
+                    设备管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.5.1" data-path="ahci.html">
+            
+                <a href="ahci.html">
+            
+                    
+                    AHCI磁盘驱动分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.3.5.2" data-path="keyboard.html">
+            
+                <a href="keyboard.html">
+            
+                    
+                    PS/2键盘驱动分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" >
+            
+                <span>
+            
+                    
+                    用户
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1" data-path="../user/user.html">
+            
+                <a href="../user/user.html">
+            
+                    
+                    用户编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" >
+            
+                <span>
+            
+                    
+                    other
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1" data-path="../../other/FAQS.html">
+            
+                <a href="../../other/FAQS.html">
+            
+                    
+                    FAQS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >PS/2键盘驱动分析</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="ps2&#x952E;&#x76D8;&#x9A71;&#x52A8;&#x5206;&#x6790;">P/S2&#x952E;&#x76D8;&#x9A71;&#x52A8;&#x5206;&#x6790;</h1>
+<h2 id="&#x521D;&#x59CB;&#x5316;">&#x521D;&#x59CB;&#x5316;</h2>
+<p>&#x5728;&#x672C;&#x9A71;&#x52A8;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x53EA;&#x9700;&#x8981;&#x5173;&#x6CE8;&#x6709;&#x5DEE;&#x5F02;&#x7684;&#x5730;&#x65B9;&#xFF0C;&#x62FF;&#x51FA;&#x6765;&#x8BB2;&#x4E00;&#x4E0B;&#x5C31;&#x884C;&#x4E86;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">static</span> iostatus_t <span class="hljs-title">keyboard_enter</span><span class="hljs-params">(driver_object_t *driver)</span>
+</span>{
+    <span class="hljs-keyword">iostatus_t</span> status;
+
+    <span class="hljs-keyword">device_object_t</span> *devobj;
+    <span class="hljs-keyword">device_extension_t</span> *devext;
+
+    <span class="hljs-comment">/* &#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E9B;&#x5176;&#x5B83;&#x5185;&#x5BB9; */</span>
+    status = io_create_device(driver, <span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">device_extension_t</span>), DEV_NAME, DEVICE_TYPE_KEYBOARD, &amp;devobj);
+
+    <span class="hljs-keyword">if</span> (status != IO_SUCCESS) {
+        keprint(PRINT_ERR <span class="hljs-string">&quot;keyboard_enter: create device failed!\n&quot;</span>);
+        <span class="hljs-keyword">return</span> status;
+    }
+    <span class="hljs-comment">/* neither io mode */</span>
+    devobj-&gt;flags = <span class="hljs-number">0</span>;
+    devext = (<span class="hljs-keyword">device_extension_t</span> *)devobj-&gt;device_extension;
+    devext-&gt;device_object = devobj;
+
+    devext-&gt;irq = IRQ1;
+    devext-&gt;flags = <span class="hljs-number">0</span>;
+    devext-&gt;opened = <span class="hljs-number">0</span>;
+
+    <span class="hljs-comment">/* &#x521D;&#x59CB;&#x5316;&#x79C1;&#x6709;&#x6570;&#x636E; */</span>
+    devext-&gt;code_with_e0 = <span class="hljs-number">0</span>;
+
+    devext-&gt;shift_left    = devext-&gt;shift_right = <span class="hljs-number">0</span>;
+    devext-&gt;alt_left    = devext-&gt;alt_right   = <span class="hljs-number">0</span>;
+    devext-&gt;ctl_left    = devext-&gt;ctl_right  = <span class="hljs-number">0</span>;
+
+    devext-&gt;caps_lock   = <span class="hljs-number">0</span>;
+    devext-&gt;num_lock    = <span class="hljs-number">1</span>;
+    devext-&gt;scroll_lock = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> *buf = mem_alloc(DEV_FIFO_BUF_LEN);
+    <span class="hljs-keyword">if</span> (buf == <span class="hljs-literal">NULL</span>) {
+        status = IO_FAILED;
+        keprint(PRINT_DEBUG <span class="hljs-string">&quot;keyboard_enter: alloc buf failed!\n&quot;</span>);
+        <span class="hljs-keyword">return</span> status;
+    }
+    fifo_io_init(&amp;devext-&gt;fifoio, buf, DEV_FIFO_BUF_LEN);
+
+    input_even_init(&amp;devext-&gt;evbuf);
+
+    <span class="hljs-comment">/* &#x521D;&#x59CB;&#x5316;&#x952E;&#x76D8;&#x63A7;&#x5236;&#x5668; */</span>
+
+    <span class="hljs-comment">/* &#x53D1;&#x9001;&#x5199;&#x914D;&#x7F6E;&#x547D;&#x4EE4; */</span>
+    WAIT_KBC_WRITE();
+    out8(KBC_CMD, KBC_CMD_WRITE_CONFIG);
+
+    <span class="hljs-comment">/* &#x5F80;&#x6570;&#x636E;&#x7AEF;&#x53E3;&#x5199;&#x5165;&#x914D;&#x7F6E;&#x503C; */</span>
+    WAIT_KBC_WRITE();
+    out8(KBC_WRITE_DATA, KBC_CONFIG);
+
+    <span class="hljs-comment">/* &#x6CE8;&#x518C;&#x65F6;&#x949F;&#x4E2D;&#x65AD;&#x5E76;&#x6253;&#x5F00;&#x4E2D;&#x65AD;&#xFF0C;&#x56E0;&#x4E3A;&#x8BBE;&#x5B9A;&#x786C;&#x4EF6;&#x8FC7;&#x7A0B;&#x4E2D;&#x53EF;&#x80FD;&#x4EA7;&#x751F;&#x4E2D;&#x65AD;&#xFF0C;&#x6240;&#x4EE5;&#x8981;&#x63D0;&#x524D;&#x6253;&#x5F00; */</span>    
+    irq_register(devext-&gt;irq, keyboard_handler, IRQF_DISABLED, <span class="hljs-string">&quot;IRQ1&quot;</span>, DRV_NAME, (<span class="hljs-keyword">void</span> *) devext);
+
+    <span class="hljs-comment">/* &#x542F;&#x52A8;&#x4E00;&#x4E2A;&#x5185;&#x6838;&#x7EBF;&#x7A0B;&#x6765;&#x5904;&#x7406;&#x6570;&#x636E; */</span>
+    task_create(<span class="hljs-string">&quot;kbd&quot;</span>, TASK_PRIO_LEVEL_REALTIME, kbd_thread, devext);
+
+    <span class="hljs-keyword">return</span> status;
+}
+</code></pre>
+<p>&#x952E;&#x76D8;&#x9A71;&#x52A8;&#x8FDB;&#x5165;&#x7684;&#x65F6;&#x5019;&#x5C31;&#x8FDB;&#x884C;&#x4E86;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x5728;<code>io_create_device</code>&#x521B;&#x5EFA;&#x8BBE;&#x5907;&#x7684;&#x65F6;&#x5019;&#x6307;&#x5B9A;&#x4E86;&#x6269;&#x5C55;&#x7ED3;&#x6784;&#x4F53;&#x5927;&#x5C0F;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x4E3A;&#x8FD9;&#x4E2A;&#x6269;&#x5C55;&#x7ED3;&#x6784;&#x5206;&#x914D;&#x5185;&#x5B58;&#xFF0C;&#x7136;&#x540E;&#x8BB0;&#x5F55;&#x5230;<code>devobj-&gt;device_extension</code>&#x4E2D;&#x3002;&#x5728;&#x540E;&#x9762;&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#x4E86;&#x3002;&#x4E8E;&#x662F;<code>devext = (device_extension_t *)devobj-&gt;device_extension;</code>&#x8FD9;&#x884C;&#x5C31;&#x628A;devext&#x53D8;&#x91CF;&#x6267;&#x884C;&#x4E86;&#x6269;&#x5C55;&#x533A;&#x57DF;&#x3002;</p>
+<p>&#x518D;&#x6765;&#x770B;&#x4E00;&#x4E0B;&#x4ED6;&#x7684;&#x6269;&#x5C55;&#x7ED3;&#x6784;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _device_extension {
+    <span class="hljs-keyword">device_object_t</span> *device_object; <span class="hljs-comment">/* &#x8BBE;&#x5907;&#x5BF9;&#x8C61; */</span>
+    <span class="hljs-keyword">char</span> irq;           <span class="hljs-comment">/* irq&#x53F7; */</span>
+
+    <span class="hljs-keyword">int</span>    code_with_e0;    <span class="hljs-comment">/* &#x643A;&#x5E26;E0&#x7684;&#x503C; */</span>
+    <span class="hljs-keyword">int</span>    shift_left;    <span class="hljs-comment">/* l shift state */</span>
+    <span class="hljs-keyword">int</span>    shift_right;    <span class="hljs-comment">/* r shift state */</span>
+    <span class="hljs-keyword">int</span>    alt_left;    <span class="hljs-comment">/* l alt state     */</span>
+    <span class="hljs-keyword">int</span>    alt_right;    <span class="hljs-comment">/* r left state     */</span>
+    <span class="hljs-keyword">int</span>    ctl_left;    <span class="hljs-comment">/* l ctrl state     */</span>
+    <span class="hljs-keyword">int</span>    ctl_right;    <span class="hljs-comment">/* l ctrl state     */</span>
+    <span class="hljs-keyword">int</span>    caps_lock;    <span class="hljs-comment">/* Caps Lock     */</span>
+    <span class="hljs-keyword">int</span>    num_lock;    <span class="hljs-comment">/* Num Lock     */</span>
+    <span class="hljs-keyword">int</span>    scroll_lock;    <span class="hljs-comment">/* Scroll Lock     */</span>
+    <span class="hljs-keyword">int</span>    column;        <span class="hljs-comment">/* &#x6570;&#x636E;&#x4F4D;&#x4E8E;&#x54EA;&#x4E00;&#x5217; */</span>
+
+    <span class="hljs-keyword">fifo_io_t</span> fifoio;
+    <span class="hljs-keyword">input_even_buf_t</span> evbuf;     <span class="hljs-comment">/* &#x4E8B;&#x4EF6;&#x7F13;&#x51B2;&#x533A; */</span>
+    <span class="hljs-keyword">uint32_t</span> flags;
+    <span class="hljs-keyword">uint32_t</span> opened;
+} <span class="hljs-keyword">device_extension_t</span>;
+</code></pre>
+<p>&#x6BCF;&#x4E00;&#x4E2A;&#x8BBE;&#x5907;&#x90FD;&#x53EF;&#x4EE5;&#x6709;&#x4E00;&#x4E2A;&#x6269;&#x5C55;&#x7ED3;&#x6784;&#x6765;&#x5B58;&#x653E;&#x8BBE;&#x5907;&#x81EA;&#x5DF1;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5C3D;&#x91CF;&#x4FDD;&#x6301;&#x6BCF;&#x4E2A;&#x9A71;&#x52A8;&#x7684;&#x6269;&#x5C55;&#x7ED3;&#x6784;&#x90FD;&#x4E00;&#x81F4;&#x4E3A;<code>device_extension_t</code>&#xFF0C;&#x5F53;&#x7136;&#x4F60;&#x4E5F;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5176;&#x5B83;&#x7ED3;&#x6784;&#xFF0C;&#x8FD9;&#x662F;&#x81EA;&#x7531;&#x7684;&#xFF0C;&#x56E0;&#x4E3A;&#x662F;&#x5C5E;&#x4E8E;&#x8FD9;&#x4E2A;&#x9A71;&#x52A8;&#x81EA;&#x5DF1;&#x7684;&#x5185;&#x5BB9;&#x3002;&#x5728;&#x8FD9;&#x4E2A;&#x9A71;&#x52A8;&#x4E2D;&#xFF0C;<code>devobj-&gt;flags = 0;</code>&#x610F;&#x5473;&#x7740;&#x6267;&#x884C;&#x8BFB;&#x5199;&#x64CD;&#x4F5C;&#x65F6;&#x4F7F;&#x7528;<code>ioreq-&gt;user_buffer</code>&#x3002;</p>
+<h2 id="&#x8BFB;&#x64CD;&#x4F5C;">&#x8BFB;&#x64CD;&#x4F5C;</h2>
+<pre><code class="lang-c"><span class="hljs-keyword">iostatus_t</span> keyboard_read(<span class="hljs-keyword">device_object_t</span> *device, <span class="hljs-keyword">io_request_t</span> *ioreq)
+{
+    <span class="hljs-keyword">device_extension_t</span> *ext = device-&gt;device_extension;
+    <span class="hljs-keyword">iostatus_t</span> status = IO_SUCCESS;
+
+    <span class="hljs-comment">/* &#x76F4;&#x63A5;&#x8FD4;&#x56DE;&#x8BFB;&#x53D6;&#x7684;&#x6570;&#x636E; */</span>
+    ioreq-&gt;io_status.infomation = ioreq-&gt;parame.read.length;
+    <span class="hljs-keyword">input_event_t</span> *even = (<span class="hljs-keyword">input_event_t</span> *) ioreq-&gt;user_buffer;
+    <span class="hljs-comment">/* &#x53C2;&#x6570;&#x6B63;&#x786E; */</span>
+    <span class="hljs-keyword">if</span> (even &amp;&amp; ioreq-&gt;parame.read.length == <span class="hljs-keyword">sizeof</span>(<span class="hljs-keyword">input_event_t</span>)) {
+
+        <span class="hljs-keyword">if</span> (ext-&gt;flags &amp; DEV_NOWAIT) {
+            <span class="hljs-comment">// &#x89E3;&#x6790;</span>
+            <span class="hljs-keyword">if</span> (input_even_get(&amp;ext-&gt;evbuf, even) &lt; <span class="hljs-number">0</span>) {
+                status = IO_FAILED;
+            } <span class="hljs-keyword">else</span> {
+                <span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> DEBUG_DRV</span>
+                keprint(PRINT_DEBUG <span class="hljs-string">&quot;key even get: type=%d code=%x value=%d\n&quot;</span>, even-&gt;type, even-&gt;code, even-&gt;value);
+                keprint(PRINT_DEBUG <span class="hljs-string">&quot;key even buf: head=%d tail=%d\n&quot;</span>, ext-&gt;evbuf.head, ext-&gt;evbuf.tail);
+                <span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span>        </span>
+            }
+        } <span class="hljs-keyword">else</span> {
+            <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>) {
+                <span class="hljs-comment">// &#x89E3;&#x6790;</span>
+                <span class="hljs-keyword">if</span> (!input_even_get(&amp;ext-&gt;evbuf, even))
+                    <span class="hljs-keyword">break</span>;
+                task_yield();
+            }
+        }
+    } <span class="hljs-keyword">else</span> {
+        status = IO_FAILED;
+    }
+    <span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> DEBUG_DRV</span>
+    keprint(PRINT_DEBUG <span class="hljs-string">&quot;key even get: type=%d code=%x value=%d\n&quot;</span>, even-&gt;type, even-&gt;code, even-&gt;value);
+    keprint(PRINT_DEBUG <span class="hljs-string">&quot;key even buf: head=%d tail=%d\n&quot;</span>, ext-&gt;evbuf.head, ext-&gt;evbuf.tail);
+    <span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span>     </span>
+    ioreq-&gt;io_status.status = status;
+    <span class="hljs-comment">/* &#x8C03;&#x7528;&#x5B8C;&#x6210;&#x8BF7;&#x6C42; */</span>
+    io_complete_request(ioreq);
+
+    <span class="hljs-keyword">return</span> status;
+}
+</code></pre>
+<p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>ioreq-&gt;parame.read.length</code>&#x6765;&#x83B7;&#x53D6;&#x8981;&#x8BFB;&#x53D6;&#x6570;&#x636E;&#x7684;&#x957F;&#x5EA6;&#x3002;&#x56E0;&#x4E3A;device flags&#x662F;0&#xFF0C;&#x6240;&#x4EE5;&#x901A;&#x8FC7;<code>ioreq-&gt;user_buffer</code>&#x6765;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x7F13;&#x51B2;&#x533A;&#x3002;&#x8BFB;&#x53D6;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x8C03;&#x7528;<code>io_complete_request(ioreq);</code>&#x6765;&#x5B8C;&#x6210;&#x8BFB;&#x53D6;&#x3002;</p>
+<h2 id="&#x8BBE;&#x5907;&#x63A7;&#x5236;">&#x8BBE;&#x5907;&#x63A7;&#x5236;</h2>
+<pre><code class="lang-c"><span class="hljs-keyword">iostatus_t</span> keyboard_devctl(<span class="hljs-keyword">device_object_t</span> *device, <span class="hljs-keyword">io_request_t</span> *ioreq)
+{
+    <span class="hljs-keyword">device_extension_t</span> *extension = device-&gt;device_extension;
+
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> ctlcode = ioreq-&gt;parame.devctl.code;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> leds;
+    <span class="hljs-keyword">iostatus_t</span> status;
+
+    <span class="hljs-keyword">switch</span> (ctlcode) {
+    <span class="hljs-keyword">case</span> EVENIO_GETLED:
+        leds =  extension-&gt;num_lock | 
+            (extension-&gt;caps_lock &lt;&lt; <span class="hljs-number">1</span>) |
+            (extension-&gt;scroll_lock &lt;&lt; <span class="hljs-number">2</span>);
+        *(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> *) ioreq-&gt;parame.devctl.arg = leds;
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> EVENIO_SETFLG:
+        extension-&gt;flags = *(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> *) ioreq-&gt;parame.devctl.arg;
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> EVENIO_GETFLG:
+        *(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> *) ioreq-&gt;parame.devctl.arg = extension-&gt;flags;
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">default</span>:
+        status = IO_FAILED;
+        <span class="hljs-keyword">break</span>;
+    }
+    ioreq-&gt;io_status.status = status;
+    ioreq-&gt;io_status.infomation = <span class="hljs-number">0</span>;
+    io_complete_request(ioreq);
+    <span class="hljs-keyword">return</span> status;
+}
+</code></pre>
+<p>&#x8BBE;&#x5907;&#x63A7;&#x5236;&#x662F;&#x5BF9;&#x8BBE;&#x5907;&#x8FDB;&#x884C;&#x4E00;&#x4E2A;IO&#x63A7;&#x5236;&#xFF0C;&#x53EF;&#x4EE5;&#x4ECE;&#x8BBE;&#x5907;&#x83B7;&#x53D6;&#x6216;&#x8005;&#x5199;&#x5165;&#x914D;&#x7F6E;&#x3002;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;&#x6211;&#x4EEC;&#x901A;&#x8FC7;<code>ioreq-&gt;parame.devctl.code</code>&#x83B7;&#x53D6;&#x63A7;&#x5236;&#x7801;&#xFF0C;&#x5728;&#x7528;switch&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x63A7;&#x5236;&#x7801;&#x6267;&#x884C;&#x4E0D;&#x540C;&#x7684;&#x64CD;&#x4F5C;&#x3002;&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x53EF;&#x4EE5;&#x4F20;&#x4E00;&#x4E2A;&#x53C2;&#x6570;&#x5730;&#x5740;<code>ioreq-&gt;parame.devctl.arg</code>&#xFF0C;&#x7136;&#x540E;&#x53EF;&#x4EE5;&#x4ECE;&#x53C2;&#x6570;&#x5730;&#x5740;&#x4E0A;&#x8BFB;&#x53D6;&#x6216;&#x8005;&#x5199;&#x5165;&#x6570;&#x636E;&#x3002;</p>
+<h2 id="&#x4E2D;&#x65AD;&#x5904;&#x7406;">&#x4E2D;&#x65AD;&#x5904;&#x7406;</h2>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">keyboard_handler</span><span class="hljs-params">(irqno_t irq, <span class="hljs-keyword">void</span> *data)</span>
+</span>{
+    <span class="hljs-keyword">device_extension_t</span> *ext = (<span class="hljs-keyword">device_extension_t</span> *) data;
+    ...xxx...
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+irq_register(devext-&gt;irq, keyboard_handler, IRQF_DISABLED, <span class="hljs-string">&quot;IRQ1&quot;</span>, DRV_NAME, (<span class="hljs-keyword">void</span> *) devext);
+</code></pre>
+<p>&#x5728;&#x8FD9;&#x4E2A;&#x952E;&#x76D8;&#x9A71;&#x52A8;&#x4F8B;&#x5B50;&#x4E2D;&#xFF0C;<code>flags</code>&#x662F;<code>IRQF_DISABLED</code>&#xFF0C;&#x8868;&#x793A;&#x5728;&#x952E;&#x76D8;&#x4E2D;&#x65AD;&#x51FD;&#x6570;&#x5904;&#x7406;&#x671F;&#x95F4;&#x9700;&#x8981;&#x5173;&#x95ED;&#x4E2D;&#x65AD;&#xFF0C;<code>data</code>&#x662F;<code>devext</code>&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x53EF;&#x4EE5;&#x5728;<code>keyboard_handler</code>&#x4E2D;&#x901A;&#x8FC7;<code>data</code>&#x4F20;&#x5165;&#xFF0C;&#x4ECE;&#x800C;&#x53EF;&#x4EE5;&#x89E3;&#x6790;&#x51FA;&#x5BF9;&#x5E94;&#x7684;&#x63A5;&#x53E3;&#x4F53;&#xFF0C;&#x6765;&#x6EE1;&#x8DB3;&#x6211;&#x4EEC;&#x7684;&#x4F7F;&#x7528;&#x3002;</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; BookOS-developers 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-06-16
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="ahci.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: AHCI磁盘驱动分析">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"PS/2键盘驱动分析","level":"1.1.3.5.2","depth":4,"next":{"title":"用户","level":"1.1.4","depth":2,"ref":"","articles":[{"title":"用户编程","level":"1.1.4.1","depth":3,"path":"programing-manual/user/user.md","ref":"programing-manual/user/user.md","articles":[]}]},"previous":{"title":"AHCI磁盘驱动分析","level":"1.1.3.5.1","depth":4,"path":"programing-manual/device/ahci.md","ref":"programing-manual/device/ahci.md","articles":[]},"dir":"ltr"},"config":{"plugins":["tbfed-pagefooter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy BookOS-developers 2021","modify_label":"修订时间：","modify_format":"YYYY-MM-DD"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"jason hu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"book for xbook2","language":"zh-hans","links":{"sidebar":{"bookos":"https://book-os.org"}},"gitbook":"3.2.3","description":"document for xbook2 kernel"},"file":{"path":"programing-manual/device/keyboard.md","mtime":"2021-06-16T14:03:55.636Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-16T14:18:02.822Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,657 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>用户编程 · book for xbook2</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="jason hu">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://book-os.org" target="_blank" class="custom-link">bookos</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <span>
+            
+                    
+                    xbook2文档中心
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" >
+            
+                <span>
+            
+                    
+                    简介
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    xbook2 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" >
+            
+                <span>
+            
+                    
+                    快速上手
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.1" data-path="../../tutorial/quick-start.html">
+            
+                <a href="../../tutorial/quick-start.html">
+            
+                    
+                    Qemu x86
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" >
+            
+                <span>
+            
+                    
+                    内核
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.1" data-path="../base/base.html">
+            
+                <a href="../base/base.html">
+            
+                    
+                    内核基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2" data-path="../task/task.html">
+            
+                <a href="../task/task.html">
+            
+                    
+                    任务管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3" data-path="../timer/timer.html">
+            
+                <a href="../timer/timer.html">
+            
+                    
+                    时钟管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.4" data-path="../mm/mm.html">
+            
+                <a href="../mm/mm.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.5" data-path="../device/device.html">
+            
+                <a href="../device/device.html">
+            
+                    
+                    设备管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.5.1" data-path="../device/ahci.html">
+            
+                <a href="../device/ahci.html">
+            
+                    
+                    AHCI磁盘驱动分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.5.2" data-path="../device/keyboard.html">
+            
+                <a href="../device/keyboard.html">
+            
+                    
+                    PS/2键盘驱动分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" >
+            
+                <span>
+            
+                    
+                    用户
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.1.4.1" data-path="user.html">
+            
+                <a href="user.html">
+            
+                    
+                    用户编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" >
+            
+                <span>
+            
+                    
+                    other
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1" data-path="../../other/FAQS.html">
+            
+                <a href="../../other/FAQS.html">
+            
+                    
+                    FAQS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >用户编程</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x7528;&#x6237;&#x7F16;&#x7A0B;">&#x7528;&#x6237;&#x7F16;&#x7A0B;</h1>
+<p>&#x6211;&#x4EEC;&#x63D0;&#x4F9B;&#x4E86;&#x4E00;&#x4E9B;&#x6700;&#x7B80;&#x5355;&#x800C;&#x57FA;&#x7840;&#x7684;&#x5E93;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;&#x6B64;&#x57FA;&#x7840;&#x4E0A;&#x5F00;&#x53D1;&#x4E00;&#x4E9B;&#x7B80;&#x5355;&#x7684;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x3002;</p>
+<h2 id="&#x7A0B;&#x5E8F;&#x5E93;">&#x7A0B;&#x5E8F;&#x5E93;</h2>
+<table>
+<thead>
+<tr>
+<th>&#x5E93;</th>
+<th>&#x63CF;&#x8FF0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>xcrt</td>
+<td>crt&#x5E93;&#xFF0C;&#x72EC;&#x7ACB;&#x51FA;&#x6765;&#x7684;c runtime&#x63A5;&#x53E3;</td>
+</tr>
+<tr>
+<td>xlibc</td>
+<td>xbook2 libc&#x6807;&#x51C6;c&#x5E93;</td>
+</tr>
+<tr>
+<td>pthread</td>
+<td>xbook2&#x652F;&#x6301;&#x7684;pthread&#x7EBF;&#x7A0B;&#x5E93;</td>
+</tr>
+<tr>
+<td>sconf</td>
+<td>simple config &#x7B80;&#x5355;&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x5E93;</td>
+</tr>
+<tr>
+<td>xlibcpp</td>
+<td>xbook2 libc&#x6807;&#x51C6;cpp&#x5E93;</td>
+</tr>
+<tr>
+<td>uview</td>
+<td>&#x5185;&#x6838;view&#x56FE;&#x5F62;&#x9A71;&#x52A8;&#x7528;&#x6237;&#x6001;&#x5C01;&#x88C5;&#x7684;&#x5E93;</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x5E94;&#x7528;&#x7A0B;&#x5E8F;">&#x5E94;&#x7528;&#x7A0B;&#x5E8F;</h2>
+<h3 id="ls&#x7A0B;&#x5E8F;&#x89E3;&#x6790;">ls&#x7A0B;&#x5E8F;&#x89E3;&#x6790;</h3>
+<p>&#x8981;&#x5F00;&#x53D1;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#xFF0C;&#x5C31;&#x9700;&#x8981;&#x5728;<code>xbook2/bin</code>&#x76EE;&#x5F55;&#x4E0B;&#x9762;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF0C;&#x7136;&#x540E;&#x5728;<code>xbook2/bin/Makefile</code>&#x4E2D;&#x6DFB;&#x52A0;&#x7A0B;&#x5E8F;&#x540D;&#x3002;</p>
+<pre><code class="lang-makefile">MODULE      +=  ls
+</code></pre>
+<p>&#x7136;&#x540E;&#x5728;ls&#x91CC;&#x9762;&#x7684;<code>Makefile(xbook2/bin/ls/Makefile)</code>&#x4E2D;&#x6DFB;&#x52A0;&#x5BF9;&#x5E94;&#x7684;c&#x6E90;&#x6587;&#x4EF6;&#x548C;&#x5934;&#x6587;&#x4EF6;&#xFF0C;&#x4EE5;&#x53CA;&#x9700;&#x8981;&#x94FE;&#x63A5;&#x7684;&#x5E93;&#x540D;&#x3002;</p>
+<pre><code class="lang-makefile">X_LIBS        += libxlibc.a # &#x6DFB;&#x52A0;&#x5E93;&#x540D;lib+name+.a
+
+NAME        := ls # &#x7A0B;&#x5E8F;&#x7F16;&#x8BD1;&#x540E;&#x7684;&#x540D;&#x5B57;
+SRC            += main.c # &#x9700;&#x8981;&#x7F16;&#x8BD1;&#x7684;&#x6E90;&#x7A0B;&#x5E8F;
+
+define CUSTOM_TARGET_CMD
+echo [APP] $@; \
+$(LD) $(X_LDFLAGS) $(X_OBJS) -o $@ $(patsubst %, -L%, $(X_LIBDIRS)) --start-group $(patsubst %, -l:%, $(X_LIBS)) --end-group; \
+cp $@ $(srctree)/../develop/rom/bin
+endef
+</code></pre>
+<p>&#x5982;&#x679C;&#x8981;&#x6DFB;&#x52A0;&#x5934;&#x6587;&#x4EF6;&#x5C31;<code>X_INCDIRS+=</code>&#x5934;&#x6587;&#x4EF6;&#x76EE;&#x5F55;&#x5373;&#x53EF;&#x3002;&#x4F8B;&#x5982;<code>X_INCDIRS+= ls/include</code>&#xFF0C;&#x6CE8;&#x610F;&#x8FD9;&#x91CC;&#x9700;&#x8981;&#x52A0;<code>ls</code>&#x518D;&#x52A0;<code>include</code>&#x3002;&#x4E5F;&#x5C31;&#x662F;&#x7A0B;&#x5E8F;&#x76EE;&#x5F55;&#x540D;+&#x7A0B;&#x5E8F;&#x5934;&#x6587;&#x4EF6;&#x8DEF;&#x5F84;&#x3002;</p>
+<p>&#x6700;&#x540E;&#x5C31;&#x662F;&#x5B9E;&#x73B0;<code>main.c</code>&#x91CC;&#x9762;&#x7684;&#x4EE3;&#x7801;&#x6765;&#x5B9E;&#x73B0;&#x4F60;&#x7684;&#x529F;&#x80FD;&#x4E86;&#xFF0C;<code>ls</code>&#x7684;&#x529F;&#x80FD;&#x5C31;&#x662F;&#x663E;&#x793A;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x4E0B;&#x9762;&#x7684;&#x6587;&#x4EF6;&#x540D;&#x3002;</p>
+<p>&#x7F16;&#x5199;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x9700;&#x8981;&#x7F16;&#x8BD1;&#x624D;&#x884C;&#xFF0C;&#x8FD9;&#x91CC;&#x53EF;&#x4EE5;&#x5728;&#x7EC8;&#x7AEF;&#x8F93;&#x5165;<code>make user</code>&#xFF0C;&#x5C31;&#x80FD;&#x81EA;&#x52A8;&#x7F16;&#x8BD1;&#x4FEE;&#x6539;&#x8FC7;&#x7684;&#x7A0B;&#x5E8F;&#x4E86;&#x3002;</p>
+<p>&#x7F16;&#x8BD1;&#x597D;&#x540E;&#xFF0C;<code>make run</code>&#x5728;&#x865A;&#x62DF;&#x673A;&#x4E2D;&#x542F;&#x52A8;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5728;<code>xbook2</code>&#x7684;<code>/bin</code>&#x76EE;&#x5F55;&#x4E0B;&#x9762;&#x770B;&#x5230;ls&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#x3002;&#x56E0;&#x4E3A;&#x73AF;&#x5883;&#x53D8;&#x91CF;&#x4E2D;&#x6709;<code>/bin</code>&#xFF0C;&#x6240;&#x4EE5;&#x4F60;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x8F93;&#x5165;<code>ls</code>&#x6765;&#x6267;&#x884C;&#x8FD9;&#x4E2A;&#x7A0B;&#x5E8F;&#xFF0C;&#x4E8E;&#x662F;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x5F53;&#x524D;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x4E0B;&#x9762;&#x7684;&#x6587;&#x4EF6;&#x4E86;&#x3002;</p>
+<p>&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;<code>+=</code>&#x7684;&#x610F;&#x601D;&#x662F;&#x5728;&#x539F;&#x6709;&#x7684;&#x5185;&#x5BB9;&#x4E0A;&#x9762;&#x589E;&#x52A0;&#x65B0;&#x5185;&#x5BB9;&#xFF0C;<code>:=</code>&#x7684;&#x610F;&#x601D;&#x662F;&#x5F53;&#x524D;&#x7684;&#x5185;&#x5BB9;&#x4F1A;&#x66FF;&#x4EE3;&#x524D;&#x9762;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x8FD9;&#x4E2A;&#x662F;Makefile&#x7684;&#x77E5;&#x8BC6;&#x3002;</p>
+<h3 id="bash&#x7A0B;&#x5E8F;&#x89E3;&#x6790;">bash&#x7A0B;&#x5E8F;&#x89E3;&#x6790;</h3>
+<p>&#x5728;&#x770B;&#x4E00;&#x4E2A;&#x53D1;&#x6742;&#x70B9;&#x7684;&#x7A0B;&#x5E8F;bash&#xFF0C;&#x5B83;&#x7684;<code>Makefile(xbook2/bin/bash/Makefile)</code>&#x7684;&#x5185;&#x5BB9;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-makefile">X_LIBS        += libxlibc.a libsconf.a
+
+X_INCDIRS    += bash/ bash/include bash/lib
+
+Program = bash
+Version = 5.1
+Machine = x86
+OS = bookos
+VENDOR = pc
+MACHTYPE = x86-pc-bookos
+localedir = /usr/local
+PACKAGE = bash
+prefix = /usr/local
+aliaspath = <span class="hljs-variable">$(prefix)</span>/data/locale
+
+X_CFLAGS    += -w -DPROGRAM=&apos;&quot;<span class="hljs-variable">$(Program)</span>&quot;&apos; -DCONF_HOSTTYPE=&apos;&quot;<span class="hljs-variable">$(Machine)</span>&quot;&apos;\
+            -DCONF_OSTYPE=&apos;&quot;$(OS)&quot;&apos; -DCONF_MACHTYPE=&apos;&quot;$(MACHTYPE)&quot;&apos; \
+            -DCONF_VENDOR=&apos;&quot;$(VENDOR)&quot;&apos; -DLOCALEDIR=&apos;&quot;$(localedir)&quot;&apos; -DPACKAGE=&apos;&quot;$(PACKAGE)&quot;&apos; \
+            -DHAVE_CONFIG_H -DLIBDIR=\&quot;$(prefix)/libdata\&quot; -DLOCALE_ALIAS_PATH=\&quot;$(aliaspath)\&quot; \
+            -D__XBOOK__ -DIN_LIBINTL
+
+NAME        := bash
+SRC            += shell.c eval.c general.c make_cmd.c print_cmd.c y.tab.c \
+            dispose_cmd.c execute_cmd.c variables.c version.c \
+            expr.c copy_cmd.c flags.c subst.c hashcmd.c hashlib.c mailcheck.c \
+            test.c trap.c alias.c nojobs.c braces.c \
+            input.c bashhist.c array.c arrayfunc.c assoc.c sig.c pathexp.c \
+            unwind_prot.c siglist.c bashline.c bracecomp.c error.c \
+            list.c stringlib.c locale.c findcmd.c redir.c \
+            pcomplete.c pcomplib.c syntax.c xmalloc.c
+
+SRC            += builtins/*.c
+
+SRC            += lib/glob/glob.c
+SRC            += lib/glob/strmatch.c
+SRC            += lib/glob/smatch.c
+SRC            += lib/glob/xmbsrtowcs.c
+SRC            += lib/glob/gmisc.c
+SRC            += lib/tilde/tilde.c
+
+SRC            += lib/sh/*.c
+
+SRC            += lib/termcap/termcap.c
+SRC            += lib/termcap/tparm.c
+SRC            += lib/intl/bindtextdom.c
+SRC            += lib/intl/dcgettext.c
+SRC            += lib/intl/dgettext.c
+SRC            += lib/intl/gettext.c
+SRC            += lib/intl/finddomain.c
+SRC            += lib/intl/loadmsgcat.c
+SRC            += lib/intl/localealias.c
+SRC            += lib/intl/textdomain.c
+SRC            += lib/intl/l10nflist.c
+SRC            += lib/intl/explodename.c
+SRC            += lib/intl/dcigettext.c
+SRC            += lib/intl/dcngettext.c
+SRC            += lib/intl/dngettext.c
+SRC            += lib/intl/ngettext.c
+SRC            += lib/intl/plural.c
+SRC            += lib/intl/plural-exp.c
+SRC            += lib/intl/localcharset.c
+SRC            += lib/intl/relocatable.c
+SRC            += lib/intl/localename.c
+SRC            += lib/intl/log.c
+SRC            += lib/intl/osdep.c
+SRC            += lib/intl/intl-compat.c
+
+SRC            +=     lib/readline/readline.c lib/readline/funmap.c lib/readline/keymaps.c \
+                lib/readline/vi_mode.c lib/readline/parens.c lib/readline/rltty.c \
+                lib/readline/complete.c lib/readline/bind.c lib/readline/isearch.c \
+                lib/readline/display.c lib/readline/signals.c \
+                lib/readline/util.c lib/readline/kill.c \
+                lib/readline/undo.c lib/readline/macro.c lib/readline/input.c \
+                lib/readline/callback.c lib/readline/terminal.c \
+                lib/readline/history.c lib/readline/histsearch.c lib/readline/histexpand.c \
+                lib/readline/histfile.c lib/readline/nls.c lib/readline/search.c \
+                lib/readline/savestring.c \
+                lib/readline/text.c lib/readline/misc.c lib/readline/compat.c \
+                lib/readline/colors.c lib/readline/parse-colors.c \
+                lib/readline/mbutil.c
+
+define CUSTOM_TARGET_CMD
+echo [APP] $@; \
+$(LD) $(X_LDFLAGS) $(X_OBJS) -o $@ $(patsubst %, -L%, $(X_LIBDIRS)) --start-group $(patsubst %, -l:%, $(X_LIBS)) --end-group; \
+cp $@ $(srctree)/../develop/rom/bin
+endef
+</code></pre>
+<p>&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x7528;&#x4E86;2&#x4E2A;&#x5E93;&#xFF0C;&#x662F;<code>libxlibc.a</code>&#x548C;<code>libsconf.a</code>&#xFF0C;&#x5934;&#x6587;&#x4EF6;&#x5F15;&#x5165;&#x4E86;<code>bash/ bash/include bash/lib</code>&#xFF0C;&#x8FD9;&#x6837;&#x8BBE;&#x7F6E;&#x4E4B;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x7A0B;&#x5E8F;&#x4E2D;&#x76F4;&#x63A5;<code>&lt;xxx.h&gt;</code>&#x627E;&#x5230;&#x4F4D;&#x4E8E;<code>bash</code>&#x76EE;&#x5F55;&#x4E0B;&#x9762;&#x7684;&#x67D0;&#x4E2A;&#x5934;&#x6587;&#x4EF6;&#x4E86;&#xFF0C;&#x4E0D;&#x7136;&#x7F16;&#x8BD1;&#x5668;&#x627E;&#x4E0D;&#x5230;&#x7684;&#x3002;</p>
+<p>&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x4FEE;&#x6539;&#x4E86;&#x7F16;&#x8BD1;&#x7684;flags&#xFF0C;&#x5728;&#x8FD9;&#x91CC;&#xFF0C;bash&#x989D;&#x5916;&#x589E;&#x52A0;&#x4E86;&#x4E00;&#x4E9B;&#x6807;&#x5FD7;&#xFF1A;</p>
+<pre><code class="lang-makefile">-w -DPROGRAM=&apos;&quot;$(Program)&quot;&apos; -DCONF_HOSTTYPE=&apos;&quot;$(Machine)&quot;&apos;\
+            -DCONF_OSTYPE=&apos;&quot;$(OS)&quot;&apos; -DCONF_MACHTYPE=&apos;&quot;$(MACHTYPE)&quot;&apos; \
+            -DCONF_VENDOR=&apos;&quot;$(VENDOR)&quot;&apos; -DLOCALEDIR=&apos;&quot;$(localedir)&quot;&apos; -DPACKAGE=&apos;&quot;$(PACKAGE)&quot;&apos; \
+            -DHAVE_CONFIG_H -DLIBDIR=\&quot;$(prefix)/libdata\&quot; -DLOCALE_ALIAS_PATH=\&quot;$(aliaspath)\&quot; \
+            -D__XBOOK__ -DIN_LIBINTL
+</code></pre>
+<p>&#x901A;&#x5E38;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x5728;&#x7F16;&#x8BD1;&#x65F6;&#x589E;&#x52A0;&#x4E00;&#x4E9B;&#x989D;&#x5916;&#x7684;&#x5B8F;&#x5B9A;&#x4E49;&#x6216;&#x8005;&#x662F;&#x53C2;&#x6570;&#x4EC0;&#x4E48;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;<code>X_CFLAGS += xxx</code>&#x5B9E;&#x73B0;&#x3002;</p>
+<h2 id="&#x7F16;&#x8BD1;&#x5668;&#x6807;&#x5FD7;">&#x7F16;&#x8BD1;&#x5668;&#x6807;&#x5FD7;</h2>
+<p>&#x6700;&#x540E;&#x5217;&#x51FA;&#x4E00;&#x4E9B;&#x53EF;&#x4FEE;&#x6539;&#x7684;&#x53D8;&#x91CF;&#x4F9B;&#x53C2;&#x8003;&#xFF1A;</p>
+<pre><code class="lang-makefile"><span class="hljs-comment"># compiler&apos;s flags</span>
+X_ASFLAGS    :=     # &#x6C47;&#x7F16;&#x6807;&#x5FD7; 
+X_CFLAGS    :=    # C&#x8BED;&#x8A00;&#x6807;&#x5FD7;
+X_CXXFLAGS    :=    # cxx&#x6807;&#x5FD7;
+X_LDFLAGS    :=  # &#x94FE;&#x63A5;&#x5668;&#x6807;&#x5FD7;
+X_LIBDIRS    :=    # &#x5E93;&#x76EE;&#x5F55;
+X_LIBS        :=    # &#x5E93;&#x540D;
+X_DEFINES    :=    # &#x5B9A;&#x4E49;&#x4E00;&#x4E9B;&#x5B8F;
+X_INCDIRS    :=    # &#x8BBE;&#x7F6E;&#x5934;&#x6587;&#x4EF6;&#x76EE;&#x5F55;
+X_INCS        :=    # &#x5BFC;&#x5165;&#x5934;&#x6587;&#x4EF6;
+X_CPPFLAGS    :=    # cpp&#x6807;&#x5FD7;
+</code></pre>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; BookOS-developers 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-06-16
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"用户编程","level":"1.1.4.1","depth":3,"next":{"title":"other","level":"1.1.5","depth":2,"ref":"","articles":[{"title":"FAQS","level":"1.1.5.1","depth":3,"path":"other/FAQS.md","ref":"other/FAQS.md","articles":[]}]},"previous":{"title":"用户","level":"1.1.4","depth":2,"ref":"","articles":[{"title":"用户编程","level":"1.1.4.1","depth":3,"path":"programing-manual/user/user.md","ref":"programing-manual/user/user.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["tbfed-pagefooter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy BookOS-developers 2021","modify_label":"修订时间：","modify_format":"YYYY-MM-DD"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"jason hu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"book for xbook2","language":"zh-hans","links":{"sidebar":{"bookos":"https://book-os.org"}},"gitbook":"3.2.3","description":"document for xbook2 kernel"},"file":{"path":"programing-manual/user/user.md","mtime":"2021-06-16T14:03:55.636Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-16T14:18:02.822Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

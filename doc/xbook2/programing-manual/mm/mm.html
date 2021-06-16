@@ -1,0 +1,667 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>内存管理 · book for xbook2</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="jason hu">
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-tbfed-pagefooter/footer.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="../device/device.html" />
+    
+    
+    <link rel="prev" href="../timer/timer.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="https://book-os.org" target="_blank" class="custom-link">bookos</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <span>
+            
+                    
+                    xbook2文档中心
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" >
+            
+                <span>
+            
+                    
+                    简介
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    xbook2 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" >
+            
+                <span>
+            
+                    
+                    快速上手
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.1" data-path="../../tutorial/quick-start.html">
+            
+                <a href="../../tutorial/quick-start.html">
+            
+                    
+                    Qemu x86
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" >
+            
+                <span>
+            
+                    
+                    内核
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.1" data-path="../base/base.html">
+            
+                <a href="../base/base.html">
+            
+                    
+                    内核基础
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2" data-path="../task/task.html">
+            
+                <a href="../task/task.html">
+            
+                    
+                    任务管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3" data-path="../timer/timer.html">
+            
+                <a href="../timer/timer.html">
+            
+                    
+                    时钟管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.3.4" data-path="mm.html">
+            
+                <a href="mm.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.5" data-path="../device/device.html">
+            
+                <a href="../device/device.html">
+            
+                    
+                    设备管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.5.1" data-path="../device/ahci.html">
+            
+                <a href="../device/ahci.html">
+            
+                    
+                    AHCI磁盘驱动分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.5.2" data-path="../device/keyboard.html">
+            
+                <a href="../device/keyboard.html">
+            
+                    
+                    PS/2键盘驱动分析
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" >
+            
+                <span>
+            
+                    
+                    用户
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1" data-path="../user/user.html">
+            
+                <a href="../user/user.html">
+            
+                    
+                    用户编程
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" >
+            
+                <span>
+            
+                    
+                    other
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1" data-path="../../other/FAQS.html">
+            
+                <a href="../../other/FAQS.html">
+            
+                    
+                    FAQS
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >内存管理</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5185;&#x5B58;&#x7BA1;&#x7406;">&#x5185;&#x5B58;&#x7BA1;&#x7406;</h1>
+<p>&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x662F;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x5185;&#x6838;&#x4E2D;&#x91CD;&#x4E2D;&#x4E4B;&#x91CD;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x672C;&#x7AE0;&#x5C06;&#x5E26;&#x4F60;&#x4E86;&#x89E3;xbook2&#x662F;&#x5982;&#x4F55;&#x7BA1;&#x7406;&#x5185;&#x5B58;&#x7684;&#x3002;xbook2&#x7684;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x6E90;&#x4E8E;linux&#x5185;&#x5B58;&#x7BA1;&#x7406;&#xFF0C;&#x4F46;&#x662F;&#x6211;&#x4EEC;&#x505A;&#x5F97;&#x66F4;&#x7B80;&#x5355;&#x3002;</p>
+<h2 id="&#x7269;&#x7406;&#x5185;&#x5B58;">&#x7269;&#x7406;&#x5185;&#x5B58;</h2>
+<p>&#x7269;&#x7406;&#x5185;&#x5B58;&#x662F;&#x5B9E;&#x9645;&#x4E0A;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x7684;&#x5185;&#x5B58;&#x5927;&#x5C0F;&#xFF0C;&#x6BD4;&#x5982;4G&#x7684;&#x5185;&#x5B58;&#x6761;&#xFF0C;&#x6709;4G&#x5185;&#x5B58;&#x3002;&#x4F46;&#x662F;&#x7531;&#x4E8E;&#x67D0;&#x4E9B;&#x539F;&#x56E0;&#xFF0C;&#x4E00;&#x4E9B;&#x8BBE;&#x5907;&#x7684;&#x5BC4;&#x5B58;&#x5668;&#x88AB;&#x6620;&#x5C04;&#x5230;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x64CD;&#x4F5C;&#x5185;&#x5B58;&#x4ECE;&#x800C;&#x64CD;&#x4F5C;&#x8BBE;&#x5907;&#x3002;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x5BFC;&#x81F4;&#x8FD9;&#x90E8;&#x5206;&#x5185;&#x5B58;&#x4E0D;&#x80FD;&#x62FF;&#x6765;&#x50A8;&#x5B58;&#x6570;&#x636E;&#xFF0C;&#x8FD9;&#x5C31;&#x662F;&#x4E00;&#x4E9B;&#x5185;&#x5B58;&#x7A7A;&#x6D1E;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x7269;&#x7406;&#x5185;&#x5B58;&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x5FFD;&#x7565;&#x4E86;&#x8FD9;&#x4E9B;&#x533A;&#x57DF;&#x7684;&#x5185;&#x5B58;&#x5730;&#x5740;&#xFF0C;&#x6211;&#x4EEC;&#x628A;&#x53EF;&#x7528;&#x7684;&#x5185;&#x5B58;&#x6536;&#x96C6;&#x8D77;&#x6765;&#xFF0C;&#x5C06;&#x5B83;&#x4EEC;&#x4EE5;&#x9875;&#xFF08;4096 bytes&#xFF09;&#x7684;&#x5F62;&#x5F0F;&#x8FDB;&#x884C;&#x7BA1;&#x7406;&#x3002;&#x6BCF;&#x4E2A;&#x9875;&#x5C31;&#x662F;&#x6700;&#x5C0F;&#x7684;&#x7269;&#x7406;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x5355;&#x4F4D;&#xFF0C;&#x5206;&#x914D;&#x7269;&#x7406;&#x5185;&#x5B58;&#x65F6;&#x6700;&#x5C0F;&#x90FD;&#x662F;&#x4E00;&#x4E2A;&#x9875;&#x3002;&#x81F3;&#x4E8E;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x4EE5;&#x9875;&#x6765;&#x5206;&#x914D;&#x7269;&#x7406;&#x5185;&#x5B58;&#xFF0C;&#x8FD9;&#x662F;&#x7531;&#x4E8E;&#x5206;&#x9875;&#x673A;&#x5236;&#x5BFC;&#x81F4;&#x7684;&#xFF0C;&#x5206;&#x9875;&#x673A;&#x5236;&#x662F;&#x4EE5;&#x9875;&#x9762;&#x4E3A;&#x7BA1;&#x7406;&#x7684;&#x57FA;&#x7840;&#x5355;&#x4F4D;&#xFF0C;&#x7269;&#x7406;&#x5185;&#x5B58;&#x6B63;&#x597D;&#x4EE5;&#x9875;&#x9762;&#x6765;&#x7BA1;&#x7406;&#xFF0C;&#x5219;&#x53EF;&#x4EE5;&#x5F88;&#x597D;&#x5730;&#x9002;&#x914D;&#x5206;&#x9875;&#x673A;&#x5236;&#x3002;</p>
+<p>&#x5728;xbook2&#x4E2D;&#xFF0C;&#x7269;&#x7406;&#x5185;&#x5B58;&#x662F;&#x4EE5;&#x8282;&#x70B9;&#x4E3A;&#x7BA1;&#x7406;&#x7684;&#xFF0C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x53EF;&#x4EE5;&#x662F;&#x4E00;&#x4E2A;&#x9875;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;&#x4E24;&#x4E2A;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x662F;N&#x4E2A;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> _mem_node {
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> count;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> flags;         
+    <span class="hljs-keyword">int</span> reference; 
+    <span class="hljs-keyword">list_t</span> <span class="hljs-built_in">list</span>;
+    <span class="hljs-keyword">mem_section_t</span> *section;
+    <span class="hljs-keyword">mem_cache_t</span> *cache;
+    <span class="hljs-keyword">mem_group_t</span> *group;
+} <span class="hljs-keyword">mem_node_t</span>;
+</code></pre>
+<p>&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x5185;&#x5B58;&#x8282;&#xFF0C;&#x6BCF;&#x4E2A;&#x8282;&#x4E2D;&#x5B58;&#x653E;&#x4E86;&#x76F8;&#x540C;&#x5927;&#x5C0F;&#x7684;&#x8282;&#x70B9;&#x3002;&#x76EE;&#x524D;&#x6709;12&#x79CD;&#x8282;&#xFF0C;&#x6BCF;&#x4E2A;&#x8282;&#x7684;&#x9875;&#x6570;&#x91CF;&#x5206;&#x522B;&#x662F;2^0,2^1,2^2,....2^10,2^11&#x4E2A;&#x9875;&#x3002;&#x5206;&#x914D;&#x5185;&#x5B58;&#x65F6;&#xFF0C;&#x5C31;&#x4ECE;&#x67D0;&#x4E2A;&#x8282;&#x79CD;&#x53BB;&#x5206;&#x914D;&#x8282;&#x70B9;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MEM_SECTION_MAX_NR      12</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MEM_SECTION_MAX_SIZE    2048    <span class="hljs-comment">// (2 ^ 11) : 8 MB</span></span>
+
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> {
+    <span class="hljs-keyword">list_t</span> free_list_head;
+    <span class="hljs-keyword">size_t</span> node_count;
+    <span class="hljs-keyword">size_t</span> section_size;
+} <span class="hljs-keyword">mem_section_t</span>;
+</code></pre>
+<p>&#x800C;&#x8282;&#x7684;&#x7BA1;&#x7406;&#xFF0C;&#x662F;&#x901A;&#x8FC7;&#x5185;&#x5B58;&#x533A;&#x57DF;&#x7BA1;&#x7406;&#x7684;&#xFF0C;&#x6BCF;&#x4E2A;&#x533A;&#x57DF;&#xFF0C;&#x53EF;&#x4EE5;&#x7BA1;&#x7406;&#x4E0D;&#x540C;&#x5927;&#x5C0F;&#x7684;&#x8282;&#x3002;&#x76EE;&#x524D;&#x652F;&#x6301;3&#x79CD;&#x7C7B;&#x578B;&#x7684;&#x5185;&#x5B58;&#x533A;&#x57DF;&#xFF0C;&#x5206;&#x522B;&#x662F;<code>MEM_RANGE_DMA&#x3001;MEM_RANGE_NORMAL&#x548C;MEM_RANGE_USER</code>&#xFF0C;&#x4ED6;&#x4EEC;&#x7684;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">enum</span> {
+    MEM_RANGE_DMA = <span class="hljs-number">0</span>,
+    MEM_RANGE_NORMAL,
+    MEM_RANGE_USER,
+    MEM_RANGE_NR
+};
+
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> {
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> start;
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">int</span> end;
+    <span class="hljs-keyword">size_t</span> pages;
+    <span class="hljs-keyword">mem_section_t</span> sections[MEM_SECTION_MAX_NR];
+    <span class="hljs-keyword">mem_node_t</span> *node_table;
+} <span class="hljs-keyword">mem_range_t</span>;
+</code></pre>
+<p>&#x6700;&#x540E;&#xFF0C;&#x901A;&#x8FC7;2&#x4E2A;&#x63A5;&#x53E3;&#x6765;&#x8FDB;&#x884C;&#x7269;&#x7406;&#x9875;&#x7684;&#x5206;&#x914D;&#x4E0E;&#x91CA;&#x653E;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-comment">/* 
+&#x5206;&#x914D;count&#x4E2A;&#x9875;
+flags&#x4F20;&#x5165;&#x4E0D;&#x540C;&#x8303;&#x56F4;&#x7684;&#x9875;&#xFF1A;
+MEM_NODE_TYPE_DMA&#xFF1A; &#x4ECE;MEM_RANGE_DMA&#x4E2D;&#x5206;&#x914D;&#x9875;
+MEM_NODE_TYPE_NORMAL&#xFF1A; &#x4ECE;MEM_RANGE_NORMAL&#x4E2D;&#x5206;&#x914D;&#x9875;
+MEM_NODE_TYPE_USER&#xFF1A; &#x4ECE;MEM_RANGE_USER&#x4E2D;&#x5206;&#x914D;&#x9875;
+*/</span>
+<span class="hljs-function"><span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> <span class="hljs-title">mem_node_alloc_pages</span><span class="hljs-params">(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> count, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> flags)</span></span>;
+<span class="hljs-comment">/* &#x91CA;&#x653E;&#x9875;&#x5730;&#x5740;&#x5BF9;&#x5E94;&#x7684;&#x9875; */</span>
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">mem_node_free_pages</span><span class="hljs-params">(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> page)</span></span>;
+</code></pre>
+<h2 id="&#x5206;&#x9875;&#x673A;&#x5236;">&#x5206;&#x9875;&#x673A;&#x5236;</h2>
+<p>&#x5206;&#x9875;&#x673A;&#x5236;&#x4F7F;&#x5F97;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x5F97;&#x4EE5;&#x5B9E;&#x73B0;&#x3002;&#x652F;&#x6301;&#x5206;&#x9875;&#x7684;&#x5904;&#x7406;&#x5668;&#x90FD;&#x6709;&#x4E00;&#x4E2A;&#x7279;&#x70B9;&#xFF0C;&#x5C31;&#x662F;&#x6709;&#x4E00;&#x4E2A;&#x8BB0;&#x5F55;&#x9875;&#x8868;&#x7684;&#x5BC4;&#x5B58;&#x5668;&#xFF0C;&#x5728;&#x5F00;&#x542F;&#x5206;&#x9875;&#x540E;&#xFF0C;&#x5BFB;&#x5740;&#x5C31;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x9875;&#x8868;&#x8FDB;&#x884C;&#x8F6C;&#x6362;&#xFF0C;&#x624D;&#x80FD;&#x8BBF;&#x95EE;&#x5230;&#x7269;&#x7406;&#x5730;&#x5740;&#x3002;&#x56E0;&#x6B64;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x63D0;&#x4F9B;&#x9875;&#x8868;&#x6620;&#x5C04;&#x548C;&#x89E3;&#x9664;&#x6620;&#x5C04;&#xFF0C;&#x4EE5;&#x53CA;&#x5730;&#x5740;&#x8F6C;&#x6362;&#x7684;&#x51FD;&#x6570;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">page_map_addr</span><span class="hljs-params">(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> start, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> len, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> prot)</span></span>;
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">page_unmap_addr</span><span class="hljs-params">(<span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> vaddr, <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> len)</span></span>;
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> kern_vir_addr2phy_addr(x) ((unsigned long)(x) - KERN_BASE_VIR_ADDR)</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> kern_phy_addr2vir_addr(x) ((void *)((unsigned long)(x) + KERN_BASE_VIR_ADDR))</span>
+</code></pre>
+<p>&#x4E0D;&#x8FC7;&#x8FD9;&#x79CD;&#x5185;&#x5B58;&#x5730;&#x5740;&#x8F6C;&#x6362;&#x53EA;&#x9002;&#x5408;&#x4E0E;&#x5185;&#x6838;&#xFF0C;&#x56E0;&#x4E3A;&#x5185;&#x6838;&#x5728;&#x6267;&#x884C;&#x65F6;&#xFF0C;&#x505A;&#x4E86;&#x5185;&#x5B58;&#x6620;&#x5C04;&#xFF0C;&#x76F4;&#x63A5;&#x628A;&#x7269;&#x7406;&#x5730;&#x5740;&#x548C;&#x865A;&#x62DF;&#x5730;&#x5740;&#x505A;&#x4E86;&#x4E00;&#x4E00;&#x6620;&#x5C04;&#xFF0C;&#x53EA;&#x8981;&#x548C;&#x5185;&#x6838;&#x57FA;&#x5730;&#x5740;&#x8FDB;&#x884C;&#x52A0;&#x6216;&#x8005;&#x51CF;&#xFF0C;&#x5C31;&#x80FD;&#x5F97;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x7269;&#x7406;&#x5730;&#x5740;&#x548C;&#x865A;&#x62DF;&#x5730;&#x5740;&#x4E86;&#x3002;</p>
+<p>&#x5185;&#x6838;&#x5728;&#x6253;&#x5F00;&#x5206;&#x9875;&#x6A21;&#x5F0F;&#x524D;&#xFF0C;&#x9700;&#x8981;&#x505A;&#x9875;&#x8868;&#x6620;&#x5C04;&#xFF0C;&#x6620;&#x5C04;&#x540E;&#x624D;&#x80FD;&#x6B63;&#x5E38;&#x6267;&#x884C;&#xFF0C;&#x4E0D;&#x7136;&#x8BBF;&#x95EE;&#x7684;&#x5730;&#x5740;&#x90FD;&#x662F;&#x672A;&#x6620;&#x5C04;&#x7684;&#xFF0C;&#x5C31;&#x51FA;&#x9519;&#x4E86;&#x3002;</p>
+<h2 id="&#x5185;&#x6838;&#x5185;&#x5B58;&#x7BA1;&#x7406;">&#x5185;&#x6838;&#x5185;&#x5B58;&#x7BA1;&#x7406;</h2>
+<p>&#x5185;&#x6838;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x662F;&#x4F7F;&#x7528;&#x7684;memcache&#x6765;&#x7BA1;&#x7406;&#x7684;&#xFF0C;&#x6BCF;&#x4E00;&#x4E2A;mem_cache&#x7BA1;&#x7406;&#x7740;&#x5927;&#x5C0F;&#x4E00;&#x6837;&#x7684;&#x5185;&#x5B58;&#x5BF9;&#x8C61;&#xFF0C;&#x800C;&#x8FD9;&#x4E9B;&#x5185;&#x5B58;&#x5BF9;&#x8C61;&#x5219;&#x7531;mem_group&#x6765;&#x7BA1;&#x7406;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> mem_group {
+    <span class="hljs-keyword">list_t</span> <span class="hljs-built_in">list</span>;           <span class="hljs-comment">// &#x6307;&#x5411;cache&#x4E2D;&#x7684;&#x67D0;&#x4E2A;&#x94FE;&#x8868;&#xFF08;full, partial, free&#xFF09;</span>
+    <span class="hljs-keyword">bitmap_t</span> <span class="hljs-built_in">map</span>;          <span class="hljs-comment">// &#x7BA1;&#x7406;&#x5BF9;&#x8C61;&#x5206;&#x914D;&#x72B6;&#x6001;&#x7684;&#x4F4D;&#x56FE;</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">char</span> *objects;     <span class="hljs-comment">// &#x6307;&#x5411;&#x5BF9;&#x8C61;&#x7FA4;&#x7684;&#x6307;&#x9488;</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> using_count;    <span class="hljs-comment">// &#x6B63;&#x5728;&#x4F7F;&#x7528;&#x4E2D;&#x7684;&#x5BF9;&#x8C61;&#x6570;&#x91CF;</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> free_count;     <span class="hljs-comment">// &#x7A7A;&#x95F2;&#x7684;&#x5BF9;&#x8C61;&#x6570;&#x91CF;</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> flags;         <span class="hljs-comment">// group&#x7684;&#x6807;&#x5FD7;</span>
+} <span class="hljs-keyword">mem_group_t</span>;
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> SIZEOF_MEM_GROUP sizeof(mem_group_t)</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MEM_CACHE_NAME_LEN 24</span>
+
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> mem_cache {
+    <span class="hljs-keyword">list_t</span> full_groups;      <span class="hljs-comment">// group&#x5BF9;&#x8C61;&#x90FD;&#x88AB;&#x4F7F;&#x7528;&#x4E86;&#xFF0C;&#x5C31;&#x653E;&#x5728;&#x8FD9;&#x4E2A;&#x94FE;&#x8868;</span>
+    <span class="hljs-keyword">list_t</span> partial_groups;   <span class="hljs-comment">// group&#x5BF9;&#x8C61;&#x4E00;&#x90E8;&#x5206;&#x88AB;&#x4F7F;&#x7528;&#x4E86;&#xFF0C;&#x5C31;&#x653E;&#x5728;&#x8FD9;&#x4E2A;&#x94FE;&#x8868;</span>
+    <span class="hljs-keyword">list_t</span> free_groups;      <span class="hljs-comment">// group&#x5BF9;&#x8C61;&#x90FD;&#x672A;&#x88AB;&#x4F7F;&#x7528;&#x4E86;&#xFF0C;&#x5C31;&#x653E;&#x5728;&#x8FD9;&#x4E2A;&#x94FE;&#x8868;</span>
+
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> object_size;    <span class="hljs-comment">// group&#x4E2D;&#x6BCF;&#x4E2A;&#x5BF9;&#x8C61;&#x7684;&#x5927;&#x5C0F;</span>
+    <span class="hljs-keyword">flags_t</span> flags;              <span class="hljs-comment">// cache&#x7684;&#x6807;&#x5FD7;&#x4F4D;</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> object_count;  <span class="hljs-comment">// &#x6BCF;&#x4E2A;group&#x4E2D;&#x6709;&#x591A;&#x5C11;&#x4E2A;&#x5BF9;&#x8C61;</span>
+    <span class="hljs-keyword">mutexlock_t</span> mutex;
+    <span class="hljs-keyword">char</span> name[MEM_CACHE_NAME_LEN];     <span class="hljs-comment">// cache&#x7684;&#x540D;&#x5B57;</span>
+} <span class="hljs-keyword">mem_cache_t</span>;
+</code></pre>
+<p>&#x5728;&#x521D;&#x59CB;&#x5316;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x521D;&#x59CB;&#x5316;&#x4E00;&#x4E9B;&#x6700;&#x57FA;&#x7840;&#x7684;mem_cache&#xFF0C;&#x5728;&#x4F7F;&#x7528;&#x8FC7;&#x7A0B;&#x4E2D;&#x53EF;&#x4EE5;&#x989D;&#x5916;&#x589E;&#x52A0;&#x3002;&#x5BF9;&#x4E8E;cache&#x7684;&#x5927;&#x5C0F;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;cache_size&#x6765;&#x8FDB;&#x884C;&#x63CF;&#x8FF0;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> cache_size {
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> cache_size;         <span class="hljs-comment">// &#x63CF;&#x8FF0;cache&#x7684;&#x5927;&#x5C0F;</span>
+    <span class="hljs-keyword">mem_cache_t</span> *mem_cache;      <span class="hljs-comment">// &#x6307;&#x5411;&#x5BF9;&#x5E94;cache&#x7684;&#x6307;&#x9488;</span>
+} <span class="hljs-keyword">cache_size_t</span>;
+
+<span class="hljs-keyword">static</span> <span class="hljs-keyword">cache_size_t</span> cache_size[] = {
+    <span class="hljs-meta">#<span class="hljs-meta-keyword">if</span> PAGE_SIZE == 4096</span>
+    {<span class="hljs-number">32</span>, <span class="hljs-literal">NULL</span>},
+    <span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+    {<span class="hljs-number">64</span>, <span class="hljs-literal">NULL</span>},
+    {<span class="hljs-number">128</span>, <span class="hljs-literal">NULL</span>},
+    {<span class="hljs-number">256</span>, <span class="hljs-literal">NULL</span>},
+    {<span class="hljs-number">512</span>, <span class="hljs-literal">NULL</span>},
+    {<span class="hljs-number">1024</span>, <span class="hljs-literal">NULL</span>},
+    {<span class="hljs-number">2048</span>, <span class="hljs-literal">NULL</span>},
+    {<span class="hljs-number">4096</span>, <span class="hljs-literal">NULL</span>},
+    {<span class="hljs-number">8</span>*<span class="hljs-number">1024</span>, <span class="hljs-literal">NULL</span>},
+    {<span class="hljs-number">16</span>*<span class="hljs-number">1024</span>, <span class="hljs-literal">NULL</span>},
+    {<span class="hljs-number">32</span>*<span class="hljs-number">1024</span>, <span class="hljs-literal">NULL</span>},
+    {<span class="hljs-number">64</span>*<span class="hljs-number">1024</span>, <span class="hljs-literal">NULL</span>},
+    {<span class="hljs-number">128</span>*<span class="hljs-number">1024</span>, <span class="hljs-literal">NULL</span>},    
+    <span class="hljs-comment">/* &#x914D;&#x7F6E;&#x5927;&#x5185;&#x5B58;&#x7684;&#x5206;&#x914D; */</span>
+    <span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> CONFIG_LARGE_ALLOCS</span>
+    {<span class="hljs-number">256</span>*<span class="hljs-number">1024</span>, <span class="hljs-literal">NULL</span>},
+    {<span class="hljs-number">512</span>*<span class="hljs-number">1024</span>, <span class="hljs-literal">NULL</span>},
+    {<span class="hljs-number">1024</span>*<span class="hljs-number">1024</span>, <span class="hljs-literal">NULL</span>},
+    {<span class="hljs-number">2</span>*<span class="hljs-number">1024</span>*<span class="hljs-number">1024</span>, <span class="hljs-literal">NULL</span>},
+    <span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+    {<span class="hljs-number">0</span>, <span class="hljs-literal">NULL</span>},
+};
+</code></pre>
+<p>&#x521D;&#x59CB;&#x5316;mem_cache&#x65F6;&#xFF0C;&#x6839;&#x636E;cache_size&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">static</span> <span class="hljs-keyword">int</span> <span class="hljs-title">mem_caches_build</span><span class="hljs-params">()</span>
+</span>{
+    <span class="hljs-keyword">cache_size_t</span> *cachesz = cache_size;
+    <span class="hljs-keyword">mem_cache_t</span> *mem_cache = &amp;mem_caches[<span class="hljs-number">0</span>];
+    <span class="hljs-keyword">while</span> (cachesz-&gt;cache_size) {
+        <span class="hljs-keyword">if</span> (mem_cache_init(mem_cache, <span class="hljs-string">&quot;mem cache&quot;</span>, cachesz-&gt;cache_size, <span class="hljs-number">0</span>)) {
+            keprint(<span class="hljs-string">&quot;create mem cache failed!\n&quot;</span>);
+            <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+        }
+        cachesz-&gt;mem_cache = mem_cache;
+        mem_cache++;
+        cachesz++;
+    }
+    <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+}
+</code></pre>
+<p>&#x5728;&#x5185;&#x6838;&#x4E2D;&#xFF0C;&#x5206;&#x914D;&#x548C;&#x91CA;&#x653E;&#x5185;&#x5B58;&#xFF0C;&#x53EA;&#x8981;&#x5728;&#x521D;&#x59CB;&#x5316;memcache&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x4E86;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-comment">/* &#x5206;&#x914D;&#x5185;&#x5B58; */</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> *<span class="hljs-title">mem_alloc</span><span class="hljs-params">(size_t size)</span></span>;
+<span class="hljs-comment">/* &#x91CA;&#x653E;&#x5185;&#x5B58; */</span>
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">mem_free</span><span class="hljs-params">(<span class="hljs-keyword">void</span> *object)</span></span>;
+</code></pre>
+<h2 id="&#x7528;&#x6237;&#x5185;&#x5B58;&#x7BA1;&#x7406;">&#x7528;&#x6237;&#x5185;&#x5B58;&#x7BA1;&#x7406;</h2>
+<p>&#x7528;&#x6237;&#x5185;&#x5B58;&#x7684;&#x7BA1;&#x7406;&#x5373;&#x8FDB;&#x7A0B;&#x7684;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#xFF0C;&#x4F7F;&#x7528;&#x7684;&#x662F;mem_space&#x3002;&#x8FDB;&#x7A0B;&#x7684;&#x6267;&#x884C;&#x7A7A;&#x95F4;&#x5E03;&#x5C40;&#x5982;&#x4E0B;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> USER_SPACE_START_ADDR              0x00000000</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> USER_SPACE_SIZE                    0x80000000</span>
+
+USER_SPACE_START_ADDR + USER_SPACE_SIZE
+&#x6808;
+&#x6620;&#x5C04;&#x533A;&#x57DF;
+&#x5806;
+&#x6570;&#x636E;
+&#x4EE3;&#x7801;
+USER_SPACE_START_ADDR
+</code></pre>
+<p>&#x6BCF;&#x4E00;&#x4E2A;space&#x5BF9;&#x5E94;&#x7740;&#x4E00;&#x4E2A;&#x533A;&#x57DF;&#x3002;&#x6BD4;&#x5982;&#x6709;&#x4EE3;&#x7801;space&#xFF0C;&#x6570;&#x636E;space&#xFF0C;&#x5806;space&#xFF0C;&#x6808;space&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> mem_space {
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> start;        <span class="hljs-comment">/* &#x7A7A;&#x95F4;&#x5F00;&#x59CB;&#x5730;&#x5740; */</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> end;          <span class="hljs-comment">/* &#x7A7A;&#x95F4;&#x7ED3;&#x675F;&#x5730;&#x5740; */</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> page_prot;    <span class="hljs-comment">/* &#x7A7A;&#x95F4;&#x4FDD;&#x62A4; */</span>
+    <span class="hljs-keyword">unsigned</span> <span class="hljs-keyword">long</span> flags;        <span class="hljs-comment">/* &#x7A7A;&#x95F4;&#x7684;&#x6807;&#x5FD7; */</span>
+    <span class="hljs-keyword">vmm_t</span> *vmm;                 <span class="hljs-comment">/* &#x7A7A;&#x95F4;&#x5BF9;&#x5E94;&#x7684;&#x865A;&#x62DF;&#x5185;&#x5B58;&#x7BA1;&#x7406; */</span>
+    <span class="hljs-keyword">struct</span> mem_space *next;     <span class="hljs-comment">/* &#x6240;&#x6709;&#x7A7A;&#x95F4;&#x6784;&#x6210;&#x5355;&#x5411;&#x94FE;&#x8868; */</span>
+} <span class="hljs-keyword">mem_space_t</span>;
+</code></pre>
+<p>&#x5F53;&#x6267;&#x884C;&#x4E00;&#x4E2A;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x521D;&#x59CB;&#x5316;code&#x548C;data&#x7684;space&#xFF0C;&#x4EE5;&#x53CA;&#x8FD8;&#x8981;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;stack&#x7684;space&#x3002;&#x5728;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;sys_brk&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x6765;&#x4FEE;&#x6539;&#x5806;&#x7684;&#x4F4D;&#x7F6E;&#xFF0C;&#x6269;&#x5C55;&#x5806;&#x3002;&#x7136;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x5BF9;&#x5F53;&#x524D;&#x5806;&#x8FDB;&#x884C;&#x5206;&#x914D;&#x548C;&#x91CA;&#x653E;&#x4E86;&#x3002;</p>
+<footer class="page-footer"><span class="copyright">Copyright &#xA9; BookOS-developers 2021 all right reserved&#xFF0C;powered by Gitbook</span><span class="footer-modification">&#x4FEE;&#x8BA2;&#x65F6;&#x95F4;&#xFF1A;
+2021-06-16
+</span></footer>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../timer/timer.html" class="navigation navigation-prev " aria-label="Previous page: 时钟管理">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="../device/device.html" class="navigation navigation-next " aria-label="Next page: 设备管理">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"内存管理","level":"1.1.3.4","depth":3,"next":{"title":"设备管理","level":"1.1.3.5","depth":3,"path":"programing-manual/device/device.md","ref":"programing-manual/device/device.md","articles":[{"title":"AHCI磁盘驱动分析","level":"1.1.3.5.1","depth":4,"path":"programing-manual/device/ahci.md","ref":"programing-manual/device/ahci.md","articles":[]},{"title":"PS/2键盘驱动分析","level":"1.1.3.5.2","depth":4,"path":"programing-manual/device/keyboard.md","ref":"programing-manual/device/keyboard.md","articles":[]}]},"previous":{"title":"时钟管理","level":"1.1.3.3","depth":3,"path":"programing-manual/timer/timer.md","ref":"programing-manual/timer/timer.md","articles":[]},"dir":"ltr"},"config":{"plugins":["tbfed-pagefooter","livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy BookOS-developers 2021","modify_label":"修订时间：","modify_format":"YYYY-MM-DD"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"jason hu","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"book for xbook2","language":"zh-hans","links":{"sidebar":{"bookos":"https://book-os.org"}},"gitbook":"3.2.3","description":"document for xbook2 kernel"},"file":{"path":"programing-manual/mm/mm.md","mtime":"2021-06-16T14:03:55.636Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2021-06-16T14:18:02.822Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
