@@ -1,0 +1,1 @@
+scp -r %1 root@121.43.99.128:/var/www/bookos-web/%1
