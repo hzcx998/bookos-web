@@ -1,0 +1,1838 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>riscv架构移植 · book for nxos</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="nxos development team">
+        
+        
+    
+    <link rel="stylesheet" href="../../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://book-os.org" target="_blank" class="custom-link">bookos</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <span>
+            
+                    
+                    NXOS文档中心
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" >
+            
+                <span>
+            
+                    
+                    简介
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1" data-path="../../../">
+            
+                <a href="../../../">
+            
+                    
+                    NXOS 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" >
+            
+                <span>
+            
+                    
+                    快速上手
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.1" data-path="../../../tutorial/quick-start.html">
+            
+                <a href="../../../tutorial/quick-start.html">
+            
+                    
+                    虚拟平台运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" >
+            
+                <span>
+            
+                    
+                    内核
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.1" data-path="../../base/framework.html">
+            
+                <a href="../../base/framework.html">
+            
+                    
+                    整体框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2" data-path="../../base/start.html">
+            
+                <a href="../../base/start.html">
+            
+                    
+                    启动流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3" data-path="../../mm/mm.html">
+            
+                <a href="../../mm/mm.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.3.1" data-path="../../mm/buddy.html">
+            
+                <a href="../../mm/buddy.html">
+            
+                    
+                    buddy伙伴算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3.2" data-path="../../mm/heap.html">
+            
+                <a href="../../mm/heap.html">
+            
+                    
+                    heapCache虚拟内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3.3" data-path="../../mm/vmspace.html">
+            
+                <a href="../../mm/vmspace.html">
+            
+                    
+                    vmspace虚拟地址空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.4" data-path="../../sched/sched.html">
+            
+                <a href="../../sched/sched.html">
+            
+                    
+                    调度管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.4.1" data-path="../../sched/thread.html">
+            
+                <a href="../../sched/thread.html">
+            
+                    
+                    线程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.4.2" data-path="../../sched/smp.html">
+            
+                <a href="../../sched/smp.html">
+            
+                    
+                    SMP多核调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.5" data-path="../../process/process.html">
+            
+                <a href="../../process/process.html">
+            
+                    
+                    进程管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.5.1" data-path="../../process/syscall.html">
+            
+                <a href="../../process/syscall.html">
+            
+                    
+                    系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.6" data-path="../../interrupt/irq.html">
+            
+                <a href="../../interrupt/irq.html">
+            
+                    
+                    中断系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.6.1" data-path="../../interrupt/delay_queue.html">
+            
+                <a href="../../interrupt/delay_queue.html">
+            
+                    
+                    延迟队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.7" data-path="../../timer/timer.html">
+            
+                <a href="../../timer/timer.html">
+            
+                    
+                    定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" >
+            
+                <span>
+            
+                    
+                    内核移植
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.1.4.1" data-path="riscv.html">
+            
+                <a href="riscv.html">
+            
+                    
+                    riscv架构移植
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" >
+            
+                <span>
+            
+                    
+                    用户接口
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1" data-path="../../user/api.html">
+            
+                <a href="../../user/api.html">
+            
+                    
+                    API设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" >
+            
+                <span>
+            
+                    
+                    编程开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.6.1" data-path="../../../tutorial/code-style.html">
+            
+                <a href="../../../tutorial/code-style.html">
+            
+                    
+                    代码风格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6.2" data-path="../../../tutorial/commit-rule.html">
+            
+                <a href="../../../tutorial/commit-rule.html">
+            
+                    
+                    提交规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6.3" data-path="../../../tutorial/menuconfig.html">
+            
+                <a href="../../../tutorial/menuconfig.html">
+            
+                    
+                    菜单配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6.4" data-path="../../../tutorial/toolchains.html">
+            
+                <a href="../../../tutorial/toolchains.html">
+            
+                    
+                    工具链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6.5" data-path="../../../tutorial/utest.html">
+            
+                <a href="../../../tutorial/utest.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../../.." >riscv架构移植</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="risc-v&#x67B6;&#x6784;&#x79FB;&#x690D;">RISC-V&#x67B6;&#x6784;&#x79FB;&#x690D;</h1>
+<h2 id="&#x4E00;&#x3001;&#x63CF;&#x8FF0;">&#x4E00;&#x3001;&#x63CF;&#x8FF0;</h2>
+<p>RISC-V&#xFF08;&#x53D1;&#x97F3;&#x4E3A;&#x201C;risk-five&#x201D;&#xFF09;&#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;&#x7CBE;&#x7B80;&#x6307;&#x4EE4;&#x96C6;&#xFF08;RISC&#xFF09;&#x539F;&#x5219;&#x7684;&#x5F00;&#x6E90;&#x6307;&#x4EE4;&#x96C6;&#x67B6;&#x6784;&#xFF08;ISA&#xFF09;&#x3002;</p>
+<p>&#x4E0E;&#x5927;&#x591A;&#x6570;&#x6307;&#x4EE4;&#x96C6;&#x76F8;&#x6BD4;&#xFF0C;RISC-V&#x6307;&#x4EE4;&#x96C6;&#x53EF;&#x4EE5;&#x81EA;&#x7531;&#x5730;&#x7528;&#x4E8E;&#x4EFB;&#x4F55;&#x76EE;&#x7684;&#xFF0C;&#x5141;&#x8BB8;&#x4EFB;&#x4F55;&#x4EBA;&#x8BBE;&#x8BA1;&#x3001;&#x5236;&#x9020;&#x548C;&#x9500;&#x552E;RISC-V&#x82AF;&#x7247;&#x548C;&#x8F6F;&#x4EF6;&#x3002;&#x867D;&#x7136;&#x8FD9;&#x4E0D;&#x662F;&#x7B2C;&#x4E00;&#x4E2A;&#x5F00;&#x6E90;&#x6307;&#x4EE4;&#x96C6;&#xFF0C;&#x4F46;&#x5B83;&#x5177;&#x6709;&#x91CD;&#x8981;&#x610F;&#x4E49;&#xFF0C;&#x56E0;&#x4E3A;&#x5176;&#x8BBE;&#x8BA1;&#x4F7F;&#x5176;&#x9002;&#x7528;&#x4E8E;&#x73B0;&#x4EE3;&#x8BA1;&#x7B97;&#x8BBE;&#x5907;&#xFF08;&#x5982;&#x4ED3;&#x5E93;&#x89C4;&#x6A21;&#x4E91;&#x8BA1;&#x7B97;&#x673A;&#x3001;&#x9AD8;&#x7AEF;&#x79FB;&#x52A8;&#x7535;&#x8BDD;&#x548C;&#x5FAE;&#x5C0F;&#x5D4C;&#x5165;&#x5F0F;&#x7CFB;&#x7EDF;&#xFF09;&#x3002;&#x8BBE;&#x8BA1;&#x8005;&#x8003;&#x8651;&#x5230;&#x4E86;&#x8FD9;&#x4E9B;&#x7528;&#x9014;&#x4E2D;&#x7684;&#x6027;&#x80FD;&#x4E0E;&#x529F;&#x7387;&#x6548;&#x7387;&#x3002;&#x8BE5;&#x6307;&#x4EE4;&#x96C6;&#x8FD8;&#x5177;&#x6709;&#x4F17;&#x591A;&#x652F;&#x6301;&#x7684;&#x8F6F;&#x4EF6;&#xFF0C;&#x8FD9;&#x89E3;&#x51B3;&#x4E86;&#x65B0;&#x6307;&#x4EE4;&#x96C6;&#x901A;&#x5E38;&#x7684;&#x5F31;&#x70B9;&#x3002;</p>
+<p>&#x8BE5;&#x9879;&#x76EE;2010&#x5E74;&#x59CB;&#x4E8E;&#x52A0;&#x5DDE;&#x5927;&#x5B66;&#x4F2F;&#x514B;&#x5229;&#x5206;&#x6821;&#xFF0C;&#x4F46;&#x8BB8;&#x591A;&#x8D21;&#x732E;&#x8005;&#x662F;&#x8BE5;&#x5927;&#x5B66;&#x4EE5;&#x5916;&#x7684;&#x5FD7;&#x613F;&#x8005;&#x548C;&#x884C;&#x4E1A;&#x5DE5;&#x4F5C;&#x8005;&#x3002;
+RISC-V&#x6307;&#x4EE4;&#x96C6;&#x7684;&#x8BBE;&#x8BA1;&#x8003;&#x8651;&#x4E86;&#x5C0F;&#x578B;&#x3001;&#x5FEB;&#x901F;&#x3001;&#x4F4E;&#x529F;&#x8017;&#x7684;&#x73B0;&#x5B9E;&#x60C5;&#x51B5;&#x6765;&#x5B9E;&#x505A;&#xFF0C;&#x4F46;&#x5E76;&#x6CA1;&#x6709;&#x5BF9;&#x7279;&#x5B9A;&#x7684;&#x5FAE;&#x67B6;&#x6784;&#x505A;&#x8FC7;&#x5EA6;&#x7684;&#x8BBE;&#x8BA1;&#x3002;</p>
+<p>&#x622A;&#x81F3;2017&#x5E74;5&#x6708;&#xFF0C;RISC-V&#x5DF2;&#x7ECF;&#x786E;&#x7ACB;&#x4E86;&#x7248;&#x672C;2.22&#x7684;&#x7528;&#x6237;&#x7A7A;&#x95F4;&#x7684;&#x6307;&#x4EE4;&#x96C6;(userspace ISA)&#xFF0C;&#x800C;&#x7279;&#x6743;&#x6307;&#x4EE4;&#x96C6;(privileged ISA)&#x4E5F;&#x5904;&#x5728;&#x8349;&#x6848;&#x7248;&#x672C;1.10&#x3002;</p>
+<p>&#xFF08;&#x4EE5;&#x4E0A;&#x6458;&#x81EA;&#x767E;&#x5EA6;&#x767E;&#x79D1;&#xFF09;</p>
+<h2 id="&#x4E8C;&#x3001;&#x67B6;&#x6784;&#x7B80;&#x8FF0;">&#x4E8C;&#x3001;&#x67B6;&#x6784;&#x7B80;&#x8FF0;</h2>
+<h3 id="1-&#x6307;&#x4EE4;&#x96C6;">1. &#x6307;&#x4EE4;&#x96C6;</h3>
+<p>RISC-V&#x88AB;&#x8BBE;&#x8BA1;&#x6210;&#x53EF;&#x6269;&#x5C55;&#x7684;&#xFF0C;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x7684;&#xFF0C;&#x6839;&#x636E;&#x4E0D;&#x540C;&#x7684;&#x5E94;&#x7528;&#x573A;&#x666F;&#x53EF;&#x4EE5;&#x751F;&#x4EA7;&#x5E26;&#x6709;&#x4E0D;&#x540C;&#x529F;&#x80FD;&#x6269;&#x5C55;&#x7684;&#x5904;&#x7406;&#x5668;&#x3002;</p>
+<p><img src="figures/extension.png" alt="&#x7279;&#x6743;&#x7EA7;"></p>
+<h3 id="2-&#x7279;&#x6743;&#x6A21;&#x5F0F;">2. &#x7279;&#x6743;&#x6A21;&#x5F0F;</h3>
+<p>RISC-V&#x76EE;&#x524D;&#x6709;4&#x79CD;&#x7279;&#x6743;&#x6A21;&#x5F0F;&#xFF08;<code>Machine, Hypervisor&#xFF0C;Supervisor, User</code>&#xFF09;&#x3002;</p>
+<p>&#x673A;&#x5668;&#x6A21;&#x5F0F;&#x7528;&#x4E8E;&#x56FA;&#x4EF6;&#x7A0B;&#x5E8F;&#x4EE3;&#x7801;&#x6267;&#x884C;&#xFF0C;&#x4F8B;&#x5982; <code>OpenSBI</code>, <code>RustSBI</code> &#x7B49;&#xFF0C;&#x4F46;&#x662F;&#x5728; <code>rtos</code> &#x548C;&#x88F8;&#x673A;&#x5F00;&#x53D1;&#x79CD;&#xFF0C;&#x5F88;&#x591A;&#x65F6;&#x5019;&#x90FD;&#x662F;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x673A;&#x5668;&#x6A21;&#x5F0F;&#x3002;</p>
+<p><code>Hypervisor</code> &#x865A;&#x62DF;&#x5316;&#x6A21;&#x5F0F;&#x7528;&#x4E8E;&#x4F7F;&#x7528;&#x865A;&#x62DF;&#x5316;&#x7684;&#x573A;&#x666F;&#xFF0C;&#x76EE;&#x524D;&#x8FD8;&#x5728;&#x5F00;&#x53D1;&#x9636;&#x6BB5;&#x3002;</p>
+<p>&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x66F4;&#x591A;&#x8FD0;&#x884C;&#x5728; <code>Supervisor</code> &#x76D1;&#x7BA1;&#x8005;&#x6A21;&#x5F0F;&#xFF0C;&#x8FD9;&#x6837;&#x53EF;&#x4EE5;&#x548C; <code>User</code> &#x66F4;&#x8D34;&#x8FD1;&#xFF0C;&#x4E5F;&#x4E0D;&#x7528;&#x7BA1;&#x592A;&#x591A;&#x673A;&#x5668;&#x6A21;&#x5F0F;&#x9700;&#x8981;&#x505A;&#x7684;&#x4E8B;&#x60C5;&#x3002;&#x901A;&#x5E38;&#xFF0C; <code>OpenSBI</code> &#x548C; <code>RustSBI</code> &#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x4F1A;&#x8DF3;&#x8F6C;&#x5230; <code>Supervisor</code> &#x6A21;&#x5F0F;&#xFF0C;&#x8FDB;&#x5165;&#x5185;&#x6838;&#x3002;&#x5185;&#x6838;&#x53EA;&#x9700;&#x8981;&#x94FE;&#x63A5;&#x5230; <code>SBI</code> &#x6307;&#x5B9A;&#x7684;&#x5730;&#x5740;&#x5C31;&#x884C;&#x4E86;&#x3002;&#x4F7F;&#x7528; <code>SBI</code> &#x7684;&#x597D;&#x5904;&#x662F;&#xFF0C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x4F7F;&#x7528;&#x4E32;&#x53E3;&#x7684;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#xFF0C;&#x5F88;&#x65B9;&#x4FBF;&#x8C03;&#x8BD5;&#xFF0C;&#x4E0D;&#x7528;&#x81EA;&#x5DF1;&#x4ECE;&#x673A;&#x5668;&#x6A21;&#x5F0F;&#x8DF3;&#x8F6C;&#x5230; <code>Supervisor</code> &#x6A21;&#x5F0F;&#xFF0C;&#x964D;&#x4F4E;&#x5F00;&#x53D1;&#x7684;&#x590D;&#x6742;&#x5EA6;&#x3002;</p>
+<p><code>User</code> &#x7528;&#x6237;&#x6A21;&#x5F0F;&#x5C31;&#x662F;&#x5E94;&#x7528;&#x7A0B;&#x5E8F;&#x6267;&#x884C;&#x7684;&#x6A21;&#x5F0F;&#xFF0C;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x8FDB;&#x5165;&#x5230; <code>Supervisor</code> &#x6A21;&#x5F0F;&#x53BB;&#x8C03;&#x7528;&#x5185;&#x6838;&#x63D0;&#x4F9B;&#x7684;&#x670D;&#x52A1;&#x3002;</p>
+<p><img src="figures/privilege_level.png" alt="&#x7279;&#x6743;&#x7EA7;"></p>
+<h3 id="3-&#x5BC4;&#x5B58;&#x5668;">3. &#x5BC4;&#x5B58;&#x5668;</h3>
+<p>RISCV(RV32)&#x5177;&#x6709;32&#x4E2A;&#x6574;&#x6570;&#x5BC4;&#x5B58;&#x5668;&#x7EC4;(&#x53D6;&#x540D;&#x4E3A;&#xFF1A;x0&#xFF5E;x31)&#xFF0C;&#x5176;&#x4E2D;31&#x4E2A;&#x662F;&#x901A;&#x7528;&#x5BC4;&#x5B58;&#x5668;(x1&#xFF5E;x31)&#xFF0C;&#x5B83;&#x4EEC;&#x5B58;&#x50A8;&#x6574;&#x6570;&#x6570;&#x503C;&#xFF0C;&#x5BC4;&#x5B58;&#x5668;x0&#x662F;&#x786C;&#x4EF6;&#x8FDE;&#x7EBF;&#x7684;&#x5E38;&#x6570;0&#x3002;&#x5F53;&#x4F60;&#x8BBE;&#x8BA1;&#x7684;RISCV&#x67B6;&#x6784;&#x5904;&#x7406;&#x5668;&#x5B9E;&#x73B0;&#x4E86;&#x6D6E;&#x70B9;&#x6269;&#x5C55;&#x65F6;&#xFF0C;&#x8FD8;&#x5FC5;&#x987B;&#x6709;32&#x4E2A;&#x6D6E;&#x70B9;&#x5BC4;&#x5B58;&#x5668;f0&#xFF5E;f31&#x3002;&#x5BF9;&#x4E8E;RV32&#xFF0C;&#x5176;x&#x5BC4;&#x5B58;&#x5668;&#x662F;32&#x4F4D;&#x5BBD;&#x5EA6;&#x7684;&#xFF0C;XLEN=32&#xFF0C;&#x5BF9;&#x4E8E;RV64&#xFF0C;&#x5B83;&#x4EEC;&#x662F;64&#x4F4D;&#x5BBD;&#x5EA6;&#x7684;,XLEN=64&#x3002;</p>
+<p><img src="figures/register.png" alt="&#x5BC4;&#x5B58;&#x5668;">
+<img src="figures/call.png" alt="&#x8C03;&#x7528;&#x7EA6;&#x5B9A;"></p>
+<p>&#x7279;&#x6743;&#x7EA7;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x547D;&#x540D;&#x89C4;&#x5219;&#xFF0C;&#x7279;&#x6743;&#x6A21;&#x5F0F;+&#x5BC4;&#x5B58;&#x5668;&#x540D;&#x5B57;&#xFF0C;&#x8868;&#x793A;&#x53EA;&#x80FD;&#x5728;&#x8BE5;&#x7279;&#x6743;&#x7EA7;&#x4F7F;&#x7528;&#x3002;&#x6BD4;&#x5982;status&#x5BC4;&#x5B58;&#x5668;&#xFF0C;&#x5728;&#x673A;&#x5668;&#x6A21;&#x5F0F;&#x6709;mstatus&#xFF0C;&#x76D1;&#x7BA1;&#x6A21;&#x5F0F;&#x6709;sstatus&#x3002;</p>
+<p><img src="figures/mstatus(rv64" alt="&#x673A;&#x5668;&#x6A21;&#x5F0F;&#x72B6;&#x6001;&#x5BC4;&#x5B58;&#x5668;&#xFF08;rv64&#xFF09;">.jpg)
+&#x4E0A;&#x56FE;&#x4E3A;&#x673A;&#x5668;&#x6A21;&#x5F0F;&#x72B6;&#x6001;&#x5BC4;&#x5B58;&#x5668;&#xFF08;rv64&#xFF09;</p>
+<p><img src="figures/mstatus(rv32" alt="&#x673A;&#x5668;&#x6A21;&#x5F0F;&#x72B6;&#x6001;&#x5BC4;&#x5B58;&#x5668;&#xFF08;rv32&#xFF09;">.jpg)
+&#x4E0A;&#x56FE;&#x4E3A;&#x673A;&#x5668;&#x6A21;&#x5F0F;&#x72B6;&#x6001;&#x5BC4;&#x5B58;&#x5668;&#xFF08;rv32&#xFF09;</p>
+<h3 id="3-&#x4E2D;&#x65AD;&#x7BA1;&#x7406;">3. &#x4E2D;&#x65AD;&#x7BA1;&#x7406;</h3>
+<p>RISC-V&#x4E2D;&#x65AD;&#x5206;&#x4E3A;&#x4E24;&#x79CD;&#x7C7B;&#x578B;&#xFF0C;&#x4E00;&#x79CD;&#x662F;&#x540C;&#x6B65;&#x4E2D;&#x65AD;&#xFF0C;&#x5373;ECALL&#x3001;EBREAK&#x7B49;&#x6307;&#x4EE4;&#x6240;&#x4EA7;&#x751F;&#x7684;&#x4E2D;&#x65AD;&#xFF0C;&#x53E6;&#x4E00;&#x79CD;&#x662F;&#x5F02;&#x6B65;&#x4E2D;&#x65AD;&#xFF0C;&#x5373;GPIO&#x3001;UART&#x7B49;&#x5916;&#x8BBE;&#x4EA7;&#x751F;&#x7684;&#x4E2D;&#x65AD;&#x3002;</p>
+<p>RISC-V&#x7684;&#x4E2D;&#x65AD;&#x7BA1;&#x7406;&#x7531;&#x5904;&#x7406;&#x5668;&#x6838;&#x5C40;&#x90E8;&#x4E2D;&#x65AD;CLINT&#xFF08;CoreLocalInterrupt&#xFF09;&#x548C;&#x5E73;&#x53F0;&#x7EA7;&#x4E2D;&#x65AD;&#x63A7;&#x5236;&#x5668;PLIC&#xFF08;PlatformLevelInterruptController&#xFF09;&#x7EC4;&#x6210;&#x3002;CLINT&#x5206;&#x4E3A;&#x8F6F;&#x4EF6;&#x4E2D;&#x65AD;&#x6838;&#x8BA1;&#x65F6;&#x5668;&#x4E2D;&#x65AD;&#xFF0C;&#x8D1F;&#x8D23;&#x54CD;&#x5E94;&#x5904;&#x7406;&#x5668;&#x7684;&#x5F02;&#x5E38;&#x6838;&#x548C;&#x8BA1;&#x65F6;&#x5668;&#x4E2D;&#x65AD;&#x3002;PLIC&#x8D1F;&#x8D23;&#x5904;&#x7406;&#x5916;&#x8BBE;&#x7684;&#x4E2D;&#x65AD;&#x3002;</p>
+<p><img src="figures/interrupt_class.png" alt="&#x4E2D;&#x65AD;&#x7C7B;&#x578B;"></p>
+<p>&#x4E2D;&#x65AD;&#x8868;&#x5730;&#x5740;&#x9700;&#x8981;&#x5199;&#x5165;&#x7BA1;&#x7406;&#x8005;&#x6A21;&#x5F0F;&#x7684;&#x5411;&#x91CF;&#x57FA;&#x5740;&#x5BC4;&#x5B58;&#x5668; <code>STVEC</code> &#xFF0C;&#x4EA7;&#x751F;&#x4E2D;&#x65AD;&#x540E;&#xFF0C;&#x5C31;&#x53BB;&#x8BE5;&#x5BC4;&#x5B58;&#x5668;&#x4FDD;&#x5B58;&#x7684;&#x4E2D;&#x65AD;&#x5411;&#x91CF;&#x8868;&#x5730;&#x5740;&#x627E;&#x4E2D;&#x65AD;&#x53F7;&#x5BF9;&#x5E94;&#x7684;&#x4E2D;&#x65AD;&#x670D;&#x52A1;&#x3002;</p>
+<p><code>Supervisor</code>&#x6A21;&#x5F0F;&#x7684;&#x4E2D;&#x65AD;&#x7684;&#x6253;&#x5F00;&#x4E0E;&#x5173;&#x95ED;&#x662F;&#x7531;&#x72B6;&#x6001;&#x5BC4;&#x5B58;&#x5668; <code>SSTATUS</code> &#x4E2D;&#x7684; <code>SIE</code> &#x63A7;&#x5236;&#x7684;&#xFF0C;&#x7F6E;&#x4E3A;1&#x5219;&#x8868;&#x793A;&#x4F7F;&#x80FD;&#x4E2D;&#x65AD;&#xFF0C;&#x7F6E;&#x4E3A;0&#x5219;&#x8868;&#x793A;&#x7981;&#x7528;&#x4E2D;&#x65AD;&#x3002;</p>
+<h3 id="4-mmu&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x5355;&#x5143;">4. MMU&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x5355;&#x5143;</h3>
+<p>RISC-V&#x7684;MMU&#x652F;&#x6301;&#x591A;&#x79CD;&#x6A21;&#x5F0F;&#xFF0C;&#x6709;Sv32/Sv39/Sv48/Sv57/Sv64&#x7B49;&#x3002;&#x4E0D;&#x540C;&#x7684;&#x6A21;&#x5F0F;&#x6620;&#x5C04;&#x7684;&#x9875;&#x9762;&#x7B49;&#x7EA7;&#xFF0C;&#x9875;&#x9762;&#x5927;&#x5C0F;&#x662F;&#x6709;&#x5DEE;&#x5F02;&#x7684;&#x3002;&#x5728;64&#x4F4D;&#x5904;&#x7406;&#x5668;&#x79CD;&#x6700;&#x5E38;&#x7528;&#x7684;&#x662F;Sv39&#xFF0C;&#x5B83;&#x662F;3&#x7EA7;4KB&#x9875;&#x9762;&#x5927;&#x5C0F;&#x6620;&#x5C04;&#x3002;</p>
+<p>&#x76D1;&#x7BA1;&#x8005;&#x6A21;&#x5F0F;&#x7684;&#x9875;&#x8868;&#x7684;&#x5730;&#x5740;&#x662F;&#x7531;&#x5730;&#x5740;&#x8F6C;&#x6362;&#x5BC4;&#x5B58;&#x5668; <code>SATP</code> &#x4FDD;&#x5B58;&#x7684;&#xFF0C;&#x5176;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;
+<img src="figures/satp.png" alt="&#x5730;&#x5740;&#x8F6C;&#x6362;"></p>
+<p>&#x5177;&#x4F53;&#x5B57;&#x6BB5;&#x7684;&#x89E3;&#x6790;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>Mode - MMU &#x5730;&#x5740;&#x7FFB;&#x8BD1;&#x6A21;&#x5F0F;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Bare</td>
+<td>No translation or protection</td>
+</tr>
+<tr>
+<td>1-7</td>
+<td>-</td>
+<td>Reserved</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Sv39</td>
+<td>Page-based 39-bit virtual addressing</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Sv48</td>
+<td>Page-based 48-bit virtual addressing</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Sv57</td>
+<td>Reserved for page-based 57-bit virtual addressing</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Sv64</td>
+<td>Reserved for page-based 64-bit virtual addressing</td>
+</tr>
+<tr>
+<td>12-15</td>
+<td>-</td>
+<td>Reserved</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5F53; Mode &#x4E3A; 0 &#x65F6;&#xFF0C;MMU &#x5173;&#x95ED;&#x3002;</p>
+<ul>
+<li>ASID &#x2013; &#x5F53;&#x524D; ASID&#x3002;&#x8868;&#x793A;&#x5F53;&#x524D;&#x7A0B;&#x5E8F;&#x7684; ASID &#x53F7;&#x3002;</li>
+<li>PPN &#x2013; &#x786C;&#x4EF6;&#x56DE;&#x586B;&#x6839; PPN&#x3002;&#x7B2C;&#x4E00;&#x7EA7;&#x786C;&#x4EF6;&#x56DE;&#x586B;&#x4F7F;&#x7528;&#x7684; PPN (Phsical Page Number)&#x3002;</li>
+</ul>
+<h2 id="&#x4E09;&#x3001;&#x4EE3;&#x7801;&#x79FB;&#x690D;">&#x4E09;&#x3001;&#x4EE3;&#x7801;&#x79FB;&#x690D;</h2>
+<p>&#x79FB;&#x690D;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5E73;&#x53F0;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;
+|&#x5185;&#x5BB9;    |&#x63CF;&#x8FF0;    |
+| ------- | ---------- |
+| &#x5185;&#x6838;&#x5165;&#x53E3; | &#x4E0D;&#x540C;&#x7684;&#x67B6;&#x6784;&#x5185;&#x6838;&#x5165;&#x53E3;&#x4EE3;&#x7801;&#x6709;&#x5DEE;&#x5F02;&#xFF0C;&#x9700;&#x8981;&#x6839;&#x636E;&#x67B6;&#x6784;&#x6765;&#x5B9E;&#x73B0; |
+| &#x5E73;&#x53F0;&#x521D;&#x59CB;&#x5316; | &#x8C03;&#x7528;&#x5E73;&#x53F0;&#x7684;&#x521D;&#x59CB;&#x5316;&#x4EE3;&#x7801; |
+| &#x539F;&#x5B50;&#x64CD;&#x4F5C; | &#x539F;&#x5B50;&#x64CD;&#x4F5C;&#x7528;&#x4E8E;&#x5BF9;&#x6570;&#x636E;&#x7684;&#x52A0;&#x51CF;&#x8FD0;&#x7B97;&#x4E0D;&#x4F1A;&#x88AB;&#x6253;&#x65AD;&#xFF0C;&#x4EE5;&#x53CA;&#x4E00;&#x4E9B;&#x539F;&#x5B50;&#x7EA7;&#x522B;&#x7684;&#x6570;&#x636E;&#x4EA4;&#x6362;&#x7B49; |
+| &#x5185;&#x5B58;&#x5C4F;&#x969C; | &#x5185;&#x5B58;&#x5C4F;&#x969C;&#x524D;&#x7684;&#x6240;&#x6709;&#x8BFB;&#x5199;&#x64CD;&#x4F5C;&#x5B8C;&#x6210;&#x540E;&#x624D;&#x80FD;&#x6267;&#x884C;&#x5C4F;&#x969C;&#x540E;&#x7684;&#x8BFB;&#x5199;&#x64CD;&#x4F5C; |
+| &#x8BA1;&#x65F6;&#x5668;&#x65F6;&#x949F; | &#x8BA1;&#x65F6;&#x5668;&#x65F6;&#x949F;&#x7528;&#x4E8E;&#x9A71;&#x52A8;&#x591A;&#x7EBF;&#x7A0B;&#x7684;&#x5207;&#x6362;&#x548C;&#x5185;&#x6838;&#x5B9A;&#x65F6;&#x5668; |
+| &#x7EBF;&#x7A0B;&#x4E0A;&#x4E0B;&#x6587; | &#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#x662F;&#x591A;&#x7EBF;&#x7A0B;&#x5B9E;&#x73B0;&#x7684;&#x6839;&#x57FA; |
+| &#x4E2D;&#x65AD;&#x7BA1;&#x7406; | &#x4E2D;&#x65AD;&#x7BA1;&#x7406;&#x63A5;&#x53E3;&#x5BF9;&#x5185;&#x6838;&#x4EE5;&#x53CA;&#x9A71;&#x52A8;&#x90FD;&#x662F;&#x81F3;&#x5173;&#x91CD;&#x8981;&#x7684; |
+| MMU&#x865A;&#x62DF;&#x5185;&#x5B58;&#x7BA1;&#x7406; | &#x865A;&#x62DF;&#x5730;&#x5740;&#x7684;&#x5B9E;&#x73B0;&#x548C;&#x8BBF;&#x95EE;&#xFF0C;MMU&#x7684;&#x5207;&#x6362;&#xFF0C;&#x6620;&#x5C04;&#x548C;&#x89E3;&#x9664;&#x9875;&#x9762;&#x6620;&#x5C04; |
+| &#x8FDB;&#x7A0B;&#x7BA1;&#x7406; | &#x8FDB;&#x7A0B;&#x7BA1;&#x7406;&#x76F8;&#x5173;&#x64CD;&#x4F5C;&#x662F;&#x5B9E;&#x73B0;&#x8FDB;&#x7A0B;&#x7684;&#x5FC5;&#x8981;&#x6761;&#x4EF6; |
+| SMP&#x591A;&#x6838; | &#x5BF9;&#x5904;&#x7406;&#x5668;&#x591A;&#x6838;&#x7684;&#x542F;&#x52A8;&#x548C;&#x521D;&#x59CB;&#x5316; |</p>
+<p>&#x6240;&#x6709;&#x9700;&#x8981;&#x5BF9;&#x63A5;&#x7684;&#x63A5;&#x53E3;&#x90FD;&#x5B58;&#x653E;&#x5728; <code>src/arch/riscv64/port</code> &#x76EE;&#x5F55;&#x4E0B;&#x9762;&#xFF0C;&#x65B0;&#x7684;&#x5E73;&#x53F0;&#x53EA;&#x9700;&#x8981;&#x652F;&#x6301;&#x8FD9;&#x4E9B;&#x63A5;&#x53E3;&#x7684;&#x529F;&#x80FD;&#x5373;&#x53EF;&#x3002;</p>
+<h3 id="1-&#x5185;&#x6838;&#x5165;&#x53E3;">1. &#x5185;&#x6838;&#x5165;&#x53E3;</h3>
+<p>&#x5728; <code>nxos</code> &#x4E2D;&#xFF0C;&#x4F7F;&#x7528;&#x4E86; <code>OpenSBI</code> &#x548C; <code>RustSBI</code> &#x4F5C;&#x4E3A;&#x673A;&#x5668;&#x6A21;&#x5F0F;&#x7684;&#x56FA;&#x4EF6;&#xFF0C;<code>qemu_riscv64</code>&#x5E73;&#x53F0;&#x9009;&#x62E9;&#x4E86; <code>OpenSBI</code> &#xFF0C;&#x5176;&#x5185;&#x6838;&#x7684;&#x5165;&#x53E3;&#x5730;&#x5740;&#x4E3A; <code>0x80200000</code>&#xFF0C;
+<code>k210</code> &#x9009;&#x62E9;&#x4E86; <code>RustSBI</code>&#xFF0C;&#x5176;&#x5185;&#x6838;&#x7684;&#x5165;&#x53E3;&#x5730;&#x5740;&#x4E3A; <code>0x80020000</code>&#xFF0C; <code>RustSBI</code> &#x9488;&#x5BF9; <code>k210</code> &#x505A;&#x4E86;&#x4E00;&#x4E9B;&#x517C;&#x5BB9;&#xFF0C;&#x4F7F;&#x7528;&#x8D77;&#x6765;&#x6BD4;&#x8F83;&#x7B80;&#x5355;&#x3002;</p>
+<p>&#x5728; <code>SBI</code> &#x6267;&#x884C;&#x7ED3;&#x675F;&#x540E;&#xFF0C;&#x4F1A;&#x4ECE;&#x673A;&#x5668;&#x6A21;&#x5F0F;&#x8DF3;&#x8F6C;&#x5230;&#x4F4D;&#x4E8E;&#x76D1;&#x62A4;&#x8005;&#x6A21;&#x5F0F;&#x7684;&#x5185;&#x6838;&#x4E2D;&#xFF0C;&#x5E76;&#x4E14;&#x5BC4;&#x5B58;&#x5668; <code>a0</code> &#x8BB0;&#x5F55;&#x4E86;&#x5F53;&#x524D;&#x5904;&#x7406;&#x5668;&#x6838;&#x5FC3;&#x7684; <code>id</code> &#xFF0C;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x503C;&#x6765;&#x5224;&#x65AD;&#x5904;&#x7406;&#x5668; <code>id</code>&#x3002;</p>
+<p>&#x5165;&#x53E3;&#x5730;&#x5740;&#x5728;&#x94FE;&#x63A5;&#x811A;&#x672C;&#x4E2D;&#x5199;&#x7684;&#x662F; <code>_Start</code> &#x8FD9;&#x4E2A;&#x7B26;&#x53F7;&#xFF0C;&#x56E0;&#x6B64;&#x4F1A;&#x8FDB;&#x5165; <code>sbi_entry.S</code> &#x7684; <code>_Start</code> &#x6267;&#x884C;&#x3002;</p>
+<ul>
+<li>&#x6587;&#x4EF6;&#xFF1A;src/arch/riscv64/kernel/sbi_entry.S</li>
+</ul>
+<pre><code class="lang-c"><span class="hljs-comment">/**
+ * Copyright (c) 2018-2022, NXOS Development Team
+ * SPDX-License-Identifier: Apache-2.0
+ * 
+ * Contains: Riscv64 entry 
+ * 
+ * Change Logs:
+ * Date           Author            Notes
+ * 2021-10-1      JasonHu           Init
+ */</span>
+
+    .section .text.start
+    .<span class="hljs-keyword">extern</span> NX_Main
+
+    .globl CPU_StackTop0
+    .globl CPU_StackTop1
+    .globl CPU_StackTop2
+    .globl CPU_StackTop3
+
+    .global _Start
+_Start:
+    li t0, <span class="hljs-number">0</span>
+    beq a0, t0, _SetSP0
+    li t0, <span class="hljs-number">1</span>
+    beq a0, t0, _SetSP1
+    li t0, <span class="hljs-number">2</span>
+    beq a0, t0, _SetSP2
+    li t0, <span class="hljs-number">3</span>
+    beq a0, t0, _SetSP3
+
+    j _EnterMain
+
+_SetSP0:
+    la sp, CPU_StackTop0
+    j _EnterMain
+
+_SetSP1:
+    la sp, CPU_StackTop1
+    j _EnterMain
+
+_SetSP2:
+    la sp, CPU_StackTop2
+    j _EnterMain
+
+_SetSP3:
+    la sp, CPU_StackTop3
+    j _EnterMain
+
+_EnterMain:
+    csrw sscratch, sp <span class="hljs-comment">/* first set sscrach as cpu stack here */</span>
+    csrc sstatus, <span class="hljs-number">0x2</span> <span class="hljs-comment">/* disable interrupt */</span>
+    call NX_Main
+
+loop:
+    j loop
+
+    <span class="hljs-comment">/* set in data seciton, avoid clear bss to clean stack */</span>
+    .section .data.<span class="hljs-built_in">stack</span>
+    .align <span class="hljs-number">12</span>
+
+CPU_Stack0:
+    .space <span class="hljs-number">8192</span>
+CPU_StackTop0:
+
+CPU_Stack1:
+    .space <span class="hljs-number">8192</span>
+CPU_StackTop1:
+
+CoreStack2:
+    .space <span class="hljs-number">8192</span>
+CPU_StackTop2:
+
+CoreStack3:
+    .space <span class="hljs-number">8192</span>
+CPU_StackTop3:
+</code></pre>
+<p>&#x8BE5;&#x4EE3;&#x7801;&#x7B80;&#x5355;&#x5730;&#x8BBE;&#x7F6E;&#x4E86;&#x6808;&#x5C31;&#x8FDB;&#x5165;&#x4E86; <code>NX_Main</code> &#x6267;&#x884C;&#xFF0C;&#x90A3;&#x4E48;&#x5165;&#x53E3;&#x7A0B;&#x5E8F;&#x7684;&#x79FB;&#x690D;&#x5C31;&#x5B8C;&#x6210;&#x4E86;&#x3002;</p>
+<h3 id="2-&#x5E73;&#x53F0;&#x521D;&#x59CB;&#x5316;">2. &#x5E73;&#x53F0;&#x521D;&#x59CB;&#x5316;</h3>
+<p>&#x5728;&#x5E73;&#x53F0;&#x521D;&#x59CB;&#x5316; <code>NX_HalPlatformInit</code> &#x4E2D;&#xFF0C;&#x8FDB;&#x884C;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x5B8C;&#x4E32;&#x53E3;&#x540E;&#xFF0C;&#x5C31;&#x80FD;&#x4F7F;&#x7528;&#x6253;&#x5370;&#x529F;&#x80FD;&#x4E86;&#x3002;
+&#x7136;&#x540E;&#x518D;&#x521D;&#x59CB;&#x5316;&#x4E2D;&#x65AD;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x7269;&#x7406;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x3002;</p>
+<p>&#x5728; <code>NX_HalPlatformStage2</code>&#x4E2D;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5185;&#x6838;&#x7684;&#x529F;&#x80FD;&#xFF0C;&#x5185;&#x5B58;&#x5206;&#x914D;&#xFF0C;&#x4E2D;&#x65AD;&#x6CE8;&#x518C;&#x7B49;&#x3002;
+&#x56E0;&#x6B64; <code>NX_HalDirectUartStage2</code> &#x5C31;&#x6CE8;&#x518C;&#x4E86;&#x4E32;&#x53E3;&#x4E2D;&#x65AD;&#xFF0C;&#x53EF;&#x4EE5;&#x63A5;&#x53D7;&#x8F93;&#x5165;&#x3002;</p>
+<ul>
+<li>&#x6587;&#x4EF6;&#xFF1A;src/platform/qemu_riscv64/hal/init.c</li>
+</ul>
+<pre><code class="lang-c"><span class="hljs-comment">/**
+ * Copyright (c) 2018-2022, NXOS Development Team
+ * SPDX-License-Identifier: Apache-2.0
+ * 
+ * Contains: Init Riscv64 Qemu platfrom 
+ * 
+ * Change Logs:
+ * Date           Author            Notes
+ * 2021-10-1      JasonHu           Init
+ */</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;xbook.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;trap.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;clock.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;page_zone.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;platform.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;plic.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sbi.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;regs.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;drivers/direct_uart.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sched/smp.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;utils/log.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> NX_LOG_LEVEL NX_LOG_INFO</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> NX_LOG_NAME <span class="hljs-string">&quot;INIT&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;xbook/debug.h&gt;</span></span>
+
+<span class="hljs-function">NX_INTERFACE NX_Error <span class="hljs-title">NX_HalPlatformInit</span><span class="hljs-params">(NX_UArch coreId)</span>
+</span>{
+    NX_HalClearBSS();
+
+    <span class="hljs-comment">/* <span class="hljs-doctag">NOTE:</span> init trap first before do anything */</span>
+    CPU_InitTrap(coreId);
+
+    NX_HalDirectUartInit();
+
+    sbi_init();
+    sbi_print_version();
+
+    NX_LOG_I(<span class="hljs-string">&quot;Hello, QEMU Riscv64!&quot;</span>);
+
+    PLIC_Init(NX_True);
+
+    NX_HalPageZoneInit();
+
+    <span class="hljs-keyword">return</span> NX_EOK;
+}
+
+<span class="hljs-function">NX_INTERFACE NX_Error <span class="hljs-title">NX_HalPlatformStage2</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    NX_LOG_I(<span class="hljs-string">&quot;stage2!&quot;</span>);
+
+    NX_HalDirectUartStage2();
+
+    <span class="hljs-keyword">return</span> NX_EOK;
+}
+</code></pre>
+<p>&#x4E32;&#x53E3;&#x53EF;&#x4EE5;&#x914D;&#x7F6E;&#x4E3A;&#x8C03;&#x7528; <code>SBI</code> &#x5B9E;&#x73B0;&#x8F93;&#x51FA;&#xFF0C;&#x4E5F;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x81EA;&#x5DF1;&#x64CD;&#x4F5C;&#x5BC4;&#x5B58;&#x5668;&#x5B9E;&#x73B0;&#x3002;&#x5728;&#x65E9;&#x671F;&#xFF0C;&#x8C03;&#x7528; <code>SBI</code> &#x4E32;&#x53E3;&#x6765;&#x8F93;&#x51FA;&#x662F;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x7684;&#x3002;
+&#x5B9E;&#x73B0; <code>NX_HalConsoleOutChar</code> &#x51FD;&#x6570;&#x540E;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x4F7F;&#x7528; <code>NX_Printf</code> &#x548C; <code>NX_LOG_*</code> &#x51FD;&#x6570;&#x6765;&#x6253;&#x5370;&#x6D88;&#x606F;&#x3002;</p>
+<ul>
+<li>&#x6587;&#x4EF6;&#xFF1A;src/platform/qemu_riscv64/drivers/direct_uart.c</li>
+</ul>
+<pre><code class="lang-c"><span class="hljs-comment">/**
+ * Copyright (c) 2018-2022, NXOS Development Team
+ * SPDX-License-Identifier: Apache-2.0
+ * 
+ * Contains: Direct uart driver 
+ * low-level driver routines for 16550a UART.
+ * 
+ * Change Logs:
+ * Date           Author            Notes
+ * 2021-10-1      JasonHu           Init
+ */</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;xbook.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;io/delay_irq.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;drivers/direct_uart.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;utils/log.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;xbook/debug.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> CONFIG_NX_UART0_FROM_SBI</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sbi.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;regs.h&gt;</span></span>
+
+<span class="hljs-comment">// the UART control registers.</span>
+<span class="hljs-comment">// some have different meanings for</span>
+<span class="hljs-comment">// read vs write.</span>
+<span class="hljs-comment">// see http://byterunner.com/16550.html</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> RHR 0                  <span class="hljs-comment">// receive holding register (for input bytes)</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> THR 0                  <span class="hljs-comment">// transmit holding register (for output bytes)</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IER 1                  <span class="hljs-comment">// interrupt enable register</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IER_RX_ENABLE (1 &lt;&lt; 0) <span class="hljs-comment">// receiver ready interrupt.</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> IER_TX_ENABLE (1 &lt;&lt; 1) <span class="hljs-comment">// transmitter empty interrupt.</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FCR 2                  <span class="hljs-comment">// FIFO control register</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FCR_FIFO_ENABLE (1 &lt;&lt; 0)</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> FCR_FIFO_CLEAR (3 &lt;&lt; 1) <span class="hljs-comment">// clear the content of the two FIFOs</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ISR 2                   <span class="hljs-comment">// interrupt status register</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> LCR 3                   <span class="hljs-comment">// line control register</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> LCR_EIGHT_BITS (3 &lt;&lt; 0)</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> LCR_BAUD_LATCH (1 &lt;&lt; 7) <span class="hljs-comment">// special mode to set baud rate</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> LSR 5                   <span class="hljs-comment">// line status register</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> LSR_RX_READY (1 &lt;&lt; 0)   <span class="hljs-comment">// input is waiting to be read from RHR</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> LSR_TX_IDLE (1 &lt;&lt; 5)    <span class="hljs-comment">// THR can accept another character to send</span></span>
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalDirectUartPutc</span><span class="hljs-params">(<span class="hljs-keyword">char</span> ch)</span>
+</span>{
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> CONFIG_NX_UART0_FROM_SBI</span>
+    sbi_console_putchar(ch);
+<span class="hljs-meta">#<span class="hljs-meta-keyword">else</span></span>
+    <span class="hljs-keyword">if</span> ((Read8(UART0_PHY_ADDR + LSR) &amp; LSR_TX_IDLE) == <span class="hljs-number">0</span>)
+    {
+        <span class="hljs-comment">// the UART transmit holding register is full,</span>
+        <span class="hljs-keyword">return</span>;
+    }
+    Write8(UART0_PHY_ADDR + THR, ch);
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+}
+
+<span class="hljs-function"><span class="hljs-keyword">int</span> <span class="hljs-title">NX_HalDirectUartGetc</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> CONFIG_NX_UART0_FROM_SBI</span>
+    <span class="hljs-keyword">return</span> sbi_console_getchar();
+<span class="hljs-meta">#<span class="hljs-meta-keyword">else</span></span>
+    <span class="hljs-keyword">if</span> (Read8(UART0_PHY_ADDR + LSR) &amp; <span class="hljs-number">0x01</span>)
+    {
+        <span class="hljs-comment">// input data is ready.</span>
+        <span class="hljs-keyword">return</span> Read8(UART0_PHY_ADDR + RHR);
+    }
+    <span class="hljs-keyword">else</span>
+    {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">-1</span>;
+    }
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+}
+
+<span class="hljs-function">NX_INTERFACE <span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalConsoleOutChar</span><span class="hljs-params">(<span class="hljs-keyword">char</span> ch)</span>
+</span>{
+    NX_HalDirectUartPutc(ch);
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalDirectUartInit</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    <span class="hljs-comment">// disable interrupts.</span>
+    Write8(UART0_PHY_ADDR + IER, <span class="hljs-number">0x00</span>);
+    <span class="hljs-comment">// special mode to set baud rate.</span>
+    Write8(UART0_PHY_ADDR + LCR, LCR_BAUD_LATCH);
+    <span class="hljs-comment">// LSB for baud rate of 115.2K.</span>
+    Write8(UART0_PHY_ADDR + <span class="hljs-number">0</span>, <span class="hljs-number">0x01</span>);
+    <span class="hljs-comment">// MSB for baud rate of 115.2K.</span>
+    Write8(UART0_PHY_ADDR + <span class="hljs-number">1</span>, <span class="hljs-number">0x00</span>);
+    <span class="hljs-comment">// leave set-baud mode,</span>
+    <span class="hljs-comment">// and set word length to 8 bits, no parity.</span>
+    Write8(UART0_PHY_ADDR + LCR, LCR_EIGHT_BITS);
+    <span class="hljs-comment">// reset and enable FIFOs.</span>
+    Write8(UART0_PHY_ADDR + FCR, FCR_FIFO_ENABLE | FCR_FIFO_CLEAR);
+}
+
+<span class="hljs-comment">/**
+ * default handler
+*/</span>
+<span class="hljs-function">NX_WEAK_SYM <span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalDirectUartGetcHandler</span><span class="hljs-params">(<span class="hljs-keyword">char</span> data)</span>
+</span>{
+    NX_LOG_I(<span class="hljs-string">&quot;Deafult uart handler:%x/%c\n&quot;</span>, data, data);
+}
+
+<span class="hljs-function">NX_PRIVATE NX_Error <span class="hljs-title">UartIrqHandler</span><span class="hljs-params">(NX_IRQ_Number irqno, <span class="hljs-keyword">void</span> *arg)</span>
+</span>{
+    <span class="hljs-keyword">int</span> data = NX_HalDirectUartGetc();
+    <span class="hljs-keyword">if</span> (data != <span class="hljs-number">-1</span>)
+    {
+        <span class="hljs-keyword">if</span> (NX_HalDirectUartGetcHandler != NX_NULL)
+        {
+            NX_HalDirectUartGetcHandler(data);
+        }
+    }
+    <span class="hljs-keyword">return</span> data != <span class="hljs-number">-1</span> ? NX_EOK : NX_EIO;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalDirectUartStage2</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    <span class="hljs-comment">/* enable receive interrupts. */</span>
+    Write8(UART0_PHY_ADDR + IER, IER_RX_ENABLE);
+
+    NX_ASSERT(NX_IRQ_Bind(UART0_IRQ, UartIrqHandler, NX_NULL, <span class="hljs-string">&quot;Uart&quot;</span>, <span class="hljs-number">0</span>) == NX_EOK);
+    NX_ASSERT(NX_IRQ_Unmask(UART0_IRQ) == NX_EOK);
+}
+</code></pre>
+<h3 id="3-&#x539F;&#x5B50;&#x64CD;&#x4F5C;">3. &#x539F;&#x5B50;&#x64CD;&#x4F5C;</h3>
+<p>&#x539F;&#x5B50;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x5BF9;&#x6570;&#x636E;&#x7684;&#x539F;&#x5B50;&#x8BBE;&#x7F6E;&#xFF0C;&#x83B7;&#x53D6;&#xFF0C;&#x52A0;&#x6CD5;&#xFF0C;&#x51CF;&#x6CD5;&#xFF0C;&#x6570;&#x636E;&#x4EA4;&#x6362;&#x7B49;&#x3002;&#x7531;&#x4E8E; <code>gcc</code> &#x5185;&#x7F6E;&#x4E86;&#x539F;&#x5B50;&#x64CD;&#x4F5C;&#x7684;&#x51FD;&#x6570;&#xFF0C;
+&#x8FD9;&#x91CC;&#x53EA;&#x9700;&#x8981;&#x8C03;&#x7528; <code>gcc</code> &#x5185;&#x7F6E;&#x7684;&#x539F;&#x5B50;&#x64CD;&#x4F5C;&#x5373;&#x53EF;&#x3002;</p>
+<ul>
+<li>&#x6587;&#x4EF6;&#xFF1A;src/arch/riscv64/port/atomic.c</li>
+</ul>
+<pre><code class="lang-c"><span class="hljs-comment">/**
+ * Copyright (c) 2018-2022, NXOS Development Team
+ * SPDX-License-Identifier: Apache-2.0
+ * 
+ * Contains: HAL NX_Atomic  
+ * 
+ * Change Logs:
+ * Date           Author            Notes
+ * 2021-12-1      JasonHu           Init
+ */</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;xbook/atomic.h&gt;</span></span>
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalAtomicSet</span><span class="hljs-params">(NX_Atomic *atomic, <span class="hljs-keyword">long</span> value)</span>
+</span>{
+    atomic-&gt;value = value;
+}
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">long</span> <span class="hljs-title">NX_HalAtomicGet</span><span class="hljs-params">(NX_Atomic *atomic)</span>
+</span>{
+    <span class="hljs-keyword">return</span> atomic-&gt;value;
+}
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalAtomicAdd</span><span class="hljs-params">(NX_Atomic *atomic, <span class="hljs-keyword">long</span> value)</span>
+</span>{
+    <span class="hljs-comment">/* gcc build-in functions */</span>
+    __sync_fetch_and_add(&amp;atomic-&gt;value, value);
+}
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalAtomicSub</span><span class="hljs-params">(NX_Atomic *atomic, <span class="hljs-keyword">long</span> value)</span>
+</span>{
+    __sync_fetch_and_sub(&amp;atomic-&gt;value, value);
+}
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalAtomicInc</span><span class="hljs-params">(NX_Atomic *atomic)</span>
+</span>{
+    __sync_fetch_and_add(&amp;atomic-&gt;value, <span class="hljs-number">1</span>);
+}
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalAtomicDec</span><span class="hljs-params">(NX_Atomic *atomic)</span>
+</span>{
+    __sync_fetch_and_sub(&amp;atomic-&gt;value, <span class="hljs-number">1</span>);
+}
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalAtomicSetMask</span><span class="hljs-params">(NX_Atomic *atomic, <span class="hljs-keyword">long</span> mask)</span>
+</span>{
+    __sync_fetch_and_or(&amp;atomic-&gt;value, mask);
+}
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalAtomicClearMask</span><span class="hljs-params">(NX_Atomic *atomic, <span class="hljs-keyword">long</span> mask)</span>
+</span>{    
+    __sync_fetch_and_and(&amp;atomic-&gt;value, ~mask);
+}
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">long</span> <span class="hljs-title">NX_HalAtomicSwap</span><span class="hljs-params">(NX_Atomic *atomic, <span class="hljs-keyword">long</span> newValue)</span>
+</span>{
+    <span class="hljs-keyword">return</span> __sync_lock_test_and_set(&amp;((atomic)-&gt;value), newValue);
+}
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">long</span> <span class="hljs-title">NX_HalAtomicCAS</span><span class="hljs-params">(NX_Atomic *atomic, <span class="hljs-keyword">long</span> old, <span class="hljs-keyword">long</span> newValue)</span>
+</span>{
+    <span class="hljs-keyword">return</span> __sync_val_compare_and_swap(&amp;atomic-&gt;value, old, newValue);
+}
+
+NX_INTERFACE <span class="hljs-keyword">struct</span> NX_AtomicOps NX_AtomicOpsInterface = 
+{
+    .<span class="hljs-built_in">set</span>        = NX_HalAtomicSet,
+    .get        = NX_HalAtomicGet,
+    .add        = NX_HalAtomicAdd,
+    .sub        = NX_HalAtomicSub,
+    .inc        = NX_HalAtomicInc,
+    .dec        = NX_HalAtomicDec,
+    .setMask    = NX_HalAtomicSetMask,
+    .clearMask  = NX_HalAtomicClearMask,
+    .swap       = NX_HalAtomicSwap,
+    .cas        = NX_HalAtomicCAS,
+};
+</code></pre>
+<h3 id="4-&#x5185;&#x5B58;&#x5C4F;&#x969C;">4. &#x5185;&#x5B58;&#x5C4F;&#x969C;</h3>
+<p>&#x5728; <code>risc-v</code> &#x67B6;&#x6784;&#x4E2D;&#xFF0C;&#x5185;&#x5B58;&#x5168;&#xFF08;&#x8BFB;&#x548C;&#x5199;&#xFF09;&#x5C4F;&#x969C;&#x4F7F;&#x7528; <code>gcc</code> &#x5185;&#x7F6E;&#x51FD;&#x6570; <code>__sync_synchronize</code> &#x5B9E;&#x73B0;&#xFF0C;
+&#x5185;&#x5B58;&#x8BFB;/&#x5199;&#x5C4F;&#x969C;&#x4F7F;&#x7528; <code>fence</code> &#x6307;&#x4EE4;&#x53BB;&#x5B9E;&#x73B0;&#x3002;&#x5185;&#x5B58;&#x6307;&#x4EE4;&#x5C4F;&#x969C;&#x4F7F;&#x7528; <code>fence.i</code> &#x6307;&#x4EE4;&#x5B9E;&#x73B0;&#x3002;</p>
+<ul>
+<li>&#x6587;&#x4EF6;&#xFF1A;src/arch/riscv64/port/barrier.c</li>
+</ul>
+<pre><code class="lang-c"><span class="hljs-comment">/**
+ * Copyright (c) 2018-2022, NXOS Development Team
+ * SPDX-License-Identifier: Apache-2.0
+ * 
+ * Contains: HAL Memory Barrier
+ * 
+ * Change Logs:
+ * Date           Author            Notes
+ * 2021-12-9      JasonHu           Init
+ */</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;mm/barrier.h&gt;</span></span>
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalMemBarrier</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    __sync_synchronize();
+}
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalMemBarrierRead</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    NX_CASM(<span class="hljs-string">&quot;fence&quot;</span>:::<span class="hljs-string">&quot;memory&quot;</span>);
+}
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalMemBarrierWrite</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    NX_CASM(<span class="hljs-string">&quot;fence&quot;</span>:::<span class="hljs-string">&quot;memory&quot;</span>);
+}
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalMemBarrierInstruction</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    NX_CASM(<span class="hljs-string">&quot;fence.i&quot;</span>:::<span class="hljs-string">&quot;memory&quot;</span>);
+}
+
+NX_INTERFACE <span class="hljs-keyword">struct</span> NX_MemBarrierOps NX_MemBarrierOpsInterface = 
+{
+    .barrier            = NX_HalMemBarrier,
+    .barrierRead        = NX_HalMemBarrierRead,
+    .barrierWrite       = NX_HalMemBarrierWrite,
+    .barrierInstruction = NX_HalMemBarrierInstruction,
+};
+</code></pre>
+<h3 id="5-&#x8BA1;&#x65F6;&#x5668;&#x65F6;&#x949F;">5. &#x8BA1;&#x65F6;&#x5668;&#x65F6;&#x949F;</h3>
+<p>&#x786C;&#x4EF6;&#x65F6;&#x949F;&#x4F1A;&#x6309;&#x7167;&#x4E00;&#x5B9A;&#x7684;&#x9891;&#x7387;&#x53BB;&#x589E;&#x957F;&#x5F53;&#x524D;&#x5B9A;&#x65F6;&#x5668;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x503C;&#xFF0C;&#x5728; <code>qemu</code> &#x4E2D;&#x8FD9;&#x4E2A;&#x9891;&#x7387;&#x662F; <code>10MHZ</code> &#x3002;
+&#x5982;&#x679C;&#x5F53;&#x524D;&#x5B9A;&#x65F6;&#x5668;&#x7684;&#x503C;&#x8D85;&#x8FC7;&#x4E86;&#x8D85;&#x65F6;&#x5B9A;&#x65F6;&#x5668;&#x5BC4;&#x5B58;&#x5668;&#x7684;&#x503C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x4F1A;&#x89E6;&#x53D1;&#x4E00;&#x4E2A;&#x4E2D;&#x65AD;&#x3002;&#x6CE8;&#x610F;&#xFF1A;&#x524D;&#x63D0;&#x662F;&#x6253;&#x5F00;&#x4E86;&#x5B9A;&#x65F6;&#x5668;&#x4E2D;&#x65AD;&#x3002;</p>
+<p>&#x5728;&#x505A;&#x65F6;&#x949F;&#x5B9A;&#x65F6;&#x5668;&#x521D;&#x59CB;&#x5316;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x5148;&#x5173;&#x95ED; <code>Supervisor</code> &#x6A21;&#x5F0F;&#x7684;&#x5B9A;&#x65F6;&#x5668;&#x4E2D;&#x65AD;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x8BBE;&#x7F6E;&#x8D85;&#x65F6;&#x5B9A;&#x65F6;&#x5668;&#x7684;&#x503C;&#x3002;
+&#x8FD9;&#x662F;&#x64CD;&#x4F5C;&#x9700;&#x8981;&#x901A;&#x8FC7; <code>SBI</code> &#x53BB;&#x5B9E;&#x73B0;&#xFF0C;&#x800C;&#x83B7;&#x53D6;&#x64CD;&#x4F5C;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x901A;&#x8FC7; <code>rdtime</code> &#x6307;&#x4EE4;&#x83B7;&#x53D6;&#x3002;</p>
+<p>&#x7531;&#x4E8E;&#x6211;&#x4EEC;&#x60F3;&#x5B9E;&#x73B0;1&#x79D2;&#x949F;&#x4EA7;&#x751F; <code>NX_TICKS_PER_SECOND</code> &#xFF08;&#x4E00;&#x822C;&#x5728;100~1000&#xFF09;&#x6B21;&#x5B9A;&#x65F6;&#x5668;&#x4E2D;&#x65AD;&#x7684;&#x6548;&#x679C;&#xFF0C;
+&#x6240;&#x4EE5;&#x9700;&#x8981;&#x8BA1;&#x7B97;&#x51FA;&#x4EA7;&#x751F;&#x4E00;&#x6B21;&#x4E2D;&#x65AD;&#xFF0C;&#x9700;&#x8981;&#x95F4;&#x9694;&#x591A;&#x5C11;&#x4E2A;<code>tick</code>&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x5F53;&#x8D85;&#x65F6;&#x540E;&#xFF0C;&#x5C31;&#x4F1A;&#x4EA7;&#x751F;&#x4E00;&#x4E2A;&#x4E2D;&#x65AD;&#xFF0C;&#x4E8E;&#x662F;&#x5C31;&#x8BBE;&#x7F6E;&#x4E0B;&#x4E00;&#x4E2A;&#x4E2D;&#x65AD;&#x4EA7;&#x751F;&#x65F6;&#x7684;&#x8D85;&#x65F6;&#x503C;&#x3002;</p>
+<ul>
+<li>&#x6587;&#x4EF6;&#xFF1A;src/arch/riscv64/port/clock.c</li>
+</ul>
+<pre><code class="lang-c"><span class="hljs-comment">/**
+ * Copyright (c) 2018-2022, NXOS Development Team
+ * SPDX-License-Identifier: Apache-2.0
+ * 
+ * Contains: Clock for system 
+ * 
+ * Change Logs:
+ * Date           Author            Notes
+ * 2021-10-16     JasonHu           Init
+ */</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;time/clock.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;io/irq.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;io/delay_irq.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;clock.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;regs.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sbi.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> NX_LOG_NAME <span class="hljs-string">&quot;Clock&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;utils/log.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> NX_TIMER_CLK_FREQ 10000000  <span class="hljs-comment">/* qemu has 10MHZ clock frequency */</span></span>
+
+NX_PRIVATE NX_U64 TickDelta = NX_TIMER_CLK_FREQ / NX_TICKS_PER_SECOND;
+
+<span class="hljs-function">NX_PRIVATE NX_U64 <span class="hljs-title">GetTimerCounter</span><span class="hljs-params">()</span>
+</span>{
+    NX_U64 ret;
+    NX_CASM (<span class="hljs-string">&quot;rdtime %0&quot;</span> : <span class="hljs-string">&quot;=r&quot;</span>(ret));
+    <span class="hljs-keyword">return</span> ret;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalClockHandler</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    NX_ClockTickGo();
+    <span class="hljs-comment">/* update timer */</span>
+    sbi_set_timer(GetTimerCounter() + TickDelta);
+}
+
+<span class="hljs-function">NX_INTERFACE NX_Error <span class="hljs-title">NX_HalInitClock</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    <span class="hljs-comment">/* Clear the Supervisor-Timer bit in SIE */</span>
+    ClearCSR(sie, SIE_STIE);
+
+    <span class="hljs-comment">/* Set timer */</span>
+    sbi_set_timer(GetTimerCounter() + TickDelta);
+
+    <span class="hljs-comment">/* Enable the Supervisor-Timer bit in SIE */</span>
+    SetCSR(sie, SIE_STIE);
+    <span class="hljs-keyword">return</span> NX_EOK;
+}
+</code></pre>
+<h3 id="6-&#x7EBF;&#x7A0B;&#x4E0A;&#x4E0B;&#x6587;">6. &#x7EBF;&#x7A0B;&#x4E0A;&#x4E0B;&#x6587;</h3>
+<p>&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x5207;&#x6362;&#x5206;&#x4E3A;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x521D;&#x59CB;&#x5316;&#xFF0C;&#x4ECE;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x5207;&#x6362;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#xFF0C;&#x76F4;&#x63A5;&#x5207;&#x6362;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x3002;</p>
+<p>&#x521D;&#x59CB;&#x5316;&#x7EBF;&#x7A0B;&#x4E0A;&#x4E0B;&#x6587;&#x662F;&#x5728;&#x6808;&#x4E0A;&#x6784;&#x5EFA;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x5F53;&#x7B2C;&#x4E00;&#x6B21;&#x5207;&#x6362;&#x5230;&#x8BE5;&#x7EBF;&#x7A0B;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5BC4;&#x5B58;&#x5668;&#x5C31;&#x4F1A;&#x4F7F;&#x7528;&#x6808;&#x4E2D;&#x7684;&#x503C;&#x3002;
+&#x5728;&#x51FD;&#x6570; <code>NX_HalContextInit</code> &#x4E2D;&#xFF0C;&#x9700;&#x8981;&#x6784;&#x5EFA;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x53C2;&#x6570;&#x662F;&#x7EBF;&#x7A0B;&#x7684;&#x5165;&#x53E3; <code>startEntry</code> &#x548C;&#x7EBF;&#x7A0B;&#x7ED3;&#x675F;&#x65F6;&#x6267;&#x884C;&#x7684;&#x51FD;&#x6570; <code>exitEntry</code>&#xFF0C;
+&#x4EE5;&#x53CA;&#x7EBF;&#x7A0B;&#x8FD0;&#x884C;&#x65F6;&#x7684;&#x53C2;&#x6570; <code>arg</code> &#xFF0C;&#x4EE5;&#x53CA;&#x5C06;&#x8FD9;&#x4E9B;&#x6570;&#x636E;&#x6784;&#x5EFA;&#x5728;&#x6808;&#x9876; <code>stackTop</code> &#x4E4B;&#x4E0B;&#xFF0C;&#x6700;&#x540E;&#x8FD4;&#x56DE;&#x6808;&#x4F4E;&#x3002;</p>
+<p>&#x9884;&#x7559;&#x4E00;&#x4E2A;&#x4E0A;&#x4E0B;&#x6587;&#x7A7A;&#x95F4;&#x540E;&#xFF0C;&#x8BBE;&#x7F6E;&#x53C2;&#x6570;&#x4E3A; <code>a0</code> &#xFF0C;&#x56E0;&#x4E3A;risc-v&#x4E2D;c&#x8BED;&#x8A00;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x662F; <code>a0~a7</code> &#x3002;
+&#x5165;&#x53E3;&#x5730;&#x5740;&#x4F7F;&#x7528; <code>epc</code> &#x4FDD;&#x5B58;&#xFF0C;&#x56E0;&#x4E3A;&#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#x7684;&#x65F6;&#x5019;&#x4F1A;&#x6A21;&#x62DF;&#x4E00;&#x6B21;&#x5F02;&#x5E38;&#x8FD4;&#x56DE;&#xFF0C;&#x8FD4;&#x56DE;&#x540E;&#x5C31;&#x5230;&#x8FD9;&#x4E2A;&#x5F02;&#x5E38;&#x5730;&#x5740;&#x5904;&#x6267;&#x884C;&#x3002;
+&#x7ED3;&#x675F;&#x65F6;&#x6267;&#x884C;&#x7684;&#x51FD;&#x6570;&#x4F7F;&#x7528; <code>ra</code> &#x4FDD;&#x5B58;&#xFF0C;&#x5B83;&#x662F;&#x8FD4;&#x56DE;&#x5730;&#x5740;&#x7684;&#x610F;&#x601D;&#xFF0C;&#x8868;&#x793A;&#x7EBF;&#x7A0B;&#x8FD4;&#x56DE;&#x540E;&#x5C31;&#x53BB;&#x6267;&#x884C;&#x8BE5;&#x51FD;&#x6570;&#x3002;
+&#x7EBF;&#x7A0B;&#x6808;&#x4F7F;&#x7528; <code>sp</code> &#x5BC4;&#x5B58;&#x5668;&#x4FDD;&#x5B58;&#x3002;</p>
+<p>&#x8FD8;&#x6709;&#x4E00;&#x4E2A;&#x5F88;&#x91CD;&#x8981;&#x7684;&#x5730;&#x65B9;&#x5C31;&#x662F;&#x5BF9;&#x72B6;&#x6001;&#x5BC4;&#x5B58;&#x5668; <code>sstatus</code> &#x7684;&#x8BBE;&#x7F6E;&#xFF0C;
+&#x9700;&#x8981;&#x80FD;&#x591F;&#x8BBF;&#x95EE;&#x7528;&#x6237;&#x6001;&#x7684;&#x5185;&#x5B58;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x8FD4;&#x56DE;&#x540E;&#x5F00;&#x542F;&#x4E2D;&#x65AD;&#x4EE5;&#x53CA;&#x8BBE;&#x7F6E;&#x4E3A; <code>Supervisor</code> &#x6A21;&#x5F0F;&#xFF08;&#x56E0;&#x4E3A;&#x7EBF;&#x7A0B;&#x7684;&#x5207;&#x6362;&#x662F;&#x5728;&#x5185;&#x6838;&#x4E2D;&#x5B8C;&#x6210;&#x7684;&#xFF09;&#x3002;</p>
+<ul>
+<li>&#x6587;&#x4EF6;&#xFF1A;src/arch/riscv64/port/context.c</li>
+</ul>
+<pre><code class="lang-c"><span class="hljs-comment">/**
+ * Copyright (c) 2018-2022, NXOS Development Team
+ * SPDX-License-Identifier: Apache-2.0
+ * 
+ * Contains: NX_Thread context 
+ * 
+ * Change Logs:
+ * Date           Author            Notes
+ * 2021-10-16     JasonHu           Init
+ */</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sched/context.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;utils/memory.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;utils/log.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;io/irq.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;context.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;regs.h&gt;</span></span>
+
+<span class="hljs-function">NX_IMPORT <span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalContextSwitchNext</span><span class="hljs-params">(NX_Addr nextSP)</span></span>;
+<span class="hljs-function">NX_IMPORT <span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalContextSwitchPrevNext</span><span class="hljs-params">(NX_Addr prevSP, NX_Addr nextSP)</span></span>;
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> *<span class="hljs-title">NX_HalContextInit</span><span class="hljs-params">(<span class="hljs-keyword">void</span> *startEntry, <span class="hljs-keyword">void</span> *exitEntry, <span class="hljs-keyword">void</span> *arg, <span class="hljs-keyword">void</span> *stackTop)</span>
+</span>{
+    NX_U8 *<span class="hljs-built_in">stack</span> = NX_NULL;
+    NX_HalContext *context = NX_NULL;
+
+    <span class="hljs-built_in">stack</span> = (NX_U8 *)stackTop;
+    <span class="hljs-built_in">stack</span> = (NX_U8 *)NX_ALIGN_DOWN((NX_UArch)<span class="hljs-built_in">stack</span>, <span class="hljs-keyword">sizeof</span>(NX_UArch));
+
+    <span class="hljs-built_in">stack</span> -= <span class="hljs-keyword">sizeof</span>(NX_HalContext);
+    context = (NX_HalContext *)<span class="hljs-built_in">stack</span>;
+
+    NX_MemZero(context, <span class="hljs-keyword">sizeof</span>(NX_HalContext));
+
+    context-&gt;a0 = (NX_UArch)arg;
+    context-&gt;epc = (NX_UArch)startEntry;
+    context-&gt;sp = (NX_UArch)(((NX_UArch)<span class="hljs-built_in">stack</span>) + <span class="hljs-keyword">sizeof</span>(NX_HalContext));
+    context-&gt;ra = (NX_UArch)exitEntry;
+
+    <span class="hljs-comment">/**
+     * allow to access user space memory,
+     * return to supervisor mode,
+     * enable interrupt
+     */</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> CONFIG_NX_PLATFORM_K210</span>
+    <span class="hljs-comment">/* NOTICE: in k210, SSTATUS_SUM mean disable Supervisor Access User memroy */</span>
+    context-&gt;sstatus = SSTATUS_SPP | SSTATUS_SPIE;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">else</span></span>
+    context-&gt;sstatus = SSTATUS_SUM | SSTATUS_SPP | SSTATUS_SPIE;
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+    <span class="hljs-keyword">return</span> (<span class="hljs-keyword">void</span> *)<span class="hljs-built_in">stack</span>;
+}
+
+NX_INTERFACE <span class="hljs-keyword">struct</span> NX_ContextOps NX_ContextOpsInterface = 
+{
+    .init           = NX_HalContextInit,
+    .switchNext     = NX_HalContextSwitchNext,
+    .switchPrevNext = NX_HalContextSwitchPrevNext,
+};
+</code></pre>
+<p>&#x5728;&#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x4F20;&#x5165;&#x7684;&#x662F;&#x7EBF;&#x7A0B;&#x7684;&#x6808;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x53EF;&#x4EE5;&#x4ECE;&#x5730;&#x5740;&#x4E2D;&#x53D6;&#x51FA;&#x7EBF;&#x7A0B;&#x5F53;&#x524D;&#x6808;&#x7684;&#x503C;&#x3002;
+&#x4F7F;&#x7528;&#x8FD9;&#x79CD;&#x65B9;&#x5F0F;&#x7684;&#x8BDD;&#xFF0C;&#x5C31;&#x975E;&#x5E38;&#x65B9;&#x4FBF;&#x79FB;&#x690D;&#x5230;&#x5176;&#x5B83;&#x67B6;&#x6784;&#x4E0A;&#x3002;</p>
+<p>&#x5728; <code>NX_HalContextSwitchNext</code> &#x4E2D;&#xFF0C;&#x83B7;&#x53D6;&#x4E86;&#x6808;&#x7684;&#x503C;&#x540E;&#xFF0C;&#x5C31;&#x4ECE;&#x6808;&#x4E2D;&#x6062;&#x590D;&#x5BC4;&#x5B58;&#x5668;&#x4E0A;&#x4E0B;&#x6587;&#xFF0C;&#x7136;&#x540E;&#x8C03;&#x7528; <code>sret</code> &#x8FD4;&#x56DE;&#x3002;
+&#x7531;&#x4E8E; <code>epc</code> &#x8BBE;&#x7F6E;&#x4E86;&#x7EBF;&#x7A0B;&#x7684;&#x5165;&#x53E3;&#x5730;&#x5740;&#xFF0C;&#x90A3;&#x4E48; <code>sret</code> &#x8FD4;&#x56DE;&#x540E;&#x5C31;&#x53EF;&#x4EE5;&#x8BA9; <code>pc</code> &#x7B49;&#x4E8E; <code>epc</code> &#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x5207;&#x6362;&#x5230;&#x7EBF;&#x7A0B;&#x91CC;&#x9762;&#x53BB;&#x4E86;&#x3002;</p>
+<p>&#x81F3;&#x4E8E;&#x5728; <code>NX_HalContextSwitchPrevNext</code> &#x4E2D;&#xFF0C;&#x591A;&#x4E86;&#x5BF9;&#x5F53;&#x524D;&#x7EBF;&#x7A0B;&#x7684;&#x4E0A;&#x4E0B;&#x6587;&#x7684;&#x4FDD;&#x5B58;&#x7684;&#x5DE5;&#x4F5C;&#xFF0C;&#x7136;&#x540E;&#x5207;&#x6362;&#x5230;&#x4E0B;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;&#x3002;</p>
+<ul>
+<li>&#x6587;&#x4EF6;&#xFF1A;src/arch/riscv64/kernel/context.S</li>
+</ul>
+<pre><code class="lang-c">/**
+ * Copyright (c) 2018-2022, NXOS Development Team
+ * SPDX-License-Identifier: Apache-2.0
+ * 
+ * Contains: NX_Thread context 
+ * 
+ * Change Logs:
+ * Date           Author            Notes
+ * 2021-12-01     JasonHu           Init
+ */
+
+.text
+
+#define __ASSEMBLY__
+#include &lt;context.h&gt;
+#include &lt;regs.h&gt;
+
+/**
+ * void NX_HalContextSwitchNext(NX_Addr nextSP);
+ */
+.globl NX_HalContextSwitchNext
+NX_HalContextSwitchNext:
+    LOAD sp, (a0)   /* sp = *nextSP */
+
+    RESTORE_CONTEXT
+    sret
+
+/**
+ * void NX_HalContextSwitchPrevNext(NX_Addr prevSP, NX_Addr nextSP);
+ */
+.globl NX_HalContextSwitchPrevNext
+NX_HalContextSwitchPrevNext:
+    mv t0, sp
+
+    /**
+     * set as supervisor mode and enable interupt 
+     * make sure kernel mode thread do context switch
+     */
+    li t1, SSTATUS_SPP | SSTATUS_SPIE | SSTATUS_SUM
+    csrs sstatus, t1
+
+    /**
+     * set `sepc` as `ra`, `ra` saved return address of NX_HalContextSwitchPrevNext
+     * when do `sret`, will return from NX_HalContextSwitchPrevNext
+     */
+    csrw sepc, ra
+
+    /* save context to stack */
+    SAVE_CONTEXT
+
+    /* save old sp to stack, instead the sp in sscratch */
+    STORE t0, CTX_SP_OFF * REGBYTES(sp)
+
+    /* save sp to from thread, *from = `sp` */
+    STORE sp, (a0)
+
+    LOAD sp, (a1)   /* sp = *nextSP */
+
+    /* restore context from stack */
+    RESTORE_CONTEXT
+
+    /* supervisor return, `pc` = `sepc` */
+    sret
+</code></pre>
+<h3 id="7-&#x4E2D;&#x65AD;&#x7BA1;&#x7406;">7. &#x4E2D;&#x65AD;&#x7BA1;&#x7406;</h3>
+<p>&#x5728;&#x4E2D;&#x65AD;&#x4E2D;&#xFF0C;&#x4F7F;&#x80FD; <code>NX_HalIrqEnable</code> &#x548C;&#x7981;&#x7528; <code>NX_HalIrqDisable</code> &#x4E2D;&#x65AD;&#x53EA;&#x9700;&#x8981;&#x5BF9; <code>sstatus</code> &#x5BC4;&#x5B58;&#x5668;&#x7684; <code>SSTATUS_SIE</code> &#x4F4D;&#x505A;&#x7F6E;&#x4F4D;&#x548C;&#x6E05;&#x7406;&#x7684;&#x64CD;&#x4F5C;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x9664;&#x6B64;&#x4E4B;&#x5916;&#xFF0C;&#x8FD8;&#x63D0;&#x4F9B;&#x4E86;&#x5BF9;&#x5F53;&#x524D;&#x4E2D;&#x65AD;&#x72B6;&#x6001;&#x4FDD;&#x5B58;&#x548C;&#x6062;&#x590D;&#x7684;&#x64CD;&#x4F5C; <code>NX_HalIrqSaveLevel</code> &#x548C; <code>NX_HalIrqRestoreLevel</code>&#x3002;
+&#x8BE5;&#x64CD;&#x4F5C;&#x53EA;&#x662F;&#x591A;&#x4E86;&#x5BF9; <code>sstatus</code> &#x5BC4;&#x5B58;&#x5668;&#x7684; <code>SSTATUS_SIE</code> &#x4F4D;&#x4FDD;&#x5B58;&#x548C;&#x6062;&#x590D;&#x3002;</p>
+<p>&#x9664;&#x6B64;&#x4E4B;&#x5916;&#x5C31;&#x662F;&#x5BF9;&#x67D0;&#x4E2A;&#x4E2D;&#x65AD;&#x7684;&#x4F7F;&#x80FD; <code>NX_HalIrqUnmask</code> &#x548C;&#x7981;&#x7528; <code>NX_HalIrqMask</code> &#xFF0C;&#x4EE5;&#x53CA;&#x4E2D;&#x65AD;&#x5904;&#x7406;&#x5B8C;&#x540E;&#x7684;&#x5E94;&#x7B54;&#x5904;&#x7406; <code>NX_HalIrqAck</code>&#x3002;
+&#x8FD9;3&#x4E2A;&#x63A5;&#x53E3;&#x90FD;&#x662F;&#x5BF9; <code>PLIC</code> &#x7684;&#x5C01;&#x88C5;&#x3002;</p>
+<ul>
+<li>&#x6587;&#x4EF6;&#xFF1A;src/arch/riscv64/port/interrupt.c</li>
+</ul>
+<pre><code class="lang-c"><span class="hljs-comment">/**
+ * Copyright (c) 2018-2022, NXOS Development Team
+ * SPDX-License-Identifier: Apache-2.0
+ * 
+ * Contains: interrupt manage
+ * 
+ * Change Logs:
+ * Date           Author            Notes
+ * 2021-10-31     JasonHu           Init
+ */</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;xbook.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;regs.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;io/irq.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;plic.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sched/smp.h&gt;</span></span>
+
+<span class="hljs-function">NX_PRIVATE NX_Error <span class="hljs-title">NX_HalIrqUnmask</span><span class="hljs-params">(NX_IRQ_Number irqno)</span>
+</span>{
+    <span class="hljs-keyword">if</span> (irqno &lt; <span class="hljs-number">0</span> || irqno &gt;= NX_NR_IRQS)
+    {
+        <span class="hljs-keyword">return</span> NX_EINVAL;
+    }
+
+    <span class="hljs-keyword">return</span> PLIC_EnableIRQ(NX_SMP_GetBootCore(), irqno);
+}
+
+<span class="hljs-function">NX_PRIVATE NX_Error <span class="hljs-title">NX_HalIrqMask</span><span class="hljs-params">(NX_IRQ_Number irqno)</span>
+</span>{
+    <span class="hljs-keyword">if</span> (irqno &lt; <span class="hljs-number">0</span> || irqno &gt;= NX_NR_IRQS)
+    {
+        <span class="hljs-keyword">return</span> NX_EINVAL;
+    }
+
+    <span class="hljs-keyword">return</span> PLIC_DisableIRQ(NX_SMP_GetBootCore(), irqno);
+}
+
+<span class="hljs-function">NX_PRIVATE NX_Error <span class="hljs-title">NX_HalIrqAck</span><span class="hljs-params">(NX_IRQ_Number irqno)</span>
+</span>{
+    <span class="hljs-keyword">if</span> (irqno &lt; <span class="hljs-number">0</span> || irqno &gt;= NX_NR_IRQS)
+    {
+        <span class="hljs-keyword">return</span> NX_EINVAL;
+    }
+
+    <span class="hljs-keyword">return</span> PLIC_Complete(NX_SMP_GetBootCore(), irqno);
+}
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalIrqEnable</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    WriteCSR(sstatus, ReadCSR(sstatus) | SSTATUS_SIE);
+}
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalIrqDisable</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    WriteCSR(sstatus, ReadCSR(sstatus) &amp; ~SSTATUS_SIE);
+}
+
+<span class="hljs-function">NX_PRIVATE NX_UArch <span class="hljs-title">NX_HalIrqSaveLevel</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    NX_UArch level = <span class="hljs-number">0</span>;
+    level = ReadCSR(sstatus);
+    WriteCSR(sstatus, level &amp; ~SSTATUS_SIE);
+    <span class="hljs-keyword">return</span> level &amp; SSTATUS_SIE;
+}
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalIrqRestoreLevel</span><span class="hljs-params">(NX_UArch level)</span>
+</span>{
+    WriteCSR(sstatus, ReadCSR(sstatus) | (level &amp; SSTATUS_SIE));
+}
+
+NX_INTERFACE NX_IRQ_Controller NX_IRQ_ControllerInterface = 
+{
+    .unmask = NX_HalIrqUnmask,
+    .mask = NX_HalIrqMask,
+    .ack = NX_HalIrqAck,
+    .enable = NX_HalIrqEnable,
+    .disable = NX_HalIrqDisable,
+    .saveLevel = NX_HalIrqSaveLevel,
+    .restoreLevel = NX_HalIrqRestoreLevel,
+};
+</code></pre>
+<h3 id="8-mmu&#x865A;&#x62DF;&#x5185;&#x5B58;&#x7BA1;&#x7406;">8. MMU&#x865A;&#x62DF;&#x5185;&#x5B58;&#x7BA1;&#x7406;</h3>
+<p>&#x76EE;&#x524D;&#x652F;&#x6301;&#x7684;&#x662F;mmu-sv39&#xFF0C;3&#x7EA7;&#x9875;&#x8868;&#xFF0C;&#x9875;&#x8868;&#x548C;&#x7269;&#x7406;&#x9875;&#x90FD;&#x662F;4kb&#x5927;&#x5C0F;&#x3002;</p>
+<p><code>NX_HalMapPage</code> &#x662F;&#x6620;&#x5C04;&#x865A;&#x62DF;&#x5730;&#x5740;&#xFF0C;&#x4F1A;&#x81EA;&#x52A8;&#x5206;&#x914D;&#x7269;&#x7406;&#x5730;&#x5740;&#x5E76;&#x6620;&#x5C04;&#x9875;&#x9762;&#x3002;</p>
+<p><code>NX_HalMapPageWithPhy</code> &#x6620;&#x5C04;&#x865A;&#x62DF;&#x5730;&#x5740;&#xFF0C;&#x4F46;&#x662F;&#x4F1A;&#x6307;&#x5B9A;&#x7269;&#x7406;&#x5730;&#x5740;&#xFF0C;&#x5C31;&#x4E0D;&#x7528;&#x81EA;&#x52A8;&#x5206;&#x914D;&#x7269;&#x7406;&#x5730;&#x5740;&#x4E86;&#x3002;</p>
+<p><code>NX_HalUnmapPage</code> &#x89E3;&#x9664;&#x5730;&#x5740;&#x6620;&#x5C04;&#xFF0C;&#x89E3;&#x9664;&#x540E;&#x5C31;&#x4E0D;&#x80FD;&#x8BBF;&#x95EE;&#x4E86;&#x3002;</p>
+<p><code>NX_HalVir2Phy</code> &#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x865A;&#x62DF;&#x5730;&#x5740;&#x627E;&#x5230;&#x5176;&#x6620;&#x5C04;&#x7684;&#x7269;&#x7406;&#x5730;&#x5740;&#x3002;</p>
+<p><code>NX_HalSetPageTable</code> &#x8BBE;&#x7F6E;&#x9875;&#x8868;&#x7684;&#x5730;&#x5740;&#x5230;&#x786C;&#x4EF6;&#x5BC4;&#x5B58;&#x5668;&#x4E2D;&#xFF0C;&#x5F53;&#x8BBF;&#x95EE;&#x865A;&#x62DF;&#x5730;&#x5740;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4F1A;&#x6839;&#x636E;&#x8BBE;&#x7F6E;&#x7684;&#x9875;&#x8868;&#x8FDB;&#x884C;&#x5730;&#x5740;&#x8F6C;&#x6362;&#x3002;</p>
+<p><code>NX_HalGetPageTable</code> &#x53EF;&#x4EE5;&#x83B7;&#x53D6;&#x9875;&#x8868;&#x7684;&#x5730;&#x5740;&#x3002;</p>
+<p><code>NX_HalEnable</code> &#x662F;&#x4F7F;&#x80FD; <code>MMU</code> &#xFF0C;&#x6240;&#x6709;&#x5730;&#x5740;&#x90FD;&#x53D8;&#x6210;&#x865A;&#x62DF;&#x5730;&#x5740;&#x4E86;&#x3002;</p>
+<ul>
+<li>&#x6587;&#x4EF6;&#xFF1A;src/arch/riscv64/port/mmu.c</li>
+</ul>
+<pre><code class="lang-c"><span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> *<span class="hljs-title">NX_HalMapPage</span><span class="hljs-params">(NX_Mmu *mmu, NX_Addr virAddr, NX_Size size, NX_UArch attr)</span>
+</span>{
+    NX_ASSERT(mmu);
+    <span class="hljs-keyword">if</span> (!attr)
+    {
+        <span class="hljs-keyword">return</span> NX_NULL;
+    }
+
+    virAddr = virAddr &amp; NX_PAGE_ADDR_MASK;
+    size = NX_PAGE_ALIGNUP(size);
+
+    NX_UArch level = NX_IRQ_SaveLevel();
+    <span class="hljs-keyword">void</span> *addr = __MapPage(mmu, virAddr, size, attr);
+    NX_IRQ_RestoreLevel(level);
+    <span class="hljs-keyword">return</span> addr;
+}
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> *<span class="hljs-title">NX_HalMapPageWithPhy</span><span class="hljs-params">(NX_Mmu *mmu, NX_Addr virAddr, NX_Addr phyAddr, NX_Size size, NX_UArch attr)</span>
+</span>{
+    NX_ASSERT(mmu);
+    <span class="hljs-keyword">if</span> (!attr)
+    {
+        <span class="hljs-keyword">return</span> NX_NULL;
+    }
+
+    virAddr = virAddr &amp; NX_PAGE_ADDR_MASK;
+    phyAddr = phyAddr &amp; NX_PAGE_ADDR_MASK;
+    size = NX_PAGE_ALIGNUP(size);
+
+    NX_UArch level = NX_IRQ_SaveLevel();
+    <span class="hljs-keyword">void</span> *addr = __MapPageWithPhy(mmu, virAddr, phyAddr, size, attr);
+    NX_IRQ_RestoreLevel(level);
+    <span class="hljs-keyword">return</span> addr;
+}
+
+<span class="hljs-function">NX_PRIVATE NX_Error <span class="hljs-title">NX_HalUnmapPage</span><span class="hljs-params">(NX_Mmu *mmu, NX_Addr virAddr, NX_Size size)</span>
+</span>{
+    NX_ASSERT(mmu);
+
+    virAddr = virAddr &amp; NX_PAGE_ADDR_MASK;
+    size = NX_PAGE_ALIGNUP(size);
+
+    NX_Addr addrStart = virAddr;
+    NX_Addr addrEnd = virAddr + size - <span class="hljs-number">1</span>;
+    NX_Size pages = GET_PF_ID(addrEnd) - GET_PF_ID(addrStart) + <span class="hljs-number">1</span>;
+
+    NX_UArch level = NX_IRQ_SaveLevel();
+    NX_Error err = __UnmapPage(mmu, virAddr, pages);
+    NX_IRQ_RestoreLevel(level);
+    <span class="hljs-keyword">return</span> err;
+}
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> *<span class="hljs-title">NX_HalVir2Phy</span><span class="hljs-params">(NX_Mmu *mmu, NX_Addr virAddr)</span>
+</span>{
+    NX_ASSERT(mmu);
+
+    NX_Addr pagePhy;
+    NX_Addr pageOffset;
+
+    MMU_PDE *pageTable = (MMU_PDE *)mmu-&gt;table;
+
+    MMU_PTE *pte = PageWalk(pageTable, virAddr, NX_False);
+    <span class="hljs-keyword">if</span> (pte == NX_NULL)
+    {
+        NX_PANIC(<span class="hljs-string">&quot;vir2phy walk fault!&quot;</span>);
+    }
+
+    <span class="hljs-keyword">if</span> (!PTE_USED(*pte))
+    {
+        NX_PANIC(<span class="hljs-string">&quot;vir2phy pte not used!&quot;</span>);
+    }
+
+    pagePhy = PTE2PADDR(*pte);
+    pageOffset = virAddr % NX_PAGE_SIZE;
+    <span class="hljs-keyword">return</span> (<span class="hljs-keyword">void</span> *)(pagePhy + pageOffset);
+}
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalSetPageTable</span><span class="hljs-params">(NX_Addr addr)</span>
+</span>{
+    WriteCSR(satp, MAKE_SATP(addr));
+    MMU_FlushTLB();
+}
+
+<span class="hljs-function">NX_PRIVATE NX_Addr <span class="hljs-title">NX_HalGetPageTable</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    NX_Addr addr = ReadCSR(satp);
+    <span class="hljs-keyword">return</span> (NX_Addr)GET_ADDR_FROM_SATP(addr);
+}
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalEnable</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    MMU_FlushTLB();
+}
+
+NX_INTERFACE <span class="hljs-keyword">struct</span> NX_MmuOps NX_MmuOpsInterface = 
+{
+    .setPageTable   = NX_HalSetPageTable,
+    .getPageTable   = NX_HalGetPageTable,
+    .enable         = NX_HalEnable,
+    .mapPage        = NX_HalMapPage,
+    .mapPageWithPhy = NX_HalMapPageWithPhy,
+    .unmapPage      = NX_HalUnmapPage,
+    .vir2Phy        = NX_HalVir2Phy,
+};
+</code></pre>
+<h3 id="9-&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;">9. &#x8FDB;&#x7A0B;&#x7BA1;&#x7406;</h3>
+<p><code>NX_HalProcessInitUserSpace</code> &#x7528;&#x4E8E;&#x5728;&#x8FDB;&#x7A0B;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x521B;&#x5EFA;&#x8FDB;&#x7A0B;&#x7684;&#x9875;&#x8868; &#xFF0C;&#x5E76;&#x590D;&#x5236;&#x5185;&#x6838;&#x7684;&#x9875;&#x8868;&#x9879;&#x3002;</p>
+<p><code>NX_HalProcessFreePageTable</code> &#x7528;&#x4E8E;&#x5728;&#x8FDB;&#x7A0B;&#x9000;&#x51FA;&#x7684;&#x65F6;&#x5019;&#x91CA;&#x653E;&#x9875;&#x8868;&#x3002; </p>
+<p><code>NX_HalProcessSwitchPageTable</code> &#x7528;&#x4E8E;&#x5728;&#x8FDB;&#x7A0B;&#x5207;&#x6362;&#x7684;&#x65F6;&#x5019;&#x5207;&#x6362;&#x9875;&#x8868;&#x3002;</p>
+<p><code>NX_HalProcessSyscallDispatch</code> &#x7528;&#x4E8E;&#x5206;&#x53D1;&#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x67B6;&#x6784;&#x4F20;&#x53C2;&#x6570;&#x7684;&#x65B9;&#x5F0F;&#x4F1A;&#x6709;&#x533A;&#x522B;&#xFF0C;&#x56E0;&#x6B64;&#x9700;&#x8981;&#x7279;&#x6B8A;&#x5904;&#x7406;&#x3002;</p>
+<p><code>NX_HalProcessExecuteUser</code> &#x7528;&#x4E8E;&#x8FDB;&#x7A0B;&#x4ECE;&#x5185;&#x6838;&#x8DF3;&#x5230;&#x7528;&#x6237;&#x6001;&#x6267;&#x884C;&#x3002;</p>
+<p><code>NX_HalProcessGetKernelPageTable</code> &#x7528;&#x4E8E;&#x83B7;&#x53D6;&#x5185;&#x6838;&#x7684;&#x9875;&#x8868;&#x3002;</p>
+<ul>
+<li>&#x6587;&#x4EF6;&#xFF1A;src/arch/riscv64/port/process.c</li>
+</ul>
+<pre><code class="lang-c"><span class="hljs-comment">/**
+ * Copyright (c) 2018-2022, NXOS Development Team
+ * SPDX-License-Identifier: Apache-2.0
+ * 
+ * Contains: Process for RISCV64
+ * 
+ * Change Logs:
+ * Date           Author            Notes
+ * 2022-1-16      JasonHu           Init
+ */</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;process/process.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;process/syscall.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;mm/alloc.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;utils/memory.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;mm/page.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> NX_LOG_NAME <span class="hljs-string">&quot;syscall&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> NX_LOG_LEVEL NX_LOG_INFO</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;utils/log.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;xbook/debug.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;platform.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;mm/mmu.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;interrupt.h&gt;</span></span>
+
+<span class="hljs-function">NX_PRIVATE NX_Error <span class="hljs-title">NX_HalProcessInitUserSpace</span><span class="hljs-params">(NX_Process *process, NX_Addr virStart, NX_Size size)</span>
+</span>{
+    <span class="hljs-keyword">void</span> *table = NX_MemAlloc(NX_PAGE_SIZE);
+    <span class="hljs-keyword">if</span> (table == NX_NULL)
+    {
+        <span class="hljs-keyword">return</span> NX_ENOMEM;
+    }
+    NX_MemZero(table, NX_PAGE_SIZE);
+    NX_MemCopy(table, NX_HalGetKernelPageTable(), NX_PAGE_SIZE);
+    NX_MmuInit(&amp;process-&gt;vmspace.mmu, table, virStart, size, <span class="hljs-number">0</span>);
+    <span class="hljs-keyword">return</span> NX_EOK;
+}
+
+<span class="hljs-function">NX_PRIVATE NX_Error <span class="hljs-title">NX_HalProcessFreePageTable</span><span class="hljs-params">(NX_Vmspace *vmspace)</span>
+</span>{
+    NX_ASSERT(vmspace);
+    <span class="hljs-keyword">if</span>(vmspace-&gt;mmu.table == NX_NULL)
+    {
+        <span class="hljs-keyword">return</span> NX_EFAULT;
+    }
+    NX_MemFree(vmspace-&gt;mmu.table);
+    <span class="hljs-keyword">return</span> NX_EOK;
+}
+
+<span class="hljs-function">NX_PRIVATE NX_Error <span class="hljs-title">NX_HalProcessSwitchPageTable</span><span class="hljs-params">(<span class="hljs-keyword">void</span> *pageTableVir)</span>
+</span>{
+    NX_Addr pageTablePhy = (NX_Addr)NX_Virt2Phy(pageTableVir);
+    <span class="hljs-comment">/* no need switch same page table */</span>
+    <span class="hljs-keyword">if</span> (pageTablePhy != NX_MmuGetPageTable())
+    {
+        NX_MmuSetPageTable(pageTablePhy);
+    }
+    <span class="hljs-keyword">return</span> NX_EOK;
+}
+
+<span class="hljs-function"><span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalProcessSyscallDispatch</span><span class="hljs-params">(NX_HalTrapFrame *frame)</span>
+</span>{
+    NX_SyscallWithArgHandler handler = (NX_SyscallWithArgHandler)NX_SyscallGetHandler((NX_SyscallApi)frame-&gt;a7);
+    NX_ASSERT(handler);
+
+    NX_LOG_D(<span class="hljs-string">&quot;riscv64 syscall api: %x, arg0:%x, arg1:%x, arg2:%x, arg3:%x, arg4:%x, arg5:%x, arg6:%x&quot;</span>,
+        frame-&gt;a7, frame-&gt;a0, frame-&gt;a1, frame-&gt;a2, frame-&gt;a3, frame-&gt;a4, frame-&gt;a5, frame-&gt;a6);
+
+    frame-&gt;a0 = handler(frame-&gt;a0, frame-&gt;a1, frame-&gt;a2, frame-&gt;a3, frame-&gt;a4, frame-&gt;a5, frame-&gt;a6);
+    frame-&gt;a7 = <span class="hljs-number">0</span>; <span class="hljs-comment">/* clear syscall api */</span>
+    frame-&gt;epc += <span class="hljs-number">4</span>; <span class="hljs-comment">/* skip ecall instruction */</span>
+
+    NX_LOG_D(<span class="hljs-string">&quot;riscv64 syscall return: %x&quot;</span>, frame-&gt;a0);
+}
+
+<span class="hljs-function">NX_IMPORT <span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalProcessEnterUserMode</span><span class="hljs-params">(<span class="hljs-keyword">void</span> *args, <span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *text, <span class="hljs-keyword">void</span> *userStack)</span></span>;
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalProcessExecuteUser</span><span class="hljs-params">(<span class="hljs-keyword">const</span> <span class="hljs-keyword">void</span> *text, <span class="hljs-keyword">void</span> *userStack, <span class="hljs-keyword">void</span> *kernelStack, <span class="hljs-keyword">void</span> *args)</span>
+</span>{
+    NX_LOG_D(<span class="hljs-string">&quot;riscv64 process enter user: %p, user stack %p&quot;</span>, text, userStack);
+    NX_HalProcessEnterUserMode(args, text, userStack);
+    NX_PANIC(<span class="hljs-string">&quot;should never return after into user&quot;</span>);
+}
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> *<span class="hljs-title">NX_HalProcessGetKernelPageTable</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    <span class="hljs-keyword">return</span> NX_HalGetKernelPageTable();
+}
+
+NX_INTERFACE <span class="hljs-keyword">struct</span> NX_ProcessOps NX_ProcessOpsInterface = 
+{
+    .initUserSpace      = NX_HalProcessInitUserSpace,
+    .switchPageTable    = NX_HalProcessSwitchPageTable,
+    .getKernelPageTable = NX_HalProcessGetKernelPageTable,
+    .executeUser        = NX_HalProcessExecuteUser,
+    .freePageTable      = NX_HalProcessFreePageTable,
+};
+</code></pre>
+<h3 id="10-smp&#x591A;&#x6838;">10. SMP&#x591A;&#x6838;</h3>
+<p>&#x5F15;&#x5BFC;&#x6838;&#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x4F1A;&#x521D;&#x59CB;&#x5316;&#x5185;&#x6838;&#xFF0C;&#x5728;&#x5185;&#x6838;&#x521D;&#x59CB;&#x5316;&#x5B8C;&#x6210;&#x540E;&#xFF0C;&#x5C31;&#x4F1A;&#x8FDB;&#x5165;&#x542F;&#x52A8;&#x5E94;&#x7528;&#x6838;&#x7684;&#x9636;&#x6BB5; <code>NX_HalCoreBootApp</code>&#x3002;
+&#x5982;&#x679C;&#x652F;&#x6301;&#x591A;&#x6838;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5728;&#x8FD9;&#x4E2A;&#x65F6;&#x5019;&#x53BB;&#x5524;&#x9192;&#x5176;&#x4ED6;&#x6838;&#x3002;&#x4E0D;&#x652F;&#x6301;&#x7684;&#x8BDD;&#x8FD4;&#x56DE; <code>NX_ENORES</code> &#x6CA1;&#x6709;&#x8D44;&#x6E90;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x5524;&#x9192;&#x5E94;&#x7528;&#x6838;&#x53EA;&#x9700;&#x8981;&#x8C03;&#x7528; <code>SBI</code> &#x63D0;&#x4F9B;&#x7684;&#x5524;&#x9192;&#x6838;&#x5FC3;&#x529F;&#x80FD;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x5524;&#x9192;&#x540E;&#xFF0C;&#x5E94;&#x7528;&#x6838;&#x4F1A;&#x8FDB;&#x5165; <code>NX_HalCoreEnterApp</code>, &#x5E94;&#x7528;&#x6838;&#x53EA;&#x9700;&#x8981;&#x8BBE;&#x7F6E;&#x4E2D;&#x65AD;&#x8868;&#x5730;&#x5740;&#xFF0C;&#x521D;&#x59CB;&#x5316;&#x81EA;&#x5DF1;&#x7684;&#x4E2D;&#x65AD;&#x63A7;&#x5236;&#x5668;&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x8FD8;&#x6709;&#x503C;&#x5F97;&#x6CE8;&#x610F;&#x7684;&#x662F;&#xFF0C;&#x83B7;&#x53D6;&#x5904;&#x7406;&#x5668;&#x7684;&#x7D22;&#x5F15; <code>NX_HalCoreGetIndex</code>&#x3002;&#x8BE5;&#x7D22;&#x5F15;&#x662F;&#x5728;&#x5904;&#x7406;&#x5668;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x7D22;&#x5F15;&#xFF0C;&#x4E0D;&#x7BA1;&#x4EC0;&#x4E48;&#x5904;&#x7406;&#x5668; <code>id</code> &#x503C;&#xFF0C;
+&#x90FD;&#x4F1A;&#x88AB;&#x6620;&#x5C04;&#x6210;&#x7D22;&#x5F15;&#xFF0C;&#x76F8;&#x5F53;&#x4E8E;&#x662F;&#x5904;&#x7406;&#x5668; <code>id</code> &#x7684; <code>hash</code> &#x503C;&#xFF0C;&#x5176;&#x8FD4;&#x56DE;&#x503C;&#x8303;&#x56F4;&#x4E3A; <strong>0~NX_MULTI_CORES_NR - 1</strong>&#x3002;</p>
+<ul>
+<li>&#x6587;&#x4EF6;&#xFF1A;src/arch/riscv64/port/smp.c</li>
+</ul>
+<pre><code class="lang-c"><span class="hljs-comment">/**
+ * Copyright (c) 2018-2022, NXOS Development Team
+ * SPDX-License-Identifier: Apache-2.0
+ * 
+ * Contains: HAL Multi Core support
+ * 
+ * Change Logs:
+ * Date           Author            Notes
+ * 2021-12-9      JasonHu           Init
+ */</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;xbook.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sched/smp.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;mm/barrier.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;platform.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> NX_LOG_NAME <span class="hljs-string">&quot;Multi Core&quot;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;utils/log.h&gt;</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;sbi.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;trap.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;clock.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;plic.h&gt;</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">include</span> <span class="hljs-meta-string">&lt;regs.h&gt;</span></span>
+
+NX_IMPORT NX_Addr TrapEntry0;
+NX_IMPORT NX_Addr TrapEntry1;
+NX_IMPORT NX_Addr TrapEntry2;
+NX_IMPORT NX_Addr TrapEntry3;
+
+<span class="hljs-comment">/**
+ * Within SBI, we can&apos;t read mhartid, so I try to use `trap entry` to see who am I.
+ */</span>
+<span class="hljs-function">NX_PRIVATE NX_UArch <span class="hljs-title">NX_HalCoreGetIndex</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    NX_Addr trapEntry = ReadCSR(stvec);
+
+    <span class="hljs-keyword">if</span> (trapEntry == (NX_Addr)&amp;TrapEntry0)
+    {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">0</span>;
+    }
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (trapEntry == (NX_Addr)&amp;TrapEntry1)
+    {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">1</span>;
+    }
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (trapEntry == (NX_Addr)&amp;TrapEntry2)
+    {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">2</span>;
+    }
+    <span class="hljs-keyword">else</span> <span class="hljs-keyword">if</span> (trapEntry == (NX_Addr)&amp;TrapEntry3)
+    {
+        <span class="hljs-keyword">return</span> <span class="hljs-number">3</span>;
+    }
+    <span class="hljs-comment">/* should never be here */</span>
+    <span class="hljs-keyword">while</span> (<span class="hljs-number">1</span>);
+}
+
+<span class="hljs-function">NX_PRIVATE NX_Error <span class="hljs-title">NX_HalCoreBootApp</span><span class="hljs-params">(NX_UArch bootCoreId)</span>
+</span>{
+
+    NX_LOG_I(<span class="hljs-string">&quot;boot core is:%d&quot;</span>, bootCoreId);
+    NX_UArch coreId;
+    <span class="hljs-keyword">for</span> (coreId = <span class="hljs-number">0</span>; coreId &lt; NX_MULTI_CORES_NR; coreId++)
+    {
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> CONFIG_NX_PLATFORM_K210</span>
+        NX_LOG_I(<span class="hljs-string">&quot;core#%d state:%d&quot;</span>, coreId, sbi_hsm_hart_status(coreId));
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+        <span class="hljs-keyword">if</span> (bootCoreId == coreId) <span class="hljs-comment">/* skip boot core */</span>
+        {
+            NX_LOG_I(<span class="hljs-string">&quot;core#%d is boot core, skip it&quot;</span>, coreId);
+            <span class="hljs-keyword">continue</span>;
+        }
+        NX_LOG_I(<span class="hljs-string">&quot;wakeup app core:%d&quot;</span>, coreId);
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> CONFIG_NX_PLATFORM_K210</span>
+        NX_UArch mask = <span class="hljs-number">1</span> &lt;&lt; coreId;
+        sbi_send_ipi(&amp;mask);
+<span class="hljs-meta">#<span class="hljs-meta-keyword">else</span></span>
+        sbi_hsm_hart_start(coreId, MEM_KERNEL_BASE, <span class="hljs-number">0</span>);    
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+        NX_MemoryBarrier();
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> CONFIG_NX_PLATFORM_K210</span>
+        NX_LOG_I(<span class="hljs-string">&quot;core#%d state:%d after wakeup&quot;</span>, coreId, sbi_hsm_hart_status(coreId));
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span></span>
+    }
+    <span class="hljs-keyword">return</span> NX_EOK;
+}
+
+<span class="hljs-function">NX_PRIVATE NX_Error <span class="hljs-title">NX_HalCoreEnterApp</span><span class="hljs-params">(NX_UArch appCoreId)</span>
+</span>{
+    <span class="hljs-comment">/* <span class="hljs-doctag">NOTE:</span> init trap first before do anything */</span>
+    CPU_InitTrap(appCoreId);
+    NX_LOG_I(<span class="hljs-string">&quot;core#%d enter application!&quot;</span>, appCoreId);
+    PLIC_Init(NX_False);
+
+    <span class="hljs-keyword">return</span> NX_EOK;
+}
+
+NX_INTERFACE <span class="hljs-keyword">struct</span> NX_SMP_Ops NX_SMP_OpsInterface = 
+{
+    .getIdx = NX_HalCoreGetIndex,
+    .bootApp = NX_HalCoreBootApp,
+    .enterApp = NX_HalCoreEnterApp,
+};
+</code></pre>
+<h2 id="&#x56DB;&#x3001;&#x79FB;&#x690D;&#x603B;&#x7ED3;">&#x56DB;&#x3001;&#x79FB;&#x690D;&#x603B;&#x7ED3;</h2>
+<p>&#x5BF9;&#x4E8E; <code>nxos</code> &#x65B0;&#x67B6;&#x6784;&#x7684;&#x79FB;&#x690D;&#xFF0C;&#x90FD;&#x662F;&#x6309;&#x7167;&#x4E00;&#x5957;&#x7EDF;&#x4E00;&#x7684;&#x63A5;&#x53E3;&#x53BB;&#x5B9E;&#x73B0;&#x7684;&#x3002;
+&#x5728;&#x8C03;&#x8BD5;&#x8FC7;&#x7A0B;&#x4E2D;&#x4F1A;&#x9047;&#x5230;&#x5F88;&#x591A;&#x95EE;&#x9898;&#xFF0C;&#x9700;&#x8981;&#x8010;&#x5FC3;&#x5730;&#x8C03;&#x8BD5;&#x3002;</p>
+<p>&#x901A;&#x5E38;&#xFF0C;&#x90FD;&#x662F;&#x5728;&#x542F;&#x52A8;&#x540E;&#x5C3D;&#x5FEB;&#x5730;&#x5B9E;&#x73B0;&#x4E32;&#x53E3;&#x8C03;&#x8BD5;&#xFF0C;&#x4EE5;&#x4FBF;&#x80FD;&#x591F;&#x77E5;&#x9053;&#x81EA;&#x5DF1;&#x8DD1;&#x5230;&#x4EC0;&#x4E48;&#x5730;&#x65B9;&#x4E86;&#x3002;
+&#x6700;&#x5F00;&#x59CB;&#x662F;&#x53EF;&#x4EE5;&#x4E0D;&#x5F00;&#x542F; <code>MMU</code> &#x7684;&#xFF0C;&#x6700;&#x5F00;&#x59CB;&#x4E0D;&#x9700;&#x8981;&#x8DD1;&#x8FDB;&#x7A0B;&#xFF0C;
+&#x53EA;&#x9700;&#x8981;&#x5B9E;&#x73B0; <code>atomic.c</code>&#x3001;<code>barrier.c</code>&#x3001;<code>clock.c</code>&#x3001;<code>context.c</code>&#x3001;<code>interrupt.c</code>&#x5373;&#x53EF;&#x3002;
+&#x5982;&#x679C;&#x53EA;&#x662F;&#x9700;&#x8981;&#x8FD0;&#x884C;&#x8D77;&#x6765;&#xFF0C;&#x4E0D;&#x9700;&#x8981;&#x7EBF;&#x7A0B;&#x73AF;&#x5883;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x53EA;&#x9700;&#x8981; <code>atomic.c</code>&#x3001;<code>barrier.c</code>&#x5373;&#x53EF;&#x3002;</p>
+<p>&#x79FB;&#x690D;&#x8FC7;&#x7A0B;&#x662F;&#x9700;&#x8981;&#x6162;&#x6162;&#x7422;&#x78E8;&#xFF0C;&#x957F;&#x671F;&#x79EF;&#x7D2F;&#xFF0C;&#x624D;&#x80FD;&#x5B9E;&#x73B0;&#x66F4;&#x597D;&#x7684;&#x4EE3;&#x7801;&#x3002;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"riscv架构移植","level":"1.1.4.1","depth":3,"next":{"title":"用户接口","level":"1.1.5","depth":2,"ref":"","articles":[{"title":"API设计","level":"1.1.5.1","depth":3,"path":"programing-manual/user/api.md","ref":"programing-manual/user/api.md","articles":[]}]},"previous":{"title":"内核移植","level":"1.1.4","depth":2,"ref":"","articles":[{"title":"riscv架构移植","level":"1.1.4.1","depth":3,"path":"programing-manual/port/riscv/riscv.md","ref":"programing-manual/port/riscv/riscv.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy BookOS-developers 2022","modify_label":"修订时间：","modify_format":"YYYY-MM-DD"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"nxos development team","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"book for nxos","language":"zh-hans","links":{"sidebar":{"bookos":"http://book-os.org"}},"gitbook":"3.2.3","description":"document for nxos kernel"},"file":{"path":"programing-manual/port/riscv/riscv.md","mtime":"2022-04-10T21:16:40.531Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-10T21:16:49.040Z"},"basePath":"../../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../../gitbook/gitbook.js"></script>
+    <script src="../../../gitbook/theme.js"></script>
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

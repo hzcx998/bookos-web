@@ -1,0 +1,852 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>代码风格 · book for nxos</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="nxos development team">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="commit-rule.html" />
+    
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://book-os.org" target="_blank" class="custom-link">bookos</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <span>
+            
+                    
+                    NXOS文档中心
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" >
+            
+                <span>
+            
+                    
+                    简介
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    NXOS 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" >
+            
+                <span>
+            
+                    
+                    快速上手
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.1" data-path="quick-start.html">
+            
+                <a href="quick-start.html">
+            
+                    
+                    虚拟平台运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" >
+            
+                <span>
+            
+                    
+                    内核
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.1" data-path="../programing-manual/base/framework.html">
+            
+                <a href="../programing-manual/base/framework.html">
+            
+                    
+                    整体框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2" data-path="../programing-manual/base/start.html">
+            
+                <a href="../programing-manual/base/start.html">
+            
+                    
+                    启动流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3" data-path="../programing-manual/mm/mm.html">
+            
+                <a href="../programing-manual/mm/mm.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.3.1" data-path="../programing-manual/mm/buddy.html">
+            
+                <a href="../programing-manual/mm/buddy.html">
+            
+                    
+                    buddy伙伴算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3.2" data-path="../programing-manual/mm/heap.html">
+            
+                <a href="../programing-manual/mm/heap.html">
+            
+                    
+                    heapCache虚拟内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3.3" data-path="../programing-manual/mm/vmspace.html">
+            
+                <a href="../programing-manual/mm/vmspace.html">
+            
+                    
+                    vmspace虚拟地址空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.4" data-path="../programing-manual/sched/sched.html">
+            
+                <a href="../programing-manual/sched/sched.html">
+            
+                    
+                    调度管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.4.1" data-path="../programing-manual/sched/thread.html">
+            
+                <a href="../programing-manual/sched/thread.html">
+            
+                    
+                    线程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.4.2" data-path="../programing-manual/sched/smp.html">
+            
+                <a href="../programing-manual/sched/smp.html">
+            
+                    
+                    SMP多核调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.5" data-path="../programing-manual/process/process.html">
+            
+                <a href="../programing-manual/process/process.html">
+            
+                    
+                    进程管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.5.1" data-path="../programing-manual/process/syscall.html">
+            
+                <a href="../programing-manual/process/syscall.html">
+            
+                    
+                    系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.6" data-path="../programing-manual/interrupt/irq.html">
+            
+                <a href="../programing-manual/interrupt/irq.html">
+            
+                    
+                    中断系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.6.1" data-path="../programing-manual/interrupt/delay_queue.html">
+            
+                <a href="../programing-manual/interrupt/delay_queue.html">
+            
+                    
+                    延迟队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.7" data-path="../programing-manual/timer/timer.html">
+            
+                <a href="../programing-manual/timer/timer.html">
+            
+                    
+                    定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" >
+            
+                <span>
+            
+                    
+                    内核移植
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1" data-path="../programing-manual/port/riscv/riscv.html">
+            
+                <a href="../programing-manual/port/riscv/riscv.html">
+            
+                    
+                    riscv架构移植
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" >
+            
+                <span>
+            
+                    
+                    用户接口
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1" data-path="../programing-manual/user/api.html">
+            
+                <a href="../programing-manual/user/api.html">
+            
+                    
+                    API设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" >
+            
+                <span>
+            
+                    
+                    编程开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter active" data-level="1.1.6.1" data-path="code-style.html">
+            
+                <a href="code-style.html">
+            
+                    
+                    代码风格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6.2" data-path="commit-rule.html">
+            
+                <a href="commit-rule.html">
+            
+                    
+                    提交规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6.3" data-path="menuconfig.html">
+            
+                <a href="menuconfig.html">
+            
+                    
+                    菜单配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6.4" data-path="toolchains.html">
+            
+                <a href="toolchains.html">
+            
+                    
+                    工具链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6.5" data-path="utest.html">
+            
+                <a href="utest.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >代码风格</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="nxos-&#x7F16;&#x7A0B;&#x98CE;&#x683C;">NXOS &#x7F16;&#x7A0B;&#x98CE;&#x683C;</h1>
+<p>&#x672C;&#x6587;&#x6863;&#x662F;&#x5173;&#x4E8E;<strong>NXOS</strong>&#x7684;&#x4EE3;&#x7801;&#x7F16;&#x7A0B;&#x98CE;&#x683C;&#x7684;&#x63CF;&#x8FF0;&#x3002;&#x5F00;&#x53D1;&#x8005;&#x5FC5;&#x987B;&#x9075;&#x5B88;&#x672C;&#x6587;&#x6863;&#x89C4;&#x8303;&#x8FDB;&#x884C;&#x5F00;&#x53D1;&#x3002;NXOS&#x7CFB;&#x7EDF;&#x5185;&#x6838;&#x4F7F;&#x7528;C&#x8BED;&#x8A00;&#x4F5C;&#x4E3A;&#x4E3B;&#x8981;&#x5F00;&#x53D1;&#x8BED;&#x8A00;&#xFF0C;&#x56E0;&#x6B64;&#x4EE5;&#x4E0B;&#x89C4;&#x5219;&#x4EC5;&#x4EC5;&#x9002;&#x7528;&#x4E8E;C&#x8BED;&#x8A00;&#x4EE3;&#x7801;&#x3002;</p>
+<h2 id="1&#x76EE;&#x5F55;&#x540D;&#x79F0;">1.&#x76EE;&#x5F55;&#x540D;&#x79F0;</h2>
+<p>&#x76EE;&#x5F55;&#x540D;&#x79F0;&#x91C7;&#x7528;&#x9996;&#x5B57;&#x6BCD;&#x5927;&#x5199;&#x7684;&#x5F62;&#x5F0F;&#xFF0C;&#x5B50;&#x76EE;&#x5F55;&#x5E94;&#x8BE5;&#x662F;&#x5C5E;&#x4E8E;&#x7236;&#x76EE;&#x5F55;&#x7684;&#x5185;&#x5BB9;&#xFF0C;&#x9700;&#x8981;&#x6709;&#x76F8;&#x5173;&#x6027;&#x3002;&#x4F8B;&#x5982;&#xFF1A;Drivers/Disk/</p>
+<h2 id="2&#x6587;&#x4EF6;&#x540D;&#x79F0;">2.&#x6587;&#x4EF6;&#x540D;&#x79F0;</h2>
+<p>&#x6587;&#x4EF6;&#x540D;&#x79F0;&#x4E5F;&#x662F;&#x4F7F;&#x7528;&#x9996;&#x5B57;&#x6BCD;&#x5927;&#x5199;&#xFF0C;&#x5982;&#x679C;&#x6709;&#x7F29;&#x5199;&#xFF0C;&#x53EF;&#x4EE5;&#x5168;&#x90E8;&#x90FD;&#x5927;&#x5199;&#x3002;&#x6587;&#x4EF6;&#x547D;&#x540D;&#x5C3D;&#x91CF;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x901A;&#x7528;&#x5316;&#x3001;&#x4F7F;&#x7528;&#x9891;&#x7387;&#x9AD8;&#x7684;&#x540D;&#x79F0;&#x3002;&#x4F8B;&#x5982;&#xFF1A;MutexLock.c</p>
+<h2 id="3&#x5934;&#x6587;&#x4EF6;&#x5B9A;&#x4E49;">3.&#x5934;&#x6587;&#x4EF6;&#x5B9A;&#x4E49;</h2>
+<p>C&#x8BED;&#x8A00;&#x5934;&#x6587;&#x4EF6;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x591A;&#x6B21;&#x91CD;&#x590D;&#x5305;&#x542B;&#xFF0C;&#x9700;&#x8981;&#x5B9A;&#x4E49;&#x4E00;&#x4E2A;&#x7B26;&#x53F7;&#x3002;&#x8FD9;&#x4E2A;&#x7B26;&#x53F7;&#x7684;&#x5B9A;&#x4E49;&#x5F62;&#x5F0F;&#x8BF7;&#x91C7;&#x7528;&#x5982;&#x4E0B;&#x7684;&#x98CE;&#x683C;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">ifndef</span> __FILE__</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> __FILE__</span>
+<span class="hljs-comment">/* header file content */</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span> <span class="hljs-comment">/* __FILE__ */</span></span>
+</code></pre>
+<p>&#x5373;&#x5B9A;&#x4E49;&#x7684;&#x7B26;&#x53F7;&#x4E24;&#x4FA7;&#x91C7;&#x7528; &quot;_&quot; &#x4EE5;&#x907F;&#x514D;&#x91CD;&#x540D;&#xFF0C;&#x53E6;&#x5916;&#x4E5F;&#x53EF;&#x4EE5;&#x6839;&#x636E;&#x6587;&#x4EF6;&#x540D;&#x4E2D;&#x662F;&#x5426;&#x5305;&#x542B;&#x591A;&#x4E2A;&#x8BCD;&#x8BED;&#x800C;&#x91C7;&#x7528; &quot;&quot; &#x8FDE;&#x63A5;&#x8D77;&#x6765;&#x3002;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code>__DRIVER_KEYBOARD__
+</code></pre><h2 id="4&#x5934;&#x6587;&#x4EF6;&#x6CE8;&#x91CA;">4.&#x5934;&#x6587;&#x4EF6;&#x6CE8;&#x91CA;</h2>
+<p>&#x5728;&#x6BCF;&#x4E2A;&#x6E90;&#x6587;&#x4EF6;&#x6587;&#x4EF6;&#x5934;&#x4E0A;&#xFF0C;&#x5E94;&#x8BE5;&#x5305;&#x62EC;&#x76F8;&#x5E94;&#x7684;&#x7248;&#x6743;&#x4FE1;&#x606F;&#xFF0C;&#x6587;&#x4EF6;&#x63CF;&#x8FF0;&#xFF0C;Change Log &#x8BB0;&#x5F55;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-comment">/**
+ * Copyright (c) 2018-2021, BookOS Development Team
+ * SPDX-License-Identifier: Apache-2.0
+ * 
+ * Contains: This file is a code style example
+ * 
+ * Change Logs:
+ * Date           Author            Notes
+ * 2021-9-12      JasonHu           Init
+ * 2021-10-1      JasonHu           Add xxx
+ */</span>
+</code></pre>
+<p>&#x4F8B;&#x5982;&#x91C7;&#x7528;&#x5982;&#x4E0A;&#x7684;&#x5F62;&#x5F0F;&#x3002;</p>
+<h2 id="5&#x53D8;&#x91CF;&#x547D;&#x540D;">5.&#x53D8;&#x91CF;&#x547D;&#x540D;</h2>
+<p>&#x53D8;&#x91CF;&#x91C7;&#x7528;&#x5C0F;&#x9A7C;&#x5CF0;&#x547D;&#x540D;&#x98CE;&#x683C;&#xFF0C;&#x5373;&#x9996;&#x5B57;&#x6BCD;&#x5C0F;&#x5199;&#xFF0C;&#x540E;&#x7EED;&#x5355;&#x8BCD;&#x9996;&#x5B57;&#x6BCD;&#x5927;&#x5199;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-c">myThread, tmpFileBuffer
+</code></pre>
+<h2 id="6&#x51FD;&#x6570;&#x547D;&#x540D;">6.&#x51FD;&#x6570;&#x547D;&#x540D;</h2>
+<p>&#x51FD;&#x6570;&#x91C7;&#x7528;&#x5927;&#x9A7C;&#x5CF0;&#x547D;&#x540D;&#x98CE;&#x683C;&#xFF0C;&#x5373;&#x6BCF;&#x4E2A;&#x5355;&#x8BCD;&#x7684;&#x9996;&#x5B57;&#x6BCD;&#x90FD;&#x5927;&#x5199;&#xFF0C;&#x5982;&#x679C;&#x5355;&#x8BCD;&#x662F;&#x7528;&#x7684;&#x7F29;&#x5199;&#xFF0C;&#x90A3;&#x4E48;&#x5355;&#x8BCD;&#x4E4B;&#x95F4;&#x9700;&#x8981;&#x7528;&quot;_&quot;&#x9694;&#x5F00;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-c">ThreadFindByName
+VFS_CreateFile
+</code></pre>
+<p>&#x5982;&#x679C;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x4E3A;&#x7A7A;&#xFF0C;&#x5FC5;&#x987B;&#x4F7F;&#x7528;void&#x4F5C;&#x4E3A;&#x5165;&#x53E3;&#x51FD;&#x6570;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-function">Cpu *<span class="hljs-title">CpuGetCurrent</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span></code></pre>
+<h2 id="7&#x7ED3;&#x6784;&#x4F53;&#x5B9A;&#x4E49;">7.&#x7ED3;&#x6784;&#x4F53;&#x5B9A;&#x4E49;</h2>
+<p>&#x7ED3;&#x6784;&#x4F53;&#x547D;&#x540D;&#x4F7F;&#x7528;&#x5927;&#x9A7C;&#x5CF0;&#x98CE;&#x683C;&#xFF0C;&#x7ED3;&#x6784;&#x4F53;&#x6210;&#x5458;&#x4F7F;&#x7528;&#x5C0F;&#x9A7C;&#x5CF0;&#x547D;&#x540D;&#xFF0C;&#x5982;&#x679C;&#x6210;&#x5458;&#x662F;&#x51FD;&#x6570;&#x6307;&#x9488;&#xFF0C;&#x5219;&#x4F7F;&#x7528;&#x5927;&#x9A7C;&#x5CF0;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">struct</span> SoundDevice
+{
+    <span class="hljs-keyword">char</span> name[SOUND_DEVICE_NAME_LEN];
+    <span class="hljs-keyword">int</span> reference;
+    <span class="hljs-keyword">void</span> (*Write)(<span class="hljs-keyword">void</span> *buffer, NX_Size len);
+};
+</code></pre>
+<p>&#x5176;&#x4E2D;&quot;{&quot;&#x548C;&quot;}&quot;&#x9700;&#x8981;<strong>&#x5355;&#x72EC;&#x4F7F;&#x7528;&#x4E00;&#x884C;</strong>&#x3002;</p>
+<p>&#x7ED3;&#x6784;&#x4F53;&#x7684;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#x662F;&#x4E3A;&#x4E86;&#x6D88;&#x9664;struct&#x5173;&#x952E;&#x5B57;&#xFF0C;&#x53EF;&#x4EE5;&#x548C;&#x7ED3;&#x6784;&#x4F53;&#x540D;&#x4E00;&#x81F4;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> SoundDevice SoundDevice;
+</code></pre>
+<p>&#x5982;&#x679C;&#x9700;&#x8981;&#x5728;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#x4E2D;&#x4F7F;&#x7528;&#x6307;&#x9488;&#xFF0C;&#x5219;&#x9700;&#x8981;&#x4F7F;&#x7528;Ptr&#x540E;&#x7F00;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x53EF;&#x4EE5;&#x8868;&#x8FBE;&#x610F;&#x601D;&#x7684;&#x5355;&#x8BCD;&#x6307;&#x660E;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">typedef</span> <span class="hljs-keyword">struct</span> Device *DevicePtr;
+</code></pre>
+<h2 id="8&#x679A;&#x4E3E;&#x5B9A;&#x4E49;">8.&#x679A;&#x4E3E;&#x5B9A;&#x4E49;</h2>
+<p>&#x679A;&#x4E3E;&#x7ED3;&#x6784;&#x540D;&#x4E5F;&#x662F;&#x7528;&#x5927;&#x9A7C;&#x5CF0;&#xFF0C;&#x679A;&#x4E3E;&#x6210;&#x5458;&#x4F7F;&#x7528;&#x5168;&#x5927;&#x5199;&#xFF0C;&#x5355;&#x8BCD;&#x95F4;&#x7528;&quot;_&quot;&#x9694;&#x5F00;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-keyword">enum</span> SoundType
+{
+    SOUND_AC97,
+    SOUND_PC,
+    SOUND_HD,
+};
+<span class="hljs-keyword">typedef</span> <span class="hljs-keyword">enum</span> SoundType SoundType;
+</code></pre>
+<h2 id="9&#x5B8F;&#x5B9A;&#x4E49;">9.&#x5B8F;&#x5B9A;&#x4E49;</h2>
+<p>&#x4F7F;&#x7528;&#x5927;&#x5199;&#x4F5C;&#x4E3A;&#x540D;&#x5B57;&#xFF0C;&#x5355;&#x8BCD;&#x95F4;&#x4F7F;&#x7528;&quot;_&quot;&#x9694;&#x5F00;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> DEVICE_NAME_LEN    32</span>
+</code></pre>
+<p>&#x5F53;&#x5B8F;&#x9700;&#x8981;&#x4F7F;&#x7528;&#x591A;&#x884C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5219;&#x4F7F;&#x7528;&#x7A7A;&#x683C;+&quot;\&quot;&#x7684;&#x5F62;&#x5F0F;&#x8FDB;&#x884C;&#x6362;&#x884C;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> ConsolePrintColor(color, str) \
+    ConsoleSetColor(color); \
+    ConsolePrint(str); \
+    ConsoleRestoreColor()</span>
+</code></pre>
+<h2 id="10&#x6CE8;&#x91CA;&#x7F16;&#x5199;">10.&#x6CE8;&#x91CA;&#x7F16;&#x5199;</h2>
+<p>&#x8BF7;&#x4F7F;&#x7528;&#x82F1;&#x6587;&#x505A;&#x4E3A;&#x6CE8;&#x91CA;&#xFF0C;&#x4F7F;&#x7528;&#x4E2D;&#x6587;&#x6CE8;&#x91CA;&#x5C06;&#x610F;&#x5473;&#x7740;&#x5728;&#x7F16;&#x5199;&#x4EE3;&#x7801;&#x65F6;&#x9700;&#x8981;&#x6765;&#x56DE;&#x4E0D;&#x505C;&#x7684;&#x5207;&#x6362;&#x4E2D;&#x82F1;&#x6587;&#x8F93;&#x5165;&#x6CD5;&#x4ECE;&#x800C;&#x6253;&#x65AD;&#x7F16;&#x5199;&#x4EE3;&#x7801;&#x7684;&#x601D;&#x8DEF;&#x3002;&#x5E76;&#x4E14;&#x4F7F;&#x7528;&#x82F1;&#x6587;&#x6CE8;&#x91CA;&#x4E5F;&#x80FD;&#x591F;&#x6BD4;&#x8F83;&#x597D;&#x7684;&#x4E0E;&#x4E2D;&#x56FD;&#x4EE5;&#x5916;&#x7684;&#x6280;&#x672F;&#x8005;&#x8FDB;&#x884C;&#x4EA4;&#x6D41;&#x3002;&#x9664;&#x975E;&#x5FC5;&#x987B;&#x5F15;&#x7528;&#x539F;&#x6765;&#x7684;&#x6587;&#x672C;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5C31;&#x53EF;&#x4EE5;&#x5199;&#x4E2D;&#x6587;&#x3002;</p>
+<p>&#x6E90;&#x4EE3;&#x7801;&#x7684;&#x6CE8;&#x91CA;&#x4E0D;&#x5E94;&#x8BE5;&#x8FC7;&#x591A;&#xFF0C;&#x66F4;&#x591A;&#x7684;&#x8BF4;&#x660E;&#x5E94;&#x8BE5;&#x662F;&#x4EE3;&#x7801;&#x505A;&#x4E86;&#x4EC0;&#x4E48;&#xFF0C;&#x4EC5;&#x5F53;&#x4E2A;&#x522B;&#x5173;&#x952E;&#x70B9;&#x624D;&#x9700;&#x8981;&#x4E00;&#x4E9B;&#x76F8;&#x5E94;&#x63D0;&#x793A;&#x6027;&#x7684;&#x6CE8;&#x91CA;&#x4EE5;&#x89E3;&#x91CA;&#x4E00;&#x6BB5;&#x590D;&#x6742;&#x7684;&#x7B97;&#x6CD5;&#x5B83;&#x662F;&#x5982;&#x4F55;&#x5DE5;&#x4F5C;&#x7684;&#x3002;&#x5BF9;&#x8BED;&#x53E5;&#x7684;&#x6CE8;&#x91CA;&#x53EA;&#x80FD;&#x5199;&#x5728;&#x5B83;&#x7684;&#x4E0A;&#x65B9;&#x6216;&#x53F3;&#x65B9;&#xFF0C;&#x5176;&#x4ED6;&#x4F4D;&#x7F6E;&#x90FD;&#x662F;&#x975E;&#x6CD5;&#x7684;&#x3002;</p>
+<p>&#x6CE8;&#x610F;&#xFF0C;&quot;//&quot;&#x6CE8;&#x91CA;&#x53EA;&#x80FD;&#x653E;&#x5230;&#x53F3;&#x8FB9;&#x3002;</p>
+<pre><code>/* Single line comment  */
+/**
+ * Multi-line comments 
+ * Line1
+ * Line2
+ */
+
+bufSize = 16;    // set buffer Size
+</code></pre><h2 id="11&#x7F29;&#x8FDB;&#x4EE5;&#x53CA;&#x5206;&#x884C;">11.&#x7F29;&#x8FDB;&#x4EE5;&#x53CA;&#x5206;&#x884C;</h2>
+<p>&#x7F29;&#x8FDB;&#x8BF7;&#x91C7;&#x7528; 4 &#x4E2A;&#x7A7A;&#x683C;&#x7684;&#x65B9;&#x5F0F;&#x3002;&#x5982;&#x679C;&#x6CA1;&#x6709;&#x4EC0;&#x4E48;&#x7279;&#x6B8A;&#x610F;&#x4E49;&#xFF0C;&#x8BF7;&#x5728; &quot;{&quot; &#x540E;&#x8FDB;&#x884C;&#x5206;&#x884C;&#xFF0C;&#x5E76;&#x5728;&#x4E0B;&#x4E00;&#x884C;&#x90FD;&#x91C7;&#x7528;&#x7F29;&#x8FDB;&#x7684;&#x65B9;&#x5F0F;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-c">    <span class="hljs-keyword">if</span> (condition)
+    {
+        <span class="hljs-comment">/* xxx */</span>
+    }
+</code></pre>
+<p>&#x552F;&#x4E00;&#x7684;&#x4F8B;&#x5916;&#x662F; switch &#x8BED;&#x53E5;&#xFF0C;switch-case &#x8BED;&#x53E5;&#x91C7;&#x7528; case &#x8BED;&#x53E5;&#x4E0E; switch &#x5BF9;&#x9F50;&#x7684;&#x65B9;&#x5F0F;&#xFF0C; &#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-c">    <span class="hljs-keyword">switch</span> (data)
+    {
+    <span class="hljs-keyword">case</span> data1:
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">case</span> data2:
+        <span class="hljs-keyword">break</span>;
+    <span class="hljs-keyword">default</span>:
+        <span class="hljs-keyword">break</span>;
+    }
+</code></pre>
+<h2 id="12&#x5927;&#x62EC;&#x53F7;&#x4E0E;&#x7A7A;&#x683C;">12.&#x5927;&#x62EC;&#x53F7;&#x4E0E;&#x7A7A;&#x683C;</h2>
+<p>&#x4ECE;&#x4EE3;&#x7801;&#x9605;&#x8BFB;&#x89D2;&#x5EA6;&#xFF0C;&#x5EFA;&#x8BAE;&#x6BCF;&#x4E2A;&#x5927;&#x62EC;&#x53F7;&#x5355;&#x72EC;&#x5360;&#x7528;&#x4E00;&#x884C;&#xFF0C;&#x800C;&#x4E0D;&#x662F;&#x8DDF;&#x5728;&#x8BED;&#x53E5;&#x7684;&#x540E;&#x9762;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-c">    <span class="hljs-keyword">if</span> (condition)
+    {
+        <span class="hljs-comment">/* xxx */</span>
+    }
+</code></pre>
+<p>&#x5339;&#x914D;&#x7684;&#x5927;&#x62EC;&#x53F7;&#x5355;&#x72EC;&#x5360;&#x7528;&#x4E00;&#x884C;&#xFF0C;&#x4EE3;&#x7801;&#x9605;&#x8BFB;&#x8D77;&#x6765;&#x5C31;&#x4F1A;&#x6709;&#x76F8;&#x5E94;&#x7684;&#x5C42;&#x6B21;&#x800C;&#x4E0D;&#x4F1A;&#x5BB9;&#x6613;&#x51FA;&#x73B0;&#x6DF7;&#x6DC6;&#x7684;&#x60C5;&#x51B5;&#x3002;&#x7A7A;&#x683C;&#x5EFA;&#x8BAE;&#x5728;&#x975E;&#x51FD;&#x6570;&#x65B9;&#x5F0F;&#x7684;&#x62EC;&#x53F7;&#x8C03;&#x7528;&#x524D;&#x7559;&#x4E00;&#x4E2A;&#x7A7A;&#x683C;&#x4EE5;&#x548C;&#x524D;&#x9762;&#x7684;&#x8FDB;&#x884C;&#x533A;&#x5206;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-c">    <span class="hljs-keyword">if</span> (x &lt;= y)
+    {
+        <span class="hljs-comment">/* xxx */</span>
+    }
+
+    <span class="hljs-keyword">for</span> (i = <span class="hljs-number">0</span>; i &lt; MAX_CPU_NR; i++)
+    {
+        <span class="hljs-comment">/* xxx */</span>
+    }
+</code></pre>
+<p>&#x5EFA;&#x8BAE;&#x5728;&#x62EC;&#x53F7;&#x524D;&#x7559;&#x51FA;&#x4E00;&#x4E2A;&#x7A7A;&#x683C;(&#x6D89;&#x53CA;&#x7684;&#x5305;&#x62EC; if&#x3001;for&#x3001;while&#x3001;switch &#x8BED;&#x53E5;)&#xFF0C;&#x800C;&#x8FD0;&#x7B97;&#x8868;&#x8FBE;&#x5F0F;&#x4E2D;&#xFF0C;&#x8FD0;&#x7B97;&#x7B26;&#x4E0E;&#x5B57;&#x7B26;&#x4E32;&#x95F4;&#x7559;&#x4E00;&#x4E2A;&#x7A7A;&#x683C;&#x3002;&#x53E6;&#x5916;&#xFF0C;&#x4E0D;&#x8981;&#x5728;&#x62EC;&#x53F7;&#x7684;&#x8868;&#x8FBE;&#x5F0F;&#x4E24;&#x4FA7;&#x7559;&#x7A7A;&#x683C;&#xFF0C;&#x4F8B;&#x5982;&#xFF1A;</p>
+<pre><code class="lang-c">    <span class="hljs-comment">/* X: Bad!!! */</span>
+    <span class="hljs-keyword">if</span> ( x &lt;= y )
+    {
+        <span class="hljs-comment">/* xxx */</span>
+    }
+
+    <span class="hljs-comment">/* V: Good! */</span>
+    <span class="hljs-keyword">if</span> (x &lt;= y)
+    {
+        <span class="hljs-comment">/* xxx */</span>
+    }
+</code></pre>
+<p>&#x6709;&#x4E00;&#x4E2A;&#x4F8B;&#x5916;&#xFF0C;&#x5C31;&#x662F;&#x5982;&#x679C;&#x9047;&#x5230;&#x5FAA;&#x73AF;&#x51FD;&#x6570;&#xFF0C;&#x91CC;&#x9762;&#x4E0D;&#x4F1A;&#x6267;&#x884C;&#x4EE3;&#x7801;&#x7684;&#x60C5;&#x51B5;&#xFF0C;&#x62EC;&#x53F7;&#x5C31;&#x76F4;&#x63A5;&#x5199;&#x5728;&#x53F3;&#x8FB9;&#x3002;</p>
+<pre><code class="lang-c">    <span class="hljs-keyword">while</span> (x &lt; y) {}
+    <span class="hljs-keyword">for</span> (;;) {}
+</code></pre>
+<h2 id="13&#x51FD;&#x6570;&#x6307;&#x9488;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;">13.&#x51FD;&#x6570;&#x6307;&#x9488;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;</h2>
+<p>&#x5728;&#x4F7F;&#x7528;&#x51FD;&#x6570;&#x6307;&#x9488;&#x7C7B;&#x578B;&#x5B9A;&#x4E49;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x4F7F;&#x7528;Handler&#x540E;&#x7F00;&#xFF0C;&#x6765;&#x8868;&#x793A;&#x662F;&#x4E00;&#x4E2A;&#x5904;&#x7406;&#x51FD;&#x6570;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function"><span class="hljs-keyword">typedef</span> <span class="hljs-title">void</span> <span class="hljs-params">(*SoundCallbackHandler)</span><span class="hljs-params">(<span class="hljs-keyword">void</span> *buffer, NX_Size len)</span></span>;
+
+SoundCallbackHandler sndHandler;
+</code></pre>
+<h2 id="14&#x51FD;&#x6570;&#x53C2;&#x6570;&#x592A;&#x591A;">14.&#x51FD;&#x6570;&#x53C2;&#x6570;&#x592A;&#x591A;</h2>
+<p>&#x5F53;&#x51FD;&#x6570;&#x53C2;&#x6570;&#x8FC7;&#x591A;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E00;&#x884C;&#x5199;&#x4E0D;&#x4E0B;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x9700;&#x8981;&#x628A;&#x6BCF;&#x4E2A;&#x53C2;&#x6570;&#x5199;&#x6210;&#x4E00;&#x884C;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function">NX_Thread <span class="hljs-title">NX_CreateThread</span><span class="hljs-params">(<span class="hljs-keyword">char</span> *threadName,
+    ThreadHandler threadHandler,
+    <span class="hljs-keyword">void</span> *param,
+    <span class="hljs-keyword">void</span> *stackBase,
+    NX_Size stackSize,
+    <span class="hljs-keyword">int</span> priority)</span>
+</span>{
+    ...   
+}
+</code></pre>
+<h2 id="15&#x5B8F;&#x6761;&#x4EF6;&#x5B9A;&#x4E49;">15.&#x5B8F;&#x6761;&#x4EF6;&#x5B9A;&#x4E49;</h2>
+<p>&#x5F53;&#x4F7F;&#x7528;&#x5B8F;&#x6761;&#x4EF6;#if, #else, #endif&#x8FD9;&#x79CD;&#x65F6;&#xFF0C;&#x9700;&#x8981;&#x5728;&#x5F00;&#x5934;&#x548C;&#x7ED3;&#x5C3E;&#x540E;&#x9762;&#x5199;&#x4E0A;&#x6CE8;&#x91CA;&#x6765;&#x5E2E;&#x52A9;&#x5F00;&#x53D1;&#x8FD9;&#x5FEB;&#x901F;&#x627E;&#x5230;&#x5BF9;&#x5E94;&#x7684;&#x5B8F;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> NX_HAS_SMP</span>
+xxx
+<span class="hljs-meta">#<span class="hljs-meta-keyword">else</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">ifdef</span> NX_HAS_ONECORE</span>
+yyy
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span>    <span class="hljs-comment">/* NX_HAS_ONECORE */</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">endif</span>    <span class="hljs-comment">/* NX_HAS_SMP */</span></span>
+</code></pre>
+<h2 id="&#x603B;&#x7ED3;">&#x603B;&#x7ED3;</h2>
+<p>&#x76F8;&#x4FE1;&#x770B;&#x5230;&#x6700;&#x540E;&#xFF0C;&#x60A8;&#x5DF2;&#x7ECF;&#x5BF9;&#x6211;&#x4EEC;&#x7684;&#x7F16;&#x7A0B;&#x89C4;&#x8303;&#x6709;&#x4E86;&#x4E00;&#x5B9A;&#x7684;&#x4E86;&#x89E3;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x5F00;&#x59CB;&#x60A8;&#x7684;<strong>NXOS</strong>&#x5F00;&#x53D1;&#x4E4B;&#x65C5;&#x5427;&#xFF01;</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                
+                <a href="commit-rule.html" class="navigation navigation-next navigation-unique" aria-label="Next page: 提交规则">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"代码风格","level":"1.1.6.1","depth":3,"next":{"title":"提交规则","level":"1.1.6.2","depth":3,"path":"tutorial/commit-rule.md","ref":"tutorial/commit-rule.md","articles":[]},"previous":{"title":"编程开发","level":"1.1.6","depth":2,"ref":"","articles":[{"title":"代码风格","level":"1.1.6.1","depth":3,"path":"tutorial/code-style.md","ref":"tutorial/code-style.md","articles":[]},{"title":"提交规则","level":"1.1.6.2","depth":3,"path":"tutorial/commit-rule.md","ref":"tutorial/commit-rule.md","articles":[]},{"title":"菜单配置","level":"1.1.6.3","depth":3,"path":"tutorial/menuconfig.md","ref":"tutorial/menuconfig.md","articles":[]},{"title":"工具链","level":"1.1.6.4","depth":3,"path":"tutorial/toolchains.md","ref":"tutorial/toolchains.md","articles":[]},{"title":"单元测试","level":"1.1.6.5","depth":3,"path":"tutorial/utest.md","ref":"tutorial/utest.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy BookOS-developers 2022","modify_label":"修订时间：","modify_format":"YYYY-MM-DD"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"nxos development team","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"book for nxos","language":"zh-hans","links":{"sidebar":{"bookos":"http://book-os.org"}},"gitbook":"3.2.3","description":"document for nxos kernel"},"file":{"path":"tutorial/code-style.md","mtime":"2022-04-10T21:01:04.818Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-10T21:16:49.040Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

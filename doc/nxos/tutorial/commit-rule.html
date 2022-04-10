@@ -1,0 +1,745 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>提交规则 · book for nxos</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="nxos development team">
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="menuconfig.html" />
+    
+    
+    <link rel="prev" href="code-style.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+    
+        
+        <li>
+            <a href="http://book-os.org" target="_blank" class="custom-link">bookos</a>
+        </li>
+    
+    
+
+    
+    <li class="divider"></li>
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" >
+            
+                <span>
+            
+                    
+                    NXOS文档中心
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1" >
+            
+                <span>
+            
+                    
+                    简介
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    NXOS 简介
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.2" >
+            
+                <span>
+            
+                    
+                    快速上手
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.2.1" data-path="quick-start.html">
+            
+                <a href="quick-start.html">
+            
+                    
+                    虚拟平台运行
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3" >
+            
+                <span>
+            
+                    
+                    内核
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.1" data-path="../programing-manual/base/framework.html">
+            
+                <a href="../programing-manual/base/framework.html">
+            
+                    
+                    整体框架
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.2" data-path="../programing-manual/base/start.html">
+            
+                <a href="../programing-manual/base/start.html">
+            
+                    
+                    启动流程
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3" data-path="../programing-manual/mm/mm.html">
+            
+                <a href="../programing-manual/mm/mm.html">
+            
+                    
+                    内存管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.3.1" data-path="../programing-manual/mm/buddy.html">
+            
+                <a href="../programing-manual/mm/buddy.html">
+            
+                    
+                    buddy伙伴算法
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3.2" data-path="../programing-manual/mm/heap.html">
+            
+                <a href="../programing-manual/mm/heap.html">
+            
+                    
+                    heapCache虚拟内存管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.3.3" data-path="../programing-manual/mm/vmspace.html">
+            
+                <a href="../programing-manual/mm/vmspace.html">
+            
+                    
+                    vmspace虚拟地址空间
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.4" data-path="../programing-manual/sched/sched.html">
+            
+                <a href="../programing-manual/sched/sched.html">
+            
+                    
+                    调度管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.4.1" data-path="../programing-manual/sched/thread.html">
+            
+                <a href="../programing-manual/sched/thread.html">
+            
+                    
+                    线程管理
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.4.2" data-path="../programing-manual/sched/smp.html">
+            
+                <a href="../programing-manual/sched/smp.html">
+            
+                    
+                    SMP多核调度
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.5" data-path="../programing-manual/process/process.html">
+            
+                <a href="../programing-manual/process/process.html">
+            
+                    
+                    进程管理
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.5.1" data-path="../programing-manual/process/syscall.html">
+            
+                <a href="../programing-manual/process/syscall.html">
+            
+                    
+                    系统调用
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.6" data-path="../programing-manual/interrupt/irq.html">
+            
+                <a href="../programing-manual/interrupt/irq.html">
+            
+                    
+                    中断系统
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.3.6.1" data-path="../programing-manual/interrupt/delay_queue.html">
+            
+                <a href="../programing-manual/interrupt/delay_queue.html">
+            
+                    
+                    延迟队列
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.3.7" data-path="../programing-manual/timer/timer.html">
+            
+                <a href="../programing-manual/timer/timer.html">
+            
+                    
+                    定时器
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.4" >
+            
+                <span>
+            
+                    
+                    内核移植
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.4.1" data-path="../programing-manual/port/riscv/riscv.html">
+            
+                <a href="../programing-manual/port/riscv/riscv.html">
+            
+                    
+                    riscv架构移植
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5" >
+            
+                <span>
+            
+                    
+                    用户接口
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.5.1" data-path="../programing-manual/user/api.html">
+            
+                <a href="../programing-manual/user/api.html">
+            
+                    
+                    API设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6" >
+            
+                <span>
+            
+                    
+                    编程开发
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.6.1" data-path="code-style.html">
+            
+                <a href="code-style.html">
+            
+                    
+                    代码风格
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.1.6.2" data-path="commit-rule.html">
+            
+                <a href="commit-rule.html">
+            
+                    
+                    提交规则
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6.3" data-path="menuconfig.html">
+            
+                <a href="menuconfig.html">
+            
+                    
+                    菜单配置
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6.4" data-path="toolchains.html">
+            
+                <a href="toolchains.html">
+            
+                    
+                    工具链
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.6.5" data-path="utest.html">
+            
+                <a href="utest.html">
+            
+                    
+                    单元测试
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >提交规则</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x4EE3;&#x7801;&#x63D0;&#x4EA4;&#x65E5;&#x5FD7;&#x89C4;&#x5219;commitrule">&#x4EE3;&#x7801;&#x63D0;&#x4EA4;&#x65E5;&#x5FD7;&#x89C4;&#x5219;CommitRule</h1>
+<p>&#x5F53;&#x6211;&#x4EEC;&#x6DFB;&#x52A0;&#x4EE3;&#x7801;&#x8981;&#x63D0;&#x4EA4;&#x5230;git&#x4ED3;&#x5E93;&#x4E2D;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x7EDF;&#x4E00;&#x4E0B;&#x89C4;&#x8303;&#xFF0C;&#x8FD9;&#x6837;&#x4E0D;&#x4F1A;&#x663E;&#x5F97;&#x6574;&#x4E2A;&#x9879;&#x76EE;&#x4E71;&#x7CDF;&#x7CDF;&#x7684;&#xFF0C;&#x5F53;&#x7136;&#x662F;&#x9700;&#x8981;&#x82B1;&#x70B9;&#x65F6;&#x95F4;&#x6765;&#x5B66;&#x4E60;&#x548C;&#x6539;&#x53D8;&#x7684;&#x3002;&#x6BCF;&#x6B21;&#x63D0;&#x4EA4;&#x7684;&#x4EE3;&#x7801;&#x5C3D;&#x91CF;&#x77ED;&#x5C0F;&#xFF0C;&#x6D89;&#x53CA;&#x8303;&#x56F4;&#x4E0D;&#x8981;&#x592A;&#x5E7F;&#xFF0C;&#x4E13;&#x6CE8;&#x4E8E;&#x67D0;&#x4E2A;&#x9886;&#x57DF;&#x3002;</p>
+<p>&#x6BCF;&#x6B21;&#x63D0;&#x4EA4;&#xFF0C;Commit message &#x90FD;&#x5305;&#x62EC;&#x4E24;&#x4E2A;&#x90E8;&#x5206;&#xFF1A;header&#x548C;body&#x3002;</p>
+<pre><code class="lang-xml"><span class="hljs-tag">&lt;<span class="hljs-name">type</span>&gt;</span>(<span class="hljs-tag">&lt;<span class="hljs-name">scope</span>&gt;</span>): <span class="hljs-tag">&lt;<span class="hljs-name">subject</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">BLANK</span> <span class="hljs-attr">LINE</span>&gt;</span>
+<span class="hljs-tag">&lt;<span class="hljs-name">body</span>&gt;</span>
+</code></pre>
+<p>&#x5176;&#x4E2D;&#xFF0C;header &#x662F;&#x5FC5;&#x9700;&#x7684;&#xFF0C;body &#x53EF;&#x4EE5;&#x7701;&#x7565;&#x3002;
+&#x4E0D;&#x7BA1;&#x662F;&#x54EA;&#x4E00;&#x4E2A;&#x90E8;&#x5206;&#xFF0C;&#x4EFB;&#x4F55;&#x4E00;&#x884C;&#x90FD;&#x4E0D;&#x5F97;&#x8D85;&#x8FC7;72&#x4E2A;&#x5B57;&#x7B26;&#xFF08;&#x6216;100&#x4E2A;&#x5B57;&#x7B26;&#xFF09;&#x3002;&#x8FD9;&#x662F;&#x4E3A;&#x4E86;&#x907F;&#x514D;&#x81EA;&#x52A8;&#x6362;&#x884C;&#x5F71;&#x54CD;&#x7F8E;&#x89C2;&#x3002;</p>
+<h3 id="header">Header</h3>
+<p>Header&#x90E8;&#x5206;&#x53EA;&#x6709;&#x4E00;&#x884C;&#xFF0C;&#x5305;&#x62EC;&#x4E09;&#x4E2A;&#x5B57;&#x6BB5;&#xFF1A;<code>type</code>&#xFF08;&#x5FC5;&#x9700;&#xFF09;&#x3001;<code>scope</code>&#xFF08;&#x53EF;&#x9009;&#xFF09;&#x548C;<code>subject</code>&#xFF08;&#x5FC5;&#x9700;&#xFF09;&#x3002;</p>
+<h4 id="type">type</h4>
+<p>&#x7528;&#x4E8E;&#x8BF4;&#x660E; commit &#x7684;&#x7C7B;&#x522B;&#xFF0C;&#x53EA;&#x5141;&#x8BB8;&#x4F7F;&#x7528;&#x4E0B;&#x9762;7&#x4E2A;&#x6807;&#x8BC6;&#x3002;</p>
+<ul>
+<li>feat&#xFF1A;&#x65B0;&#x529F;&#x80FD;&#xFF08;feature&#xFF09;</li>
+<li>fix&#xFF1A;&#x4FEE;&#x8865;bug</li>
+<li>docs&#xFF1A;&#x6587;&#x6863;&#xFF08;documentation&#xFF09;</li>
+<li>style&#xFF1A; &#x683C;&#x5F0F;&#xFF08;&#x4E0D;&#x5F71;&#x54CD;&#x4EE3;&#x7801;&#x8FD0;&#x884C;&#x7684;&#x53D8;&#x52A8;&#xFF09;</li>
+<li>refactor&#xFF1A;&#x91CD;&#x6784;&#xFF08;&#x5373;&#x4E0D;&#x662F;&#x65B0;&#x589E;&#x529F;&#x80FD;&#xFF0C;&#x4E5F;&#x4E0D;&#x662F;&#x4FEE;&#x6539;bug&#x7684;&#x4EE3;&#x7801;&#x53D8;&#x52A8;&#xFF09;</li>
+<li>test&#xFF1A;&#x589E;&#x52A0;&#x6D4B;&#x8BD5;</li>
+<li>build : &#x6539;&#x53D8;&#x4E86;build&#x5DE5;&#x5177; &#x5982; xbuild&#x6539;&#x6210;&#x4E86;xmake</li>
+<li>revert : &#x64A4;&#x9500;&#x4E0A;&#x4E00;&#x6B21;&#x7684; commit</li>
+<li>chore : &#x6784;&#x5EFA;&#x8FC7;&#x7A0B;&#x6216;&#x8F85;&#x52A9;&#x5DE5;&#x5177;&#x7684;&#x53D8;&#x52A8;&#xFF0C;&#x6BD4;&#x5982;&#x628A;grub&#x6539;&#x6210;&#x4E86;UEFI&#x3002;</li>
+</ul>
+<p>&#x5982;&#x679C;type&#x4E3A;<code>feat</code>&#x548C;<code>fix</code>&#xFF0C;&#x5219;&#x8BE5; commit &#x5C06;&#x80AF;&#x5B9A;&#x51FA;&#x73B0;&#x5728; Change log &#x4E4B;&#x4E2D;&#x3002;&#x5176;&#x4ED6;&#x60C5;&#x51B5;&#xFF08;<code>docs</code>&#x3001;<code>chore</code>&#x3001;<code>style</code>&#x3001;<code>refactor</code>&#x3001;<code>test</code>&#xFF09;&#x7531;&#x4F60;&#x51B3;&#x5B9A;&#xFF0C;&#x8981;&#x4E0D;&#x8981;&#x653E;&#x5165; Change log&#xFF0C;&#x5EFA;&#x8BAE;&#x662F;&#x4E0D;&#x8981;&#x3002;</p>
+<h4 id="scope">scope</h4>
+<p>scope&#x7528;&#x4E8E;&#x8BF4;&#x660E; commit &#x5F71;&#x54CD;&#x7684;&#x8303;&#x56F4;&#xFF0C;&#x6BD4;&#x5982;&#x6587;&#x4EF6;&#x7CFB;&#x7EDF;&#xFF0C;&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;&#xFF0C;&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x7B49;&#x7B49;&#xFF0C;&#x89C6;&#x9879;&#x76EE;&#x4E0D;&#x540C;&#x800C;&#x4E0D;&#x540C;&#x3002;</p>
+<p>&#x4F8B;&#x5982;&#x5728;mm&#xFF0C;thread&#xFF0C;fs&#x7B49;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x4FEE;&#x6539;&#x5F71;&#x54CD;&#x4E86;&#x4E0D;&#x6B62;&#x4E00;&#x4E2A;<code>scope</code>&#xFF0C;&#x4F60;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;<code>*</code>&#x4EE3;&#x66FF;&#x3002;</p>
+<h4 id="subject">subject</h4>
+<p><code>subject</code>&#x662F; commit &#x76EE;&#x7684;&#x7684;&#x7B80;&#x77ED;&#x63CF;&#x8FF0;&#xFF0C;&#x4E0D;&#x8D85;&#x8FC7;50&#x4E2A;&#x5B57;&#x7B26;&#x3002;</p>
+<p>&#x5176;&#x4ED6;&#x6CE8;&#x610F;&#x4E8B;&#x9879;&#xFF1A;</p>
+<ul>
+<li>&#x4EE5;&#x52A8;&#x8BCD;&#x5F00;&#x5934;&#xFF0C;&#x4F7F;&#x7528;&#x7B2C;&#x4E00;&#x4EBA;&#x79F0;&#x73B0;&#x5728;&#x65F6;&#xFF0C;&#x6BD4;&#x5982;change&#xFF0C;&#x800C;&#x4E0D;&#x662F;changed&#x6216;changes</li>
+<li>&#x7B2C;&#x4E00;&#x4E2A;&#x5B57;&#x6BCD;&#x5C0F;&#x5199;</li>
+<li>&#x7ED3;&#x5C3E;&#x4E0D;&#x52A0;&#x53E5;&#x53F7;&#xFF08;.&#xFF09;</li>
+</ul>
+<h3 id="body">Body</h3>
+<p>Body &#x90E8;&#x5206;&#x662F;&#x5BF9;&#x672C;&#x6B21; commit &#x7684;&#x8BE6;&#x7EC6;&#x63CF;&#x8FF0;&#xFF0C;&#x53EF;&#x4EE5;&#x5206;&#x6210;&#x591A;&#x884C;&#x3002;&#x4E0B;&#x9762;&#x662F;&#x4E00;&#x4E2A;&#x8303;&#x4F8B;&#x3002;</p>
+<pre><code class="lang-php">Add fatfs, suport fat12, fat16, fat32, exfat.
+
+- fat12: used <span class="hljs-keyword">for</span> floppy
+- fat32: used <span class="hljs-keyword">for</span> sdcard/harddisk
+</code></pre>
+<p>&#x6709;&#x4E24;&#x4E2A;&#x6CE8;&#x610F;&#x70B9;:</p>
+<ul>
+<li>&#x4F7F;&#x7528;&#x7B2C;&#x4E00;&#x4EBA;&#x79F0;&#x73B0;&#x5728;&#x65F6;&#xFF0C;&#x6BD4;&#x5982;&#x4F7F;&#x7528;change&#x800C;&#x4E0D;&#x662F;changed&#x6216;changes&#x3002;</li>
+<li>&#x6C38;&#x8FDC;&#x522B;&#x5FD8;&#x4E86;&#x7B2C;2&#x884C;&#x662F;&#x7A7A;&#x884C;</li>
+<li>&#x5E94;&#x8BE5;&#x8BF4;&#x660E;&#x4EE3;&#x7801;&#x53D8;&#x52A8;&#x7684;&#x52A8;&#x673A;&#xFF0C;&#x4EE5;&#x53CA;&#x4E0E;&#x4EE5;&#x524D;&#x884C;&#x4E3A;&#x7684;&#x5BF9;&#x6BD4;&#x3002;</li>
+</ul>
+<h3 id="&#x4E3E;&#x4F8B;">&#x4E3E;&#x4F8B;</h3>
+<pre><code>feat(mm): add buddy system
+
+Add simple buddy system code, it works weel.
+</code></pre><pre><code>fix(mm): bug on buddy alloc page
+</code></pre><pre><code>docs(mm): add buddy system doc
+</code></pre><pre><code>style(*): add NX_ prefix for all kernel function
+</code></pre><pre><code>refactor(mm): update buddy system
+</code></pre><pre><code>test(mm): add utest for buddy system
+</code></pre><pre><code>revert: feat(mm): add buddy system
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="code-style.html" class="navigation navigation-prev " aria-label="Previous page: 代码风格">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="menuconfig.html" class="navigation navigation-next " aria-label="Next page: 菜单配置">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"提交规则","level":"1.1.6.2","depth":3,"next":{"title":"菜单配置","level":"1.1.6.3","depth":3,"path":"tutorial/menuconfig.md","ref":"tutorial/menuconfig.md","articles":[]},"previous":{"title":"代码风格","level":"1.1.6.1","depth":3,"path":"tutorial/code-style.md","ref":"tutorial/code-style.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy BookOS-developers 2022","modify_label":"修订时间：","modify_format":"YYYY-MM-DD"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"nxos development team","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"book for nxos","language":"zh-hans","links":{"sidebar":{"bookos":"http://book-os.org"}},"gitbook":"3.2.3","description":"document for nxos kernel"},"file":{"path":"tutorial/commit-rule.md","mtime":"2022-04-10T21:01:04.818Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-10T21:16:49.040Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="../gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
