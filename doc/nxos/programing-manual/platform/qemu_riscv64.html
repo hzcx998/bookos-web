@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>启动流程 · book for nxos</title>
+        <title>qemu_riscv64 · book for nxos</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -57,10 +57,10 @@
     <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="../mm/mm.html" />
+    <link rel="next" href="k210.html" />
     
     
-    <link rel="prev" href="framework.html" />
+    <link rel="prev" href="i386.html" />
     
 
     </head>
@@ -190,9 +190,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.1.3.1" data-path="framework.html">
+        <li class="chapter " data-level="1.1.3.1" data-path="../base/framework.html">
             
-                <a href="framework.html">
+                <a href="../base/framework.html">
             
                     
                     整体框架
@@ -203,9 +203,9 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.1.3.2" data-path="start.html">
+        <li class="chapter " data-level="1.1.3.2" data-path="../base/start.html">
             
-                <a href="start.html">
+                <a href="../base/start.html">
             
                     
                     启动流程
@@ -447,9 +447,9 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.1.5.1" data-path="../platform/i386.html">
+        <li class="chapter " data-level="1.1.5.1" data-path="i386.html">
             
-                <a href="../platform/i386.html">
+                <a href="i386.html">
             
                     
                     i386
@@ -460,9 +460,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.5.2" data-path="../platform/qemu_riscv64.html">
+        <li class="chapter active" data-level="1.1.5.2" data-path="qemu_riscv64.html">
             
-                <a href="../platform/qemu_riscv64.html">
+                <a href="qemu_riscv64.html">
             
                     
                     qemu_riscv64
@@ -473,9 +473,9 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.5.3" data-path="../platform/k210.html">
+        <li class="chapter " data-level="1.1.5.3" data-path="k210.html">
             
-                <a href="../platform/k210.html">
+                <a href="k210.html">
             
                     
                     k210
@@ -642,7 +642,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href="../.." >启动流程</a>
+        <a href="../.." >qemu_riscv64</a>
     </h1>
 </div>
 
@@ -657,22 +657,37 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h1 id="nxos-&#x542F;&#x52A8;&#x6D41;&#x7A0B;">NXOS &#x542F;&#x52A8;&#x6D41;&#x7A0B;</h1>
-<p>&#x5728;&#x8BBE;&#x5907;&#x5F00;&#x673A;&#x540E;&#xFF0C;&#x5904;&#x7406;&#x5668;&#x4F1A;&#x8DF3;&#x5230;&#x4E00;&#x4E2A;&#x5730;&#x5740;&#x53BB;&#x6267;&#x884C;&#x4EE3;&#x7801;&#xFF0C;&#x4E00;&#x822C;&#x90FD;&#x662F;&#x56FA;&#x5B9A;&#x7684;&#xFF0C;&#x7136;&#x540E;&#x518D;&#x4ECE;&#x8FD9;&#x4E9B;&#x56FA;&#x5B9A;&#x4EE3;&#x7801;&#x8DF3;&#x8F6C;&#x5230;&#x7A0B;&#x5E8F;&#x5458;&#x81EA;&#x5DF1;&#x7F16;&#x5199;&#x7684;&#x7A0B;&#x5E8F;&#x3002;&#x7A0B;&#x5E8F;&#x5458;&#x81EA;&#x5DF1;&#x5199;&#x7684;&#x7A0B;&#x5E8F;&#x5C31;&#x662F;&#x88F8;&#x673A;&#xFF0C;rtos&#x6216;&#x8005;&#x64CD;&#x4F5C;&#x7CFB;&#x7EDF;&#x3002;<br>&#x5728;nxos&#x4E2D;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x5E73;&#x53F0;&#x4F1A;&#x6709;&#x4E0D;&#x540C;&#x7684;&#x6267;&#x884C;&#x5730;&#x5740;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x6307;&#x5B9A;&#x5185;&#x6838;&#x7A0B;&#x5E8F;&#x7684;&#x5165;&#x53E3;&#x5730;&#x5740;&#xFF0C;&#x5728;&#x94FE;&#x63A5;&#x7684;&#x65F6;&#x5019;&#x6307;&#x5B9A;&#x4E00;&#x4E2A;&#x6807;&#x7B7E; <code>_Start</code>&#xFF0C;&#x5F53;&#x6267;&#x884C;&#x5230;&#x8FD9;&#x4E2A;&#x5730;&#x65B9;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5185;&#x6838;&#x5C31;&#x5F00;&#x59CB;&#x8FD0;&#x884C;&#x4E86;&#x3002;</p>
-<h2 id="&#x5185;&#x6838;&#x6267;&#x884C;&#x8DEF;&#x5F84;">&#x5185;&#x6838;&#x6267;&#x884C;&#x8DEF;&#x5F84;</h2>
-<pre><code>-&gt; _Start
-    -&gt; NX_Main (&#x5185;&#x6838;&#x7684;&#x4E3B;&#x51FD;&#x6570;)
-        -&gt; NX_SMP_Preload
-        -&gt; NX_HalPlatformInit (&#x5E73;&#x53F0;&#x521D;&#x59CB;&#x5316;, &#x4E0D;&#x80FD;&#x4F7F;&#x7528;&#x5185;&#x6838;&#x7684;&#x529F;&#x80FD;: &#x5E73;&#x53F0;&#x5F00;&#x53D1;&#x8005;&#x5B9E;&#x73B0;)
-        -&gt; ShowLogVersion
-        -&gt; ... &#x5185;&#x6838;&#x529F;&#x80FD;&#x521D;&#x59CB;&#x5316; ...
-        -&gt; NX_CallsInit (&#x521D;&#x59CB;&#x5316;&#x8C03;&#x7528;)
-        -&gt; NX_HalPlatformStage2 (&#x5E73;&#x53F0;&#x521D;&#x59CB;&#x5316;&#x4E8C;&#x9636;&#x6BB5;&#xFF0C;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x5185;&#x6838;&#x7684;&#x529F;&#x80FD;: &#x5E73;&#x53F0;&#x5F00;&#x53D1;&#x8005;&#x5B9E;&#x73B0;) 
-
-        -&gt; NX_SMP_Main (SMP&#x521D;&#x59CB;&#x5316;)
-        -&gt; NX_SchedToFirstThread (&#x8C03;&#x5EA6;&#x7B2C;&#x4E00;&#x4E2A;&#x7EBF;&#x7A0B;)
-            -&gt; NX_HalPlatformMain (&#x5E73;&#x53F0;&#x7684;&#x4E3B;&#x51FD;&#x6570;&#xFF0C;&#x4EC0;&#x4E48;&#x90FD;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;: &#x5E73;&#x53F0;&#x5F00;&#x53D1;&#x8005;&#x5B9E;&#x73B0;)
+                                <h1 id="qemuriscv64&#x5E73;&#x53F0;&#x7B80;&#x4ECB;">qemu_riscv64&#x5E73;&#x53F0;&#x7B80;&#x4ECB;</h1>
+<p>QEMU&#x662F;&#x4E00;&#x79CD;&#x901A;&#x7528;&#x7684;&#x5F00;&#x6E90;&#x8BA1;&#x7B97;&#x673A;&#x4EFF;&#x771F;&#x5668;&#x548C;&#x865A;&#x62DF;&#x5668;&#x3002;&#x672C;&#x5E73;&#x53F0;&#x5C31;&#x662F;qemu&#x5BF9;riscv64&#x67B6;&#x6784;&#x7684;&#x4EFF;&#x771F;&#x652F;&#x6301;&#x3002;</p>
+<h1 id="&#x529F;&#x80FD;&#x652F;&#x6301;">&#x529F;&#x80FD;&#x652F;&#x6301;</h1>
+<ul>
+<li>[x] OpenSBI&#x56FA;&#x4EF6;</li>
+<li>[x] &#x5185;&#x5B58;&#x7BA1;&#x7406;</li>
+<li>[x] &#x4E0A;&#x4E0B;&#x6587;&#x5207;&#x6362;</li>
+<li>[x] &#x5B9A;&#x65F6;&#x5668;&#x65F6;&#x949F;</li>
+<li>[x] &#x539F;&#x5B50;&#x64CD;&#x4F5C;</li>
+<li>[x] &#x5185;&#x5B58;&#x5C4F;&#x969C;</li>
+<li>[x] SMP&#x591A;&#x6838;</li>
+<li>[x] MMU&#x652F;&#x6301;</li>
+<li>[x] &#x4E2D;&#x65AD;&#x7BA1;&#x7406;</li>
+<li>[x] &#x7CFB;&#x7EDF;&#x8C03;&#x7528;&#x652F;&#x6301;</li>
+<li>[x] &#x6267;&#x884C;&#x7528;&#x6237;&#x6001;&#x7A0B;&#x5E8F;</li>
+<li>[x] &#x4E32;&#x53E3;&#x8F93;&#x5165;&#x8F93;&#x51FA;</li>
+<li>[x] &#x901A;&#x8FC7;&#x5355;&#x5143;&#x6D4B;&#x8BD5;&#x548C;&#x96C6;&#x6210;&#x6D4B;&#x8BD5;</li>
+<li>[x] gdb&#x8C03;&#x8BD5;</li>
+</ul>
+<h1 id="&#x8FD0;&#x884C;&#x65B9;&#x6CD5;">&#x8FD0;&#x884C;&#x65B9;&#x6CD5;</h1>
+<pre><code class="lang-bash"><span class="hljs-comment"># 1. &#x8FDB;&#x5165;nxos&#x6E90;&#x7801;&#xFF0C;&#x6253;&#x5F00;&#x7EC8;&#x7AEF;&#x3002;</span>
+<span class="hljs-comment"># 2. &#x521D;&#x59CB;&#x5316;&#x73AF;&#x5883;</span>
+<span class="hljs-built_in">source</span> setup.sh riscv64-qemu_riscv64    <span class="hljs-comment"># linux</span>
+setup.bat riscv64-qemu_riscv64          <span class="hljs-comment"># windows</span>
+<span class="hljs-comment"># 3. &#x83B7;&#x53D6;&#x9ED8;&#x8BA4;&#x914D;&#x7F6E;</span>
+make defconfig
+<span class="hljs-comment"># 4. &#x7F16;&#x8BD1;&#x8FD0;&#x884C;</span>
+make run -j8 <span class="hljs-comment"># -jN&#x662F;&#x591A;&#x7EBF;&#x7A0B;&#x7F16;&#x8BD1;</span>
+<span class="hljs-comment"># 5. ctrl + a z &#x9000;&#x51FA;qemu</span>
 </code></pre>
+
                                 
                                 </section>
                             
@@ -699,12 +714,12 @@
 
             
                 
-                <a href="framework.html" class="navigation navigation-prev " aria-label="Previous page: 整体框架">
+                <a href="i386.html" class="navigation navigation-prev " aria-label="Previous page: i386">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
                 
-                <a href="../mm/mm.html" class="navigation navigation-next " aria-label="Next page: 内存管理">
+                <a href="k210.html" class="navigation navigation-next " aria-label="Next page: k210">
                     <i class="fa fa-angle-right"></i>
                 </a>
                 
@@ -715,7 +730,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"启动流程","level":"1.1.3.2","depth":3,"next":{"title":"内存管理","level":"1.1.3.3","depth":3,"path":"programing-manual/mm/mm.md","ref":"programing-manual/mm/mm.md","articles":[{"title":"buddy伙伴算法","level":"1.1.3.3.1","depth":4,"path":"programing-manual/mm/buddy.md","ref":"programing-manual/mm/buddy.md","articles":[]},{"title":"heapCache虚拟内存管理","level":"1.1.3.3.2","depth":4,"path":"programing-manual/mm/heap.md","ref":"programing-manual/mm/heap.md","articles":[]},{"title":"vmspace虚拟地址空间","level":"1.1.3.3.3","depth":4,"path":"programing-manual/mm/vmspace.md","ref":"programing-manual/mm/vmspace.md","articles":[]}]},"previous":{"title":"整体框架","level":"1.1.3.1","depth":3,"path":"programing-manual/base/framework.md","ref":"programing-manual/base/framework.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy BookOS-developers 2022","modify_label":"修订时间：","modify_format":"YYYY-MM-DD"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"nxos development team","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"book for nxos","language":"zh-hans","links":{"sidebar":{"bookos":"http://book-os.org"}},"gitbook":"3.2.3","description":"document for nxos kernel"},"file":{"path":"programing-manual/base/start.md","mtime":"2022-04-10T21:01:04.802Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-11T19:30:27.188Z"},"basePath":"../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"qemu_riscv64","level":"1.1.5.2","depth":3,"next":{"title":"k210","level":"1.1.5.3","depth":3,"path":"programing-manual/platform/k210.md","ref":"programing-manual/platform/k210.md","articles":[]},"previous":{"title":"i386","level":"1.1.5.1","depth":3,"path":"programing-manual/platform/i386.md","ref":"programing-manual/platform/i386.md","articles":[]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy BookOS-developers 2022","modify_label":"修订时间：","modify_format":"YYYY-MM-DD"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"nxos development team","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"book for nxos","language":"zh-hans","links":{"sidebar":{"bookos":"http://book-os.org"}},"gitbook":"3.2.3","description":"document for nxos kernel"},"file":{"path":"programing-manual/platform/qemu_riscv64.md","mtime":"2022-04-11T19:22:14.725Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-11T19:30:27.188Z"},"basePath":"../..","book":{"language":""}});
         });
     </script>
 </div>

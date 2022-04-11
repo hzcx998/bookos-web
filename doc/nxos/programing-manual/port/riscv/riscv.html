@@ -434,7 +434,7 @@
                 <span>
             
                     
-                    用户接口
+                    平台支持
             
                 </span>
             
@@ -443,12 +443,38 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.1.5.1" data-path="../../user/api.html">
+        <li class="chapter " data-level="1.1.5.1" data-path="../../platform/i386.html">
             
-                <a href="../../user/api.html">
+                <a href="../../platform/i386.html">
             
                     
-                    API设计
+                    i386
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.2" data-path="../../platform/qemu_riscv64.html">
+            
+                <a href="../../platform/qemu_riscv64.html">
+            
+                    
+                    qemu_riscv64
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.5.3" data-path="../../platform/k210.html">
+            
+                <a href="../../platform/k210.html">
+            
+                    
+                    k210
             
                 </a>
             
@@ -466,6 +492,38 @@
                 <span>
             
                     
+                    用户接口
+            
+                </span>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.1.6.1" data-path="../../user/api.html">
+            
+                <a href="../../user/api.html">
+            
+                    
+                    API设计
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.1.7" >
+            
+                <span>
+            
+                    
                     编程开发
             
                 </span>
@@ -475,7 +533,7 @@
             <ul class="articles">
                 
     
-        <li class="chapter " data-level="1.1.6.1" data-path="../../../tutorial/code-style.html">
+        <li class="chapter " data-level="1.1.7.1" data-path="../../../tutorial/code-style.html">
             
                 <a href="../../../tutorial/code-style.html">
             
@@ -488,7 +546,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.6.2" data-path="../../../tutorial/commit-rule.html">
+        <li class="chapter " data-level="1.1.7.2" data-path="../../../tutorial/commit-rule.html">
             
                 <a href="../../../tutorial/commit-rule.html">
             
@@ -501,7 +559,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.6.3" data-path="../../../tutorial/menuconfig.html">
+        <li class="chapter " data-level="1.1.7.3" data-path="../../../tutorial/menuconfig.html">
             
                 <a href="../../../tutorial/menuconfig.html">
             
@@ -514,7 +572,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.6.4" data-path="../../../tutorial/toolchains.html">
+        <li class="chapter " data-level="1.1.7.4" data-path="../../../tutorial/toolchains.html">
             
                 <a href="../../../tutorial/toolchains.html">
             
@@ -527,7 +585,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.1.6.5" data-path="../../../tutorial/utest.html">
+        <li class="chapter " data-level="1.1.7.5" data-path="../../../tutorial/utest.html">
             
                 <a href="../../../tutorial/utest.html">
             
@@ -631,63 +689,6 @@ RISC-V&#x6307;&#x4EE4;&#x96C6;&#x7684;&#x8BBE;&#x8BA1;&#x8003;&#x8651;&#x4E86;&#
 <p><code>Supervisor</code>&#x6A21;&#x5F0F;&#x7684;&#x4E2D;&#x65AD;&#x7684;&#x6253;&#x5F00;&#x4E0E;&#x5173;&#x95ED;&#x662F;&#x7531;&#x72B6;&#x6001;&#x5BC4;&#x5B58;&#x5668; <code>SSTATUS</code> &#x4E2D;&#x7684; <code>SIE</code> &#x63A7;&#x5236;&#x7684;&#xFF0C;&#x7F6E;&#x4E3A;1&#x5219;&#x8868;&#x793A;&#x4F7F;&#x80FD;&#x4E2D;&#x65AD;&#xFF0C;&#x7F6E;&#x4E3A;0&#x5219;&#x8868;&#x793A;&#x7981;&#x7528;&#x4E2D;&#x65AD;&#x3002;</p>
 <h3 id="4-mmu&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x5355;&#x5143;">4. MMU&#x5185;&#x5B58;&#x7BA1;&#x7406;&#x5355;&#x5143;</h3>
 <p>RISC-V&#x7684;MMU&#x652F;&#x6301;&#x591A;&#x79CD;&#x6A21;&#x5F0F;&#xFF0C;&#x6709;Sv32/Sv39/Sv48/Sv57/Sv64&#x7B49;&#x3002;&#x4E0D;&#x540C;&#x7684;&#x6A21;&#x5F0F;&#x6620;&#x5C04;&#x7684;&#x9875;&#x9762;&#x7B49;&#x7EA7;&#xFF0C;&#x9875;&#x9762;&#x5927;&#x5C0F;&#x662F;&#x6709;&#x5DEE;&#x5F02;&#x7684;&#x3002;&#x5728;64&#x4F4D;&#x5904;&#x7406;&#x5668;&#x79CD;&#x6700;&#x5E38;&#x7528;&#x7684;&#x662F;Sv39&#xFF0C;&#x5B83;&#x662F;3&#x7EA7;4KB&#x9875;&#x9762;&#x5927;&#x5C0F;&#x6620;&#x5C04;&#x3002;</p>
-<p>&#x76D1;&#x7BA1;&#x8005;&#x6A21;&#x5F0F;&#x7684;&#x9875;&#x8868;&#x7684;&#x5730;&#x5740;&#x662F;&#x7531;&#x5730;&#x5740;&#x8F6C;&#x6362;&#x5BC4;&#x5B58;&#x5668; <code>SATP</code> &#x4FDD;&#x5B58;&#x7684;&#xFF0C;&#x5176;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;
-<img src="figures/satp.png" alt="&#x5730;&#x5740;&#x8F6C;&#x6362;"></p>
-<p>&#x5177;&#x4F53;&#x5B57;&#x6BB5;&#x7684;&#x89E3;&#x6790;&#x5982;&#x4E0B;&#xFF1A;</p>
-<ul>
-<li>Mode - MMU &#x5730;&#x5740;&#x7FFB;&#x8BD1;&#x6A21;&#x5F0F;</li>
-</ul>
-<table>
-<thead>
-<tr>
-<th>Value</th>
-<th>Name</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>0</td>
-<td>Bare</td>
-<td>No translation or protection</td>
-</tr>
-<tr>
-<td>1-7</td>
-<td>-</td>
-<td>Reserved</td>
-</tr>
-<tr>
-<td>8</td>
-<td>Sv39</td>
-<td>Page-based 39-bit virtual addressing</td>
-</tr>
-<tr>
-<td>9</td>
-<td>Sv48</td>
-<td>Page-based 48-bit virtual addressing</td>
-</tr>
-<tr>
-<td>10</td>
-<td>Sv57</td>
-<td>Reserved for page-based 57-bit virtual addressing</td>
-</tr>
-<tr>
-<td>11</td>
-<td>Sv64</td>
-<td>Reserved for page-based 64-bit virtual addressing</td>
-</tr>
-<tr>
-<td>12-15</td>
-<td>-</td>
-<td>Reserved</td>
-</tr>
-</tbody>
-</table>
-<p>&#x5F53; Mode &#x4E3A; 0 &#x65F6;&#xFF0C;MMU &#x5173;&#x95ED;&#x3002;</p>
-<ul>
-<li>ASID &#x2013; &#x5F53;&#x524D; ASID&#x3002;&#x8868;&#x793A;&#x5F53;&#x524D;&#x7A0B;&#x5E8F;&#x7684; ASID &#x53F7;&#x3002;</li>
-<li>PPN &#x2013; &#x786C;&#x4EF6;&#x56DE;&#x586B;&#x6839; PPN&#x3002;&#x7B2C;&#x4E00;&#x7EA7;&#x786C;&#x4EF6;&#x56DE;&#x586B;&#x4F7F;&#x7528;&#x7684; PPN (Phsical Page Number)&#x3002;</li>
-</ul>
 <h2 id="&#x4E09;&#x3001;&#x4EE3;&#x7801;&#x79FB;&#x690D;">&#x4E09;&#x3001;&#x4EE3;&#x7801;&#x79FB;&#x690D;</h2>
 <p>&#x79FB;&#x690D;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x5E73;&#x53F0;&#x9700;&#x8981;&#x5B9E;&#x73B0;&#x5982;&#x4E0B;&#x5185;&#x5BB9;&#xFF1A;
 |&#x5185;&#x5BB9;    |&#x63CF;&#x8FF0;    |
@@ -1533,6 +1534,401 @@ NX_INTERFACE <span class="hljs-keyword">struct</span> NX_MmuOps NX_MmuOpsInterfa
     .vir2Phy        = NX_HalVir2Phy,
 };
 </code></pre>
+<p>&#x76D1;&#x7BA1;&#x8005;&#x6A21;&#x5F0F;&#x7684;&#x9875;&#x8868;&#x7684;&#x5730;&#x5740;&#x662F;&#x7531;&#x5730;&#x5740;&#x8F6C;&#x6362;&#x5BC4;&#x5B58;&#x5668; <code>SATP</code> &#x4FDD;&#x5B58;&#x7684;&#xFF0C;&#x5176;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;
+<img src="figures/satp.png" alt="&#x5730;&#x5740;&#x8F6C;&#x6362;"></p>
+<p>&#x5177;&#x4F53;&#x5B57;&#x6BB5;&#x7684;&#x89E3;&#x6790;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>Mode - MMU &#x5730;&#x5740;&#x7FFB;&#x8BD1;&#x6A21;&#x5F0F;</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Value</th>
+<th>Name</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0</td>
+<td>Bare</td>
+<td>No translation or protection</td>
+</tr>
+<tr>
+<td>1-7</td>
+<td>-</td>
+<td>Reserved</td>
+</tr>
+<tr>
+<td>8</td>
+<td>Sv39</td>
+<td>Page-based 39-bit virtual addressing</td>
+</tr>
+<tr>
+<td>9</td>
+<td>Sv48</td>
+<td>Page-based 48-bit virtual addressing</td>
+</tr>
+<tr>
+<td>10</td>
+<td>Sv57</td>
+<td>Reserved for page-based 57-bit virtual addressing</td>
+</tr>
+<tr>
+<td>11</td>
+<td>Sv64</td>
+<td>Reserved for page-based 64-bit virtual addressing</td>
+</tr>
+<tr>
+<td>12-15</td>
+<td>-</td>
+<td>Reserved</td>
+</tr>
+</tbody>
+</table>
+<p>&#x5F53; Mode &#x4E3A; 0 &#x65F6;&#xFF0C;MMU &#x5173;&#x95ED;&#x3002;</p>
+<ul>
+<li>ASID &#x2013; &#x5F53;&#x524D; ASID&#x3002;&#x8868;&#x793A;&#x5F53;&#x524D;&#x7A0B;&#x5E8F;&#x7684; ASID &#x53F7;&#x3002;</li>
+<li>PPN &#x2013; &#x786C;&#x4EF6;&#x56DE;&#x586B;&#x6839; PPN&#x3002;&#x7B2C;&#x4E00;&#x7EA7;&#x786C;&#x4EF6;&#x56DE;&#x586B;&#x4F7F;&#x7528;&#x7684; PPN (Phsical Page Number)&#x3002;</li>
+</ul>
+<p>&#x63A5;&#x4E0B;&#x6765;&#xFF0C;&#x6211;&#x4EEC;&#x7ED9;&#x51FA; SV39 &#x5730;&#x5740;&#x8F6C;&#x6362;&#x7684;&#x5168;&#x8FC7;&#x7A0B;&#x56FE;&#x793A;&#xFF08;&#x6765;&#x6E90;&#x4E8E; MIT 6.828 &#x8BFE;&#x7A0B;&#xFF09;&#x6765;&#x4ECB;&#x7ECD;&#x591A;&#x7EA7;&#x9875;&#x8868;&#x539F;&#x7406;&#x7684;&#x4ECB;&#x7ECD;&#xFF1A;
+<img src="figures/sv39-full.png" alt="sv39-full"></p>
+<p>&#x5728; <code>SV39</code> &#x6A21;&#x5F0F;&#x4E2D;&#x6211;&#x4EEC;&#x91C7;&#x7528;&#x4E09;&#x7EA7;&#x9875;&#x8868;&#xFF0C;&#x5373;&#x5C06; <code>27</code> &#x4F4D;&#x7684;&#x865A;&#x62DF;&#x9875;&#x53F7;&#x5206;&#x4E3A;&#x4E09;&#x4E2A;&#x7B49;&#x957F;&#x7684;&#x90E8;&#x5206;&#xFF0C;
+&#x7B2C; <code>26-18</code> &#x4F4D;&#x4E3A;&#x4E09;&#x7EA7;&#x7D22;&#x5F15; <code>VPN2</code>&#xFF0C;&#x7B2C; <code>17-9</code> &#x4F4D;&#x4E3A;&#x4E8C;&#x7EA7;&#x7D22;&#x5F15; <code>VPN1</code>&#xFF0C;&#x7B2C; <code>8-0</code> &#x4F4D;&#x4E3A;&#x4E00;&#x7EA7;&#x7D22;&#x5F15; <code>VPN0</code>&#x3002;</p>
+<p>&#x6211;&#x4EEC;&#x4E5F;&#x5C06;&#x9875;&#x8868;&#x5206;&#x4E3A;&#x4E09;&#x7EA7;&#x9875;&#x8868;&#xFF0C;&#x4E8C;&#x7EA7;&#x9875;&#x8868;&#xFF0C;&#x4E00;&#x7EA7;&#x9875;&#x8868;&#x3002;
+&#x6BCF;&#x4E2A;&#x9875;&#x8868;&#x90FD;&#x7528; <code>9</code> &#x4F4D;&#x7D22;&#x5F15;&#x7684;&#xFF0C;&#x56E0;&#x6B64;&#x6709; <code>2&#x7684;9&#x6B21;&#x65B9;=512</code> &#x4E2A;&#x9875;&#x8868;&#x9879;&#xFF0C;
+&#x800C;&#x6BCF;&#x4E2A;&#x9875;&#x8868;&#x9879;&#x90FD;&#x662F; <code>8</code> &#x5B57;&#x8282;&#xFF0C;
+&#x56E0;&#x6B64;&#x6BCF;&#x4E2A;&#x9875;&#x8868;&#x5927;&#x5C0F;&#x90FD;&#x4E3A; <code>512 x 8 = 4KiB</code> &#x3002;
+&#x6B63;&#x597D;&#x662F;&#x4E00;&#x4E2A;&#x7269;&#x7406;&#x9875;&#x7684;&#x5927;&#x5C0F;&#x3002;
+&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A;&#x4E00;&#x4E2A;&#x9875;&#x8868;&#x653E;&#x5230;&#x4E00;&#x4E2A;&#x7269;&#x7406;&#x9875;&#x4E2D;&#xFF0C;&#x5E76;&#x7528;&#x4E00;&#x4E2A;&#x7269;&#x7406;&#x9875;&#x53F7;&#x6765;&#x63CF;&#x8FF0;&#x5B83;&#x3002;
+&#x4E8B;&#x5B9E;&#x4E0A;&#xFF0C;&#x4E09;&#x7EA7;&#x9875;&#x8868;&#x7684;&#x6BCF;&#x4E2A;&#x9875;&#x8868;&#x9879;&#x4E2D;&#x7684;&#x7269;&#x7406;&#x9875;&#x53F7;&#x53EF;&#x63CF;&#x8FF0;&#x4E00;&#x4E2A;&#x4E8C;&#x7EA7;&#x9875;&#x8868;&#xFF1B;
+&#x4E8C;&#x7EA7;&#x9875;&#x8868;&#x7684;&#x6BCF;&#x4E2A;&#x9875;&#x8868;&#x9879;&#x4E2D;&#x7684;&#x7269;&#x7406;&#x9875;&#x53F7;&#x53EF;&#x63CF;&#x8FF0;&#x4E00;&#x4E2A;&#x4E00;&#x7EA7;&#x9875;&#x8868;&#xFF1B;
+&#x4E00;&#x7EA7;&#x9875;&#x8868;&#x4E2D;&#x7684;&#x9875;&#x8868;&#x9879;&#x5185;&#x5BB9;&#x5219;&#x548C;&#x6211;&#x4EEC;&#x521A;&#x624D;&#x63D0;&#x5230;&#x7684;&#x9875;&#x8868;&#x9879;&#x4E00;&#x6837;&#xFF0C;&#x5176;&#x5185;&#x5BB9;&#x5305;&#x542B;&#x7269;&#x7406;&#x9875;&#x53F7;&#xFF0C;&#x5373;&#x63CF;&#x8FF0;&#x4E00;&#x4E2A;&#x8981;&#x6620;&#x5C04;&#x5230;&#x7684;&#x7269;&#x7406;&#x9875;&#x3002;</p>
+<p>&#x5177;&#x4F53;&#x6765;&#x8BF4;&#xFF0C;&#x5047;&#x8BBE;&#x6211;&#x4EEC;&#x6709;&#x865A;&#x62DF;&#x5730;&#x5740; <code>(VPN2,VPN1,VPN0,offset)</code> :</p>
+<ul>
+<li><p>&#x6211;&#x4EEC;&#x9996;&#x5148;&#x4F1A;&#x8BB0;&#x5F55;&#x88C5;&#x8F7D;&#x300C;&#x5F53;&#x524D;&#x6240;&#x7528;&#x7684;&#x4E09;&#x7EA7;&#x9875;&#x8868;&#x7684;&#x7269;&#x7406;&#x9875;&#x300D;&#x7684;&#x9875;&#x53F7;&#x5230; <code>satp</code> &#x5BC4;&#x5B58;&#x5668;&#x4E2D;&#xFF1B;</p>
+</li>
+<li><p>&#x628A; <code>VPN2</code> &#x4F5C;&#x4E3A;&#x504F;&#x79FB;&#x5728;&#x7B2C;&#x4E09;&#x7EA7;&#x9875;&#x8868;&#x7684;&#x7269;&#x7406;&#x9875;&#x4E2D;&#x627E;&#x5230;&#x7B2C;&#x4E8C;&#x7EA7;&#x9875;&#x8868;&#x7684;&#x7269;&#x7406;&#x9875;&#x53F7;&#xFF1B;</p>
+</li>
+<li><p>&#x628A; <code>VPN1</code> &#x4F5C;&#x4E3A;&#x504F;&#x79FB;&#x5728;&#x7B2C;&#x4E8C;&#x7EA7;&#x9875;&#x8868;&#x7684;&#x7269;&#x7406;&#x9875;&#x4E2D;&#x627E;&#x5230;&#x7B2C;&#x4E00;&#x7EA7;&#x9875;&#x8868;&#x7684;&#x7269;&#x7406;&#x9875;&#x53F7;&#xFF1B;</p>
+</li>
+<li><p>&#x628A; <code>VPN0</code> &#x4F5C;&#x4E3A;&#x504F;&#x79FB;&#x5728;&#x7B2C;&#x4E00;&#x7EA7;&#x9875;&#x8868;&#x7684;&#x7269;&#x7406;&#x9875;&#x4E2D;&#x627E;&#x5230;&#x8981;&#x8BBF;&#x95EE;&#x4F4D;&#x7F6E;&#x7684;&#x7269;&#x7406;&#x9875;&#x53F7;&#xFF1B;</p>
+</li>
+<li><p>&#x7269;&#x7406;&#x9875;&#x53F7;&#x5BF9;&#x5E94;&#x7684;&#x7269;&#x7406;&#x9875;&#x57FA;&#x5740;&#xFF08;&#x5373;&#x7269;&#x7406;&#x9875;&#x53F7;&#x5DE6;&#x79FB;12&#x4F4D;&#xFF09;&#x52A0;&#x4E0A;  &#x5C31;&#x662F;&#x865A;&#x62DF;&#x5730;&#x5740;&#x5BF9;&#x5E94;&#x7684;&#x7269;&#x7406;&#x5730;&#x5740;&#x3002;</p>
+</li>
+</ul>
+<p>&#x8FD9;&#x6837;&#x5904;&#x7406;&#x5668;&#x901A;&#x8FC7;&#x8FD9;&#x79CD;&#x591A;&#x6B21;&#x8F6C;&#x6362;&#xFF0C;&#x7EC8;&#x4E8E;&#x4ECE;&#x865A;&#x62DF;&#x9875;&#x53F7;&#x627E;&#x5230;&#x4E86;&#x4E00;&#x7EA7;&#x9875;&#x8868;&#x9879;&#xFF0C;
+&#x4ECE;&#x800C;&#x5F97;&#x51FA;&#x4E86;&#x7269;&#x7406;&#x9875;&#x53F7;&#x548C;&#x865A;&#x62DF;&#x5730;&#x5740;&#x6240;&#x5BF9;&#x5E94;&#x7684;&#x7269;&#x7406;&#x5730;&#x5740;&#x3002;
+&#x521A;&#x624D;&#x6211;&#x4EEC;&#x63D0;&#x5230;&#x82E5;&#x9875;&#x8868;&#x9879;&#x6EE1;&#x8DB3; <code>R,W,X</code> &#x90FD;&#x4E3A; 0&#xFF0C;&#x8868;&#x660E;&#x8FD9;&#x4E2A;&#x9875;&#x8868;&#x9879;&#x6307;&#x5411;&#x4E0B;&#x4E00;&#x7EA7;&#x9875;&#x8868;&#x3002;
+&#x5728;&#x8FD9;&#x91CC;&#x4E09;&#x7EA7;&#x548C;&#x4E8C;&#x7EA7;&#x9875;&#x8868;&#x9879;&#x7684; <code>R,W,X</code> &#x4E3A; 0 &#x5E94;&#x8BE5;&#x6210;&#x7ACB;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x4EEC;&#x6307;&#x5411;&#x4E86;&#x4E0B;&#x4E00;&#x7EA7;&#x9875;&#x8868;&#x3002;</p>
+<p>&#x9875;&#x9762;&#x5C5E;&#x6027;&#x7684;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<ul>
+<li>&#x6587;&#x4EF6;&#xFF1A;src/arch/riscv64/include/arch/mmu.h</li>
+</ul>
+<pre><code class="lang-c"><span class="hljs-comment">// page table entry (PTE) fields</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> PTE_V     0x001 <span class="hljs-comment">// Valid</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> PTE_R     0x002 <span class="hljs-comment">// Read</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> PTE_W     0x004 <span class="hljs-comment">// Write</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> PTE_X     0x008 <span class="hljs-comment">// Execute</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> PTE_U     0x010 <span class="hljs-comment">// User</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> PTE_G     0x020 <span class="hljs-comment">// Global</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> PTE_A     0x040 <span class="hljs-comment">// Accessed</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> PTE_D     0x080 <span class="hljs-comment">// Dirty</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> PTE_SOFT  0x300 <span class="hljs-comment">// Reserved for Software</span></span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> PTE_S     0x000 <span class="hljs-comment">// system</span></span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> NX_PAGE_ATTR_RWX    (PTE_X | PTE_W | PTE_R)</span>
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> NX_PAGE_ATTR_KERNEL (PTE_V | NX_PAGE_ATTR_RWX | PTE_S | PTE_G)</span>
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> NX_PAGE_ATTR_USER   (PTE_V | NX_PAGE_ATTR_RWX | PTE_U | PTE_G)</span>
+</code></pre>
+<p><a href="https://rcore-os.github.io/rCore-Tutorial-Book-v3/chapter4/3sv39-implementation-1.html" target="_blank">&#x4EE5;&#x4E0A;&#x63CF;&#x8FF0;&#x6458;&#x81EA;rcore book</a></p>
+<p>&#x5728; <code>NX_HalMapPage</code> &#x4E2D;&#x8C03;&#x7528;&#x4E86; <code>__MapPage</code> &#x3002;<code>__MapPage</code> &#x4F1A;&#x5148;&#x8BA1;&#x7B97;&#x9700;&#x8981;&#x6620;&#x5C04;&#x7684;&#x9875;&#x9762;&#x6570;&#x91CF;&#xFF0C;&#x7136;&#x540E;&#x5FAA;&#x73AF;&#x6620;&#x5C04;&#x9875;&#x9762;&#x3002;</p>
+<p>&#x7531;&#x4E8E;&#x6BCF;&#x4E2A;&#x865A;&#x62DF;&#x5730;&#x5740;&#x90FD;&#x9700;&#x8981;&#x6709;&#x4E00;&#x4E2A;&#x5BF9;&#x5E94;&#x7684;&#x7269;&#x7406;&#x5730;&#x5740;&#xFF0C;&#x56E0;&#x6B64;&#x8C03;&#x7528;&#x7269;&#x7406;&#x9875;&#x9762;&#x5206;&#x914D;&#x51FD;&#x6570; <code>NX_PageAlloc</code> &#x6765;&#x5206;&#x914D;&#x9875;&#x9762;&#x3002;&#x7136;&#x540E;&#x8C03;&#x7528; <code>MapOnePage</code> &#x6765;&#x6620;&#x5C04;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x3002;</p>
+<pre><code class="lang-c">NX_PRIVATE <span class="hljs-keyword">void</span> *__MapPage(NX_Mmu *mmu, NX_Addr virAddr, NX_Size size, NX_UArch attr)
+{
+    NX_Addr addrStart = virAddr;
+    NX_Addr addrEnd = virAddr + size - <span class="hljs-number">1</span>;
+
+    NX_SSize pages = GET_PF_ID(addrEnd) - GET_PF_ID(addrStart) + <span class="hljs-number">1</span>;
+    NX_Size mappedPages = <span class="hljs-number">0</span>;
+    <span class="hljs-keyword">void</span> *phyAddr;
+
+    <span class="hljs-keyword">while</span> (pages &gt; <span class="hljs-number">0</span>)
+    {
+        phyAddr = NX_PageAlloc(<span class="hljs-number">1</span>);
+        <span class="hljs-keyword">if</span> (phyAddr == NX_NULL)
+        {
+            NX_LOG_E(<span class="hljs-string">&quot;map page: alloc page failed!&quot;</span>);
+            <span class="hljs-keyword">goto</span> err;
+        }
+
+        <span class="hljs-keyword">if</span> (MapOnePage(mmu, virAddr, (NX_Addr)phyAddr, attr) != NX_EOK)
+        {
+            NX_LOG_E(<span class="hljs-string">&quot;map page: vir:%p phy:%p attr:%x failed!&quot;</span>, virAddr, phyAddr, attr);
+            <span class="hljs-keyword">goto</span> err;
+        }
+        virAddr += NX_PAGE_SIZE;
+        phyAddr += NX_PAGE_SIZE;
+        pages--;
+        mappedPages++;
+    }
+    <span class="hljs-keyword">return</span> (<span class="hljs-keyword">void</span> *)addrStart;
+err:
+    <span class="hljs-keyword">if</span> (phyAddr != NX_NULL)
+    {
+        NX_PageFree(phyAddr);
+    }
+    __UnmapPage(mmu, addrStart, mappedPages);
+    <span class="hljs-keyword">return</span> NX_NULL;
+}
+</code></pre>
+<p>&#x5728; <code>MapOnePage</code> &#x4E2D;&#xFF0C;&#x4F1A;&#x5148;&#x68C0;&#x6D4B;&#x8BE5;&#x5730;&#x5740;&#x662F;&#x5426;&#x5DF2;&#x7ECF;&#x6620;&#x5C04;&#xFF0C;&#x6CA1;&#x6709;&#x6620;&#x5C04;&#x624D;&#x80FD;&#x6620;&#x5C04;&#x3002;</p>
+<p>&#x9700;&#x8981;&#x8C03;&#x7528;&#x4E00;&#x4E2A;&#x6700;&#x4E3A;&#x6838;&#x5FC3;&#x7684;&#x51FD;&#x6570;&#xFF0C;&#x5C31;&#x662F; <code>PageWalk</code>&#x3002;
+&#x5B83;&#x4F1A;&#x6839;&#x636E;&#x865A;&#x62DF;&#x5730;&#x5740;&#x6765;&#x505A;&#x9875;&#x8868;&#x904D;&#x5386;&#xFF0C;&#x5982;&#x679C; <code>allocPage</code> &#x4E3A;&#x5047;&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x904D;&#x5386;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x67D0;&#x4E2A;&#x7B49;&#x7EA7;&#x7684;&#x9875;&#x8868;&#x4E0D;&#x5B58;&#x5728;&#x5C31;&#x4F1A;&#x8FD4;&#x56DE;&#x7A7A;&#x3002;
+&#x8FD9;&#x5C31;&#x610F;&#x5473;&#x7740;&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#x662F;&#x6CA1;&#x6709;&#x6620;&#x5C04;&#x3002;</p>
+<p>&#x5982;&#x679C; <code>allocPage</code> &#x4E3A;&#x771F;&#xFF0C;&#x90A3;&#x4E48;&#x5C31;&#x4F1A;&#x5728;&#x904D;&#x5386;&#x8FC7;&#x7A0B;&#x4E2D;&#x5206;&#x914D;&#x4E0D;&#x5B58;&#x5728;&#x7684;&#x9875;&#x8868;&#x3002;
+&#x4F8B;&#x5982;&#x5728;&#x9875;&#x76EE;&#x5F55;&#x8868;&#x4E2D;&#xFF0C;&#x4F1A;&#x6709;&#x9875;&#x8868;&#x9879;&#xFF0C;&#x5982;&#x679C;&#x53D1;&#x73B0;&#x8BE5;&#x9875;&#x8868;&#x9879;&#x4E3A;&#x7A7A;&#xFF0C;&#x5219;&#x4F1A;&#x5206;&#x914D;&#x4E00;&#x4E2A;&#x7269;&#x7406;&#x9875;&#xFF0C;&#x4F5C;&#x4E3A;&#x4E0B;&#x4E00;&#x7EA7;&#x7684;&#x9875;&#x8868;&#x3002;</p>
+<p>&#x8BE5;&#x51FD;&#x6570;&#x6700;&#x540E;&#x8FD4;&#x56DE;&#x7684;&#x662F; <code>VPN0</code> &#x7684;&#x9875;&#x8868;&#x9879;&#xFF0C;&#x9875;&#x8868;&#x9879;&#x5B58;&#x653E;&#x4E86;&#x7269;&#x7406;&#x9875;&#x7684;&#x5730;&#x5740;&#x3002;</p>
+<p>&#x5728; <code>MapOnePage</code> &#x4E2D;&#xFF0C;<code>allocPage</code> &#x4E3A;&#x771F;&#xFF0C;&#x90A3;&#x5C31;&#x610F;&#x5473;&#x7740;&#x5982;&#x679C;&#x865A;&#x62DF;&#x5730;&#x5740;&#x6CA1;&#x6709;&#x6620;&#x5C04;&#x7269;&#x7406;&#x5730;&#x5740;&#xFF0C;&#x5C31;&#x4F1A;&#x4E00;&#x7EA7;&#x4E00;&#x7EA7;&#x5730;&#x5206;&#x914D;&#x9875;&#x8868;&#x3002;</p>
+<p>&#x8FD4;&#x56DE; <code>pte</code> &#x540E;&#xFF0C;&#x9700;&#x8981;&#x586B;&#x5199;&#x4E5F;&#x8868;&#x9879;&#xFF0C;&#x5176;&#x5185;&#x5BB9;&#x662F;&#x7269;&#x7406;&#x5730;&#x5740;&#x548C;&#x9875;&#x9762;&#x7684;&#x5C5E;&#x6027;<code>R,W,X</code>&#x7B49;&#x3002;</p>
+<p>&#x9875;&#x8868;&#x9879;&#x683C;&#x5F0F;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="figures/sv39-pte.png" alt="pte&#x683C;&#x5F0F;"></p>
+<p>&#x7269;&#x7406;&#x9875;&#x7684;&#x5C5E;&#x6027;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><img src="figures/pte-rwx.png" alt="pte&#x683C;&#x5F0F;rwx&#x5C5E;&#x6027;"></p>
+<pre><code class="lang-c"><span class="hljs-function">NX_PRIVATE MMU_PTE *<span class="hljs-title">PageWalk</span><span class="hljs-params">(MMU_PDE *pageTable, NX_Addr virAddr, NX_Bool allocPage)</span>
+</span>{
+    NX_ASSERT(pageTable);
+
+    <span class="hljs-comment">/* The page table in sv39 mode has 3 levels */</span>
+    <span class="hljs-keyword">int</span> level;
+    <span class="hljs-keyword">for</span> (level = <span class="hljs-number">2</span>; level &gt; <span class="hljs-number">0</span>; level--)
+    {
+        MMU_PTE *pte = &amp;pageTable[GET_LEVEL_OFF(level, virAddr)];
+
+        <span class="hljs-keyword">if</span> (PTE_USED(*pte))
+        {
+            pageTable = (MMU_PDE *)PTE2PADDR(*pte);
+            NX_ASSERT(pageTable);
+        }
+        <span class="hljs-keyword">else</span>
+        {
+            <span class="hljs-keyword">if</span> (allocPage == NX_False)
+            {
+                <span class="hljs-keyword">return</span> NX_NULL;
+            }
+            pageTable = (MMU_PDE *)NX_PageAlloc(<span class="hljs-number">1</span>);
+            <span class="hljs-keyword">if</span> (pageTable == NX_NULL)
+            {
+                NX_LOG_E(<span class="hljs-string">&quot;riscv64 mmu-sv39: page walk with no enough memory!&quot;</span>);
+                <span class="hljs-keyword">return</span> NX_NULL;
+            }
+            NX_MemZero(NX_Phy2Virt(pageTable), NX_PAGE_SIZE);
+
+            <span class="hljs-comment">/* increase last level page table reference */</span>
+            <span class="hljs-keyword">void</span> *levelPageTable = (<span class="hljs-keyword">void</span> *)(NX_Virt2Phy((NX_Addr)pte) &amp; NX_PAGE_ADDR_MASK);
+            NX_ASSERT(pageTable);
+            NX_PageIncrease(levelPageTable);
+
+            *pte = PADDR2PTE(pageTable) | PTE_V;
+        }
+        pageTable = (MMU_PDE *)NX_Phy2Virt(pageTable);
+    }
+    <span class="hljs-keyword">return</span> &amp;pageTable[GET_LEVEL_OFF(<span class="hljs-number">0</span>, virAddr)];
+}
+
+<span class="hljs-function">NX_PRIVATE NX_Error <span class="hljs-title">MapOnePage</span><span class="hljs-params">(NX_Mmu *mmu, NX_Addr virAddr, NX_Addr phyAddr, NX_UArch attr)</span>
+</span>{
+    <span class="hljs-keyword">if</span> (IsVirAddrMapped(mmu, virAddr) == NX_True)
+    {
+        NX_LOG_E(<span class="hljs-string">&quot;map page: vir:%p was mapped!&quot;</span>, virAddr);
+        <span class="hljs-keyword">return</span> NX_EINVAL;
+    }
+
+    MMU_PDE *pageTable = (MMU_PDE *)mmu-&gt;table;
+
+    MMU_PTE *pte = PageWalk(pageTable, virAddr, NX_True);
+    <span class="hljs-keyword">if</span> (pte == NX_NULL)
+    {
+        NX_LOG_E(<span class="hljs-string">&quot;map page: walk page vir:%p failed!&quot;</span>, virAddr);
+        <span class="hljs-keyword">return</span> NX_EFAULT;
+    }
+    <span class="hljs-keyword">if</span> (PTE_USED(*pte))
+    {
+        NX_PANIC(<span class="hljs-string">&quot;Map one page but PTE had used!&quot;</span>);
+    }
+    <span class="hljs-comment">/* increase last level page table reference */</span>
+    <span class="hljs-keyword">void</span> *levelPageTable = (<span class="hljs-keyword">void</span> *)(NX_Virt2Phy((NX_Addr)pte) &amp; NX_PAGE_ADDR_MASK);
+    NX_PageIncrease(levelPageTable);
+
+    *pte = PADDR2PTE(phyAddr) | attr;
+
+    <span class="hljs-keyword">return</span> NX_EOK;
+}
+</code></pre>
+<p>&#x5728; <code>NX_HalMapPageWithPhy</code> &#x4E2D;&#xFF0C;&#x4F1A;&#x8C03;&#x7528; <code>__MapPageWithPhy</code>&#x3002;</p>
+<p>&#x53EA;&#x662F;&#x73B0;&#x5728;&#x4E0D;&#x9700;&#x8981;&#x5728;&#x5206;&#x914D;&#x7269;&#x7406;&#x5730;&#x5740;&#x800C;&#x5DF2;&#xFF0C;&#x56E0;&#x4E3A;&#x5DF2;&#x7ECF;&#x6307;&#x5B9A;&#x4E86;&#x7269;&#x7406;&#x5730;&#x5740;&#x4E86;&#x3002;</p>
+<pre><code class="lang-c">NX_PRIVATE <span class="hljs-keyword">void</span> *__MapPageWithPhy(NX_Mmu *mmu, NX_Addr virAddr, NX_Addr phyAddr, NX_Size size, NX_UArch attr)
+{
+    NX_Addr addrStart = virAddr;
+    NX_Addr addrEnd = virAddr + size - <span class="hljs-number">1</span>;
+
+    NX_SSize pages = GET_PF_ID(addrEnd) - GET_PF_ID(addrStart) + <span class="hljs-number">1</span>;
+    NX_Size mappedPages = <span class="hljs-number">0</span>;
+
+    <span class="hljs-keyword">while</span> (pages &gt; <span class="hljs-number">0</span>)
+    {
+        <span class="hljs-keyword">if</span> (MapOnePage(mmu, virAddr, phyAddr, attr) != NX_EOK)
+        {
+            NX_LOG_E(<span class="hljs-string">&quot;map page: vir:%p phy:%p attr:%x failed!&quot;</span>, virAddr, phyAddr, attr);
+            __UnmapPage(mmu, addrStart, mappedPages);
+            <span class="hljs-keyword">return</span> NX_NULL;
+        }
+        virAddr += NX_PAGE_SIZE;
+        phyAddr += NX_PAGE_SIZE;
+        pages--;
+        mappedPages++;
+    }
+    <span class="hljs-keyword">return</span> (<span class="hljs-keyword">void</span> *)addrStart;
+}
+</code></pre>
+<p>&#x5728; <code>NX_HalUnmapPage</code> &#x4E2D;&#xFF0C;&#x4F1A;&#x8C03;&#x7528; <code>__UnmapPage</code> &#x6765;&#x89E3;&#x9664;&#x9875;&#x9762;&#x7684;&#x6620;&#x5C04;&#x3002;</p>
+<p>&#x5728;&#x89E3;&#x9664;&#x9875;&#x9762;&#x6620;&#x5C04;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x5FAA;&#x73AF;&#x8C03;&#x7528; <code>UnmapOnePage</code> &#x89E3;&#x9664;&#x6BCF;&#x4E00;&#x4E2A;&#x9875;&#x9762;&#x3002;</p>
+<p>&#x5728; <code>UnmapOnePage</code> &#x4E2D;&#xFF0C;&#x4F1A;&#x901A;&#x8FC7; <code>PageWalkPTE</code> &#x53BB;&#x904D;&#x5386;3&#x7EA7;&#x9875;&#x8868;&#xFF0C;&#x83B7;&#x53D6;&#x865A;&#x62DF;&#x5730;&#x5740; <code>virAddr</code> &#x5BF9;&#x5E94;&#x7684;&#x9875;&#x8868;&#x9879;&#x3002;&#x5C06;&#x7ED3;&#x679C;&#x4FDD;&#x5B58;&#x5230;
+<code>pteArray[]</code> &#x6570;&#x7EC4;&#x4E2D;&#xFF0C;<code>pteArray[0]</code> &#x4FDD;&#x5B58;&#x4E86; <code>VPN0</code> &#x7684;&#x9875;&#x8868;&#x9879;&#xFF0C;<code>pteArray[1]</code> &#x4FDD;&#x5B58;&#x4E86; <code>VPN1</code> &#x7684;&#x9875;&#x8868;&#x9879;&#xFF0C;<code>pteArray[2]</code> &#x4FDD;&#x5B58;&#x4E86; <code>VPN2</code> &#x7684;&#x9875;&#x8868;&#x9879;&#x3002;</p>
+<p>&#x9996;&#x5148;&#x4F1A;&#x91CA;&#x653E;&#x53F6;&#x5B50;&#x9875;&#x9762;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x865A;&#x62DF;&#x5730;&#x5740;&#x6700;&#x7EC8;&#x5BF9;&#x5E94;&#x7684;&#x7269;&#x7406;&#x5730;&#x5740;&#xFF0C;&#x800C;&#x9875;&#x8868;&#x662F;&#x975E;&#x53F6;&#x5B50;&#x9875;&#x9762;&#x3002;</p>
+<p>&#x975E;&#x53F6;&#x5B50;&#x9875;&#x9762;&#xFF0C;&#x5C31;&#x662F;&#x9875;&#x8868;&#xFF0C;&#x5728;&#x91CA;&#x653E;&#x7684;&#x65F6;&#x5019;&#x8C03;&#x7528; <code>NX_PageFree</code> &#x4F1A;&#x51CF;&#x5C11;&#x9875;&#x9762;&#x7684;&#x5F15;&#x7528;&#x8BA1;&#x6570;&#xFF0C;&#x4E3A;0&#x7684;&#x65F6;&#x5019;&#x624D;&#x771F;&#x6B63;&#x91CA;&#x653E;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-comment">/**
+ * walk addr for get pte level 0, 1, 2
+ */</span>
+<span class="hljs-function">NX_PRIVATE NX_Error <span class="hljs-title">PageWalkPTE</span><span class="hljs-params">(MMU_PDE *pageTable, NX_Addr virAddr, MMU_PTE *pteArray[<span class="hljs-number">3</span>])</span>
+</span>{
+    <span class="hljs-comment">/* The page table in sv39 mode has 3 levels */</span>
+    <span class="hljs-keyword">int</span> level;
+    <span class="hljs-keyword">for</span> (level = <span class="hljs-number">2</span>; level &gt; <span class="hljs-number">0</span>; level--)
+    {
+        MMU_PTE *pte = &amp;pageTable[GET_LEVEL_OFF(level, virAddr)];
+        pteArray[level] = pte;
+
+        <span class="hljs-keyword">if</span> (PTE_USED(*pte))
+        {
+            pageTable = (MMU_PDE *)PTE2PADDR(*pte);        
+            pageTable = (MMU_PDE *)NX_Phy2Virt(pageTable);
+        }
+        <span class="hljs-keyword">else</span>
+        {
+            NX_LOG_E(<span class="hljs-string">&quot;map walk pte: pte on vir:%p not used!&quot;</span>, virAddr);
+            <span class="hljs-keyword">return</span> NX_EFAULT;
+        }
+    }
+    pteArray[<span class="hljs-number">0</span>] = &amp;pageTable[GET_LEVEL_OFF(<span class="hljs-number">0</span>, virAddr)];
+    <span class="hljs-keyword">return</span> NX_EOK;
+}
+
+<span class="hljs-function">NX_PRIVATE NX_Error <span class="hljs-title">UnmapOnePage</span><span class="hljs-params">(NX_Mmu *mmu, NX_Addr virAddr)</span>
+</span>{
+    MMU_PDE *pageTable = (MMU_PDE *)mmu-&gt;table;
+    MMU_PTE *pte;
+    NX_Addr phyPage;
+    <span class="hljs-keyword">void</span> *levelPageTable;
+
+    MMU_PTE *pteArray[<span class="hljs-number">3</span>] = {NX_NULL, NX_NULL, NX_NULL};
+    NX_ASSERT(PageWalkPTE(pageTable, virAddr, pteArray) == NX_EOK);
+
+    pte = pteArray[<span class="hljs-number">0</span>];
+    NX_ASSERT(pte != NX_NULL);
+    NX_ASSERT(PTE_USED(*pte));
+    NX_ASSERT(PAGE_IS_LEAF(*pte));
+    phyPage = PTE2PADDR(*pte);
+    NX_ASSERT(phyPage);
+    NX_PageFree((<span class="hljs-keyword">void</span> *)phyPage);   <span class="hljs-comment">/* free leaf page*/</span>
+    *pte = <span class="hljs-number">0</span>; <span class="hljs-comment">/* clear pte in level 0 */</span>
+
+    <span class="hljs-comment">/* free none-leaf page */</span>
+    levelPageTable = (<span class="hljs-keyword">void</span> *)(((NX_Addr)pte) &amp; NX_PAGE_ADDR_MASK); <span class="hljs-comment">/* get level page table by pte */</span>
+    <span class="hljs-keyword">if</span> (NX_PageFree(levelPageTable) == NX_EOK)
+    {
+        pte = pteArray[<span class="hljs-number">1</span>];
+        NX_ASSERT(PTE_USED(*pte));
+        NX_ASSERT(!PAGE_IS_LEAF(*pte));
+        NX_ASSERT((NX_Addr)levelPageTable == PTE2PADDR(*pte));
+        *pte = <span class="hljs-number">0</span>;   <span class="hljs-comment">/* clear pte in level 1 */</span>
+
+        levelPageTable = (<span class="hljs-keyword">void</span> *)(((NX_Addr)pte) &amp; NX_PAGE_ADDR_MASK);
+        <span class="hljs-keyword">if</span> (NX_PageFree(levelPageTable) == NX_EOK)
+        {
+            pte = pteArray[<span class="hljs-number">2</span>]; 
+            NX_ASSERT(PTE_USED(*pte));
+            NX_ASSERT(!PAGE_IS_LEAF(*pte));
+            NX_ASSERT((NX_Addr)levelPageTable == PTE2PADDR(*pte));
+            *pte = <span class="hljs-number">0</span>;   <span class="hljs-comment">/* clear pte in level 2 */</span>
+        }
+    }
+    <span class="hljs-keyword">return</span> NX_EOK;
+}
+
+NX_INLINE NX_Error __UnmapPage(NX_Mmu *mmu, NX_Addr virAddr, NX_Size pages)
+{
+    <span class="hljs-keyword">while</span> (pages &gt; <span class="hljs-number">0</span>)
+    {
+        UnmapOnePage(mmu, virAddr);
+        virAddr += NX_PAGE_SIZE;
+        pages--;
+    }
+    <span class="hljs-keyword">return</span> NX_EOK;
+}
+</code></pre>
+<p>&#x5728; <code>NX_HalVir2Phy</code> &#x4E2D;&#xFF0C;&#x6839;&#x636E;&#x865A;&#x62DF;&#x5730;&#x5740; <code>virAddr</code>&#xFF0C;&#x8F6C;&#x6362;&#x4E3A;&#x7269;&#x7406;&#x5730;&#x5740;&#x3002;
+&#x4E4B;&#x524D;&#x4ECB;&#x7ECD;&#x8FC7; <code>PageWalk</code> &#x8FD9;&#x4E2A;&#x51FD;&#x6570;&#xFF0C;&#x5982;&#x679C; <code>allocPage</code> &#x4E3A;&#x5047;&#xFF0C;&#x90A3;&#x4E48;&#x5728;&#x904D;&#x5386;&#x8FC7;&#x7A0B;&#x4E2D;&#xFF0C;&#x4E0D;&#x5B58;&#x5728;&#x5C31;&#x4F1A;&#x51FA;&#x9519;&#xFF0C;&#x5B58;&#x5728;&#x5C31;&#x4F1A;&#x8FD4;&#x56DE;&#x9875;&#x8868;&#x9879;&#xFF0C;&#x91CC;&#x9762;&#x5B58;&#x653E;&#x4E86;&#x7269;&#x7406;&#x9875;&#x7684;&#x5730;&#x5740;&#x3002;</p>
+<p>&#x901A;&#x8FC7; <code>PTE2PADDR(*pte)</code> &#x53D6;&#x51FA;&#x7269;&#x7406;&#x9875;&#x9762;&#x7684;&#x5730;&#x5740;&#xFF0C;&#x8FD4;&#x56DE;&#x7684;&#x65F6;&#x5019;&#x52A0;&#x4E0A;&#x9875;&#x5185;&#x504F;&#x79FB; <code>(pagePhy + pageOffset)</code>&#x3002;</p>
+<pre><code class="lang-c">
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> *<span class="hljs-title">NX_HalVir2Phy</span><span class="hljs-params">(NX_Mmu *mmu, NX_Addr virAddr)</span>
+</span>{
+    NX_ASSERT(mmu);
+
+    NX_Addr pagePhy;
+    NX_Addr pageOffset;
+
+    MMU_PDE *pageTable = (MMU_PDE *)mmu-&gt;table;
+
+    MMU_PTE *pte = PageWalk(pageTable, virAddr, NX_False);
+    <span class="hljs-keyword">if</span> (pte == NX_NULL)
+    {
+        NX_PANIC(<span class="hljs-string">&quot;vir2phy walk fault!&quot;</span>);
+    }
+
+    <span class="hljs-keyword">if</span> (!PTE_USED(*pte))
+    {
+        NX_PANIC(<span class="hljs-string">&quot;vir2phy pte not used!&quot;</span>);
+    }
+
+    pagePhy = PTE2PADDR(*pte);
+    pageOffset = virAddr % NX_PAGE_SIZE;
+    <span class="hljs-keyword">return</span> (<span class="hljs-keyword">void</span> *)(pagePhy + pageOffset);
+}
+</code></pre>
+<p>&#x8BBE;&#x7F6E;&#x9875;&#x8868;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x5C06;&#x9875;&#x8868;&#x57FA;&#x5730;&#x5740;&#x5199;&#x5165; <code>satp</code> &#x5BC4;&#x5B58;&#x5668;&#x3002;&#x7136;&#x540E;&#x5237;&#x65B0;&#x5FEB;&#x8868;&#x3002;
+&#x8FD9;&#x91CC;&#x7684;&#x5FEB;&#x8868;&#x53EF;&#x4EE5;&#x7406;&#x89E3;&#x4E3A;&#x7F13;&#x5B58;&#xFF0C;&#x53EF;&#x4EE5;&#x52A0;&#x5FEB;&#x865A;&#x62DF;&#x5730;&#x5740;&#x5230;&#x7269;&#x7406;&#x5730;&#x5740;&#x7684;&#x8F6C;&#x6362;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function">NX_INLINE <span class="hljs-keyword">void</span> <span class="hljs-title">SFenceVMA</span><span class="hljs-params">()</span>
+</span>{
+    NX_CASM(<span class="hljs-string">&quot;sfence.vma&quot;</span>);
+}
+
+<span class="hljs-meta">#<span class="hljs-meta-keyword">define</span> MMU_FlushTLB() SFenceVMA()</span>
+
+<span class="hljs-function">NX_PRIVATE <span class="hljs-keyword">void</span> <span class="hljs-title">NX_HalSetPageTable</span><span class="hljs-params">(NX_Addr addr)</span>
+</span>{
+    WriteCSR(satp, MAKE_SATP(addr));
+    MMU_FlushTLB();
+}
+</code></pre>
+<p>&#x83B7;&#x53D6;&#x4E5F;&#x8868;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x9700;&#x8981;&#x8BFB;&#x53D6; <code>satp</code> &#x5BC4;&#x5B58;&#x5668;&#xFF0C;&#x5E76;&#x8F6C;&#x6362;&#x51FA;&#x9875;&#x8868;&#x7684;&#x5730;&#x5740;&#x3002;</p>
+<pre><code class="lang-c"><span class="hljs-function">NX_PRIVATE NX_Addr <span class="hljs-title">NX_HalGetPageTable</span><span class="hljs-params">(<span class="hljs-keyword">void</span>)</span>
+</span>{
+    NX_Addr addr = ReadCSR(satp);
+    <span class="hljs-keyword">return</span> (NX_Addr)GET_ADDR_FROM_SATP(addr);
+}
+</code></pre>
 <h3 id="9-&#x8FDB;&#x7A0B;&#x7BA1;&#x7406;">9. &#x8FDB;&#x7A0B;&#x7BA1;&#x7406;</h3>
 <p><code>NX_HalProcessInitUserSpace</code> &#x7528;&#x4E8E;&#x5728;&#x8FDB;&#x7A0B;&#x521B;&#x5EFA;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x521B;&#x5EFA;&#x8FDB;&#x7A0B;&#x7684;&#x9875;&#x8868; &#xFF0C;&#x5E76;&#x590D;&#x5236;&#x5185;&#x6838;&#x7684;&#x9875;&#x8868;&#x9879;&#x3002;</p>
 <p><code>NX_HalProcessFreePageTable</code> &#x7528;&#x4E8E;&#x5728;&#x8FDB;&#x7A0B;&#x9000;&#x51FA;&#x7684;&#x65F6;&#x5019;&#x91CA;&#x653E;&#x9875;&#x8868;&#x3002; </p>
@@ -1795,7 +2191,7 @@ NX_INTERFACE <span class="hljs-keyword">struct</span> NX_SMP_Ops NX_SMP_OpsInter
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"riscv架构移植","level":"1.1.4.1","depth":3,"next":{"title":"用户接口","level":"1.1.5","depth":2,"ref":"","articles":[{"title":"API设计","level":"1.1.5.1","depth":3,"path":"programing-manual/user/api.md","ref":"programing-manual/user/api.md","articles":[]}]},"previous":{"title":"内核移植","level":"1.1.4","depth":2,"ref":"","articles":[{"title":"riscv架构移植","level":"1.1.4.1","depth":3,"path":"programing-manual/port/riscv/riscv.md","ref":"programing-manual/port/riscv/riscv.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy BookOS-developers 2022","modify_label":"修订时间：","modify_format":"YYYY-MM-DD"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"nxos development team","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"book for nxos","language":"zh-hans","links":{"sidebar":{"bookos":"http://book-os.org"}},"gitbook":"3.2.3","description":"document for nxos kernel"},"file":{"path":"programing-manual/port/riscv/riscv.md","mtime":"2022-04-10T21:16:40.531Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-10T21:16:49.040Z"},"basePath":"../../..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"riscv架构移植","level":"1.1.4.1","depth":3,"next":{"title":"平台支持","level":"1.1.5","depth":2,"ref":"","articles":[{"title":"i386","level":"1.1.5.1","depth":3,"path":"programing-manual/platform/i386.md","ref":"programing-manual/platform/i386.md","articles":[]},{"title":"qemu_riscv64","level":"1.1.5.2","depth":3,"path":"programing-manual/platform/qemu_riscv64.md","ref":"programing-manual/platform/qemu_riscv64.md","articles":[]},{"title":"k210","level":"1.1.5.3","depth":3,"path":"programing-manual/platform/k210.md","ref":"programing-manual/platform/k210.md","articles":[]}]},"previous":{"title":"内核移植","level":"1.1.4","depth":2,"ref":"","articles":[{"title":"riscv架构移植","level":"1.1.4.1","depth":3,"path":"programing-manual/port/riscv/riscv.md","ref":"programing-manual/port/riscv/riscv.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["livereload"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"tbfed-pagefooter":{"copyright":"Copyright &copy BookOS-developers 2022","modify_label":"修订时间：","modify_format":"YYYY-MM-DD"},"livereload":{},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"nxos development team","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"book for nxos","language":"zh-hans","links":{"sidebar":{"bookos":"http://book-os.org"}},"gitbook":"3.2.3","description":"document for nxos kernel"},"file":{"path":"programing-manual/port/riscv/riscv.md","mtime":"2022-04-11T19:29:42.631Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2022-04-11T19:30:27.188Z"},"basePath":"../../..","book":{"language":""}});
         });
     </script>
 </div>
